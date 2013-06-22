@@ -5,21 +5,24 @@ permalink: /posts/:title.html
 exclude:
   - README.md
 
-name: Your Site Name
-host: yourdomain.com
-desc: Some description of your site.
+name: Jack不是Hacker是Haskeller
+host: http://hongmomanu.github.com
+desc: 一琴一鹤走天涯.
 
 custom:
     category:
-        default: Default Category
-        another: Another Category
+        haskell: Haskell式编程
+        dishaskell: 非Haskell编程
+        linux: Linux相关的        
     categories:
-      - name:  default
-        title: Default Category
+      - name:  haskell
+        title: Haskell式编程
 
-      - name:  another
-        title: Another Category
-
+      - name:  dishaskell
+        title: 非Haskell编程
+      
+      - name: linux
+        title: Linux相关的 
 meta:
     author:
         name: Your Name
