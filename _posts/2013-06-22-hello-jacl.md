@@ -17,5 +17,5 @@ getImageR = do
     bytes <- -- generate image data
     sendResponse (typePng, toContent bytes)
 {% endhighlight %}
-
+[baidu]
 {% include references.md %}
