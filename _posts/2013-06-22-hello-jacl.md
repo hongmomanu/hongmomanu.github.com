@@ -17,3 +17,5 @@ tags: []
 * [jekyll]自带的或者用[HighlightJS]做代码高亮
 * [Gravatar]统一头像标识服务
 * ……
+
+{% include references.md %}
