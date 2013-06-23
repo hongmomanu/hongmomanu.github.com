@@ -17,5 +17,11 @@ getImageR = do
     bytes <- -- generate image data
     sendResponse (typePng, toContent bytes)
 {% endhighlight %}
-[baidu]
+* [Haskell官网](http://www.haskell.org/haskellwiki/Haskell)
+* 更新命令 
+{% highlight bash %}
+git add -u
+git commit -m "new content"
+git push origin master
+{% endhighlight %}
 {% include references.md %}
