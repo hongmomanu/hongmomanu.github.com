@@ -18,4 +18,10 @@ tags: []
 * [Gravatar]统一头像标识服务
 * ……
 
+{% highlight ruby %}
+def foo
+  puts 'foo'
+end
+{% endhighlight %}
+
 {% include references.md %}
