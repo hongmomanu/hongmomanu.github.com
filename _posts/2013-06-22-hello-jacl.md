@@ -13,4 +13,3 @@ def foo
 end
 {% endhighlight %}
 
-{% include JB/setup %}
