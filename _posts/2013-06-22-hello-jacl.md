@@ -2,7 +2,7 @@
 layout: post
 title: "Hello Jack"
 description: ""
-category: default
+category: haskell
 tags: []
 ---
 现在，我可以：
