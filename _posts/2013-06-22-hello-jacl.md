@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "Hello Jacl"
+title: "Hello Jack"
 description: ""
-category: 
+category: default
 tags: []
 ---
 
