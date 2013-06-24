@@ -13,7 +13,8 @@ custom:
     category:
         haskell: Haskell式编程
         dishaskell: 非Haskell编程
-        linux: Linux相关的        
+        linux: Linux相关 
+        qin:七弦益友       
     categories:
       - name:  haskell
         title: Haskell式编程
@@ -22,7 +23,11 @@ custom:
         title: 非Haskell编程
       
       - name: linux
-        title: Linux相关的 
+        title: Linux相关
+      
+      - name: qin
+        title: 七弦益友 
+        
 meta:
     author:
         name: Jack
