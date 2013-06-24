@@ -44,7 +44,7 @@
 			{% if site.meta.author.gravatar %}<img src="{{ site.meta.gravatar}}{{ site.meta.author.gravatar }}?s=48" />{% endif %}
 			<figcaption><strong>{{ site.meta.author.name }}</strong></figcaption>
 		</figure>
-		<p>Write something about yourself.</p>
+		<p>可以调素琴，阅金经。无丝竹之乱耳，无案牍之劳形。</p>
 	</div>
 	
 	<div class="block block-license">
