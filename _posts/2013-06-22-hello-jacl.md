@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "Hello Jack"
+title: "yesod 返回文件"
 description: ""
 category: haskell
-tags: []
+tags: [haskell,yesod]
 ---
 * For a file on disk, you can use sendFile in your handler.
 {% highlight haskell %}
