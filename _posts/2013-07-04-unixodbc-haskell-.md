@@ -8,8 +8,10 @@ tags: [linux,bash]
 
 * unixodbc 配置
 {% highlight bash %}
-export TWO_TASK=//address:1521/orcl  --这个环境变量必须的，我想也许是个bug
-sudo ln -s libodbcinst.so.x  libodbcinst.so.1  --如果你没有libodbcinst.so.1 ，可以用libodbcinst.so.x 做的软连接 /usr/lib64/ 下
+export TWO_TASK=//address:1521/orcl  
+>   --这个环境变量必须的，我想也许是个bug
+sudo ln -s libodbcinst.so.x  libodbcinst.so.1  
+>   --如果你没有libodbcinst.so.1 ，可以用libodbcinst.so.x 做的软连接 /usr/lib64/ 下
 {% endhighlight %}
 
 * haskell demo
