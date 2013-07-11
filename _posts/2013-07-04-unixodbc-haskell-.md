@@ -39,7 +39,8 @@ import Database.HDBC.ODBC
 getTestR :: Handler Html
 getTestR = do
     liftIO $ print 123
-    let connectionString = "Driver={/opt/instantclient/libsqora.so.11.1};Uid=username;Pwd=password"
+    let connectionString =
+            "Driver={/opt/instantclient/libsqora.so.11.1};Uid=username;Pwd=password;Dbq=host"
     let ioconn = connectODBC connectionString
     conn <- liftIO $ ioconn
     vals <- liftIO $ quickQuery conn "SELECT count(*) FROM tablename" []
