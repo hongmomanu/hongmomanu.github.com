@@ -20,9 +20,9 @@ tags: [linux,bash]
 {% highlight bash %}
 [ORACLE]
 Driver=/opt/instantclient/libsqora.so.11.1
-ServerName =192.168.2.141:1521/orcl
-UserID=CIVILAFFAIRS_MZ_TZ_MATCH
-password=hvit
+ServerName =address:1521/orcl
+UserID=username
+password=password
 {% endhighlight %}
 
 * 测试命令 isql ORACLE
