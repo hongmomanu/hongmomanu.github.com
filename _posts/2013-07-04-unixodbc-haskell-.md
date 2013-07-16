@@ -8,9 +8,29 @@ tags: [linux,bash]
 
 * unixodbc 配置
 {% highlight bash %}
+
+
 -> 丢弃的配置/**-export TWO_TASK=//address:1521/orcl
 ->   --这个环境变量必须的，我想也许是个bug
 **/
+
+{% endhighlight %}
+* 中文问题
+ {% highlight bash %}
+标签： unixodbc it oracle	分类： SQL数据库
+1，下载
+   unixODBC-2.3.1，
+   oracle-instantclient11.2-basic-11.2.0.3.0-1，
+   oracle-instantclient11.2-odbc-11.2.0.3.0-1，
+   oracle-instantclient11.2-sqlplus-11.2.0.3.0-1
+
+2，假设oracle安装时选择了utf8字符集，或者客户端数据为UTF8字符集
+   安装unixODBC：
+   ./configure --sysconfdir=/etc --prefix=/usr --enable-iconv=yes --with-iconv-char-enc=UTF8
+   make
+   make install
+
+  安装oracle客户端包
 {% endhighlight %}
 * 如果用connectstring 则
 {% highlight bash %}
