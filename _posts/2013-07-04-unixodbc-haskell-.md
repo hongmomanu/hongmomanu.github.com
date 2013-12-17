@@ -12,7 +12,7 @@ tags: [linux,bash]
 
 -> 丢弃的配置/**-export TWO_TASK=//address:1521/orcl
 ->   --这个环境变量必须的，我想也许是个bug
-**/
+
 
 {% endhighlight %}
 * 中文问题
