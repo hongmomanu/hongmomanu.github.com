@@ -70,7 +70,7 @@
         <entry file="file://$PROJECT_DIR$/_posts/2014-07-03-clojure1.md">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.28402367" vertical-offset="0" max-vertical-offset="507">
-              <caret line="8" column="9" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
+              <caret line="8" column="2" selection-start-line="8" selection-start-column="2" selection-end-line="8" selection-end-column="2" />
               <folding />
             </state>
           </provider>
@@ -528,7 +528,7 @@
       <updated>1372042718544</updated>
       <workItem from="1397100158254" duration="154000" />
       <workItem from="1404365698621" duration="6897000" />
-      <workItem from="1404375167512" duration="807000" />
+      <workItem from="1404375167512" duration="878000" />
     </task>
     <task id="LOCAL-00001" summary="new update">
       <created>1373521369114</created>
@@ -754,11 +754,15 @@
       <created>1404375591349</created>
       <updated>1404375591350</updated>
     </task>
-    <option name="localTasksCounter" value="57" />
+    <task id="LOCAL-00057" summary="new update">
+      <created>1404375991163</created>
+      <updated>1404375991164</updated>
+    </task>
+    <option name="localTasksCounter" value="58" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7858000" />
+    <option name="totallyTimeSpent" value="7929000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="30" width="1366" height="738" extended-state="0" />
@@ -1210,7 +1214,7 @@
     <entry file="file://$PROJECT_DIR$/_posts/2014-07-03-clojure1.md">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.28402367" vertical-offset="0" max-vertical-offset="507">
-          <caret line="8" column="9" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
+          <caret line="8" column="2" selection-start-line="8" selection-start-column="2" selection-end-line="8" selection-end-column="2" />
           <folding />
         </state>
       </provider>
