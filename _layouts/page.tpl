@@ -88,7 +88,7 @@ site.VAR_SITE_NAME = '{{ site.name }}';
 site.VAR_GOOGLE_CUSTOM_SEARCH_ID = '{{ site.meta.author.gcse }}';
 site.TPL_SEARCH_TITLE = '#{0} / 搜索：#{1}';
 
-$$(document).ready(function(){
+$(document).ready(function(){
       console.log(1);
       $$("h2,h3,h4,h5,h6").each(function(i,item){
         var tag = $$(item).get(0).localName;
