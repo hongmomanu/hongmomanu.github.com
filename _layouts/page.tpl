@@ -77,7 +77,7 @@
 <script src="http://yandex.st/highlightjs/7.3/highlight.min.js"></script>
 
 <script src="/assets/js/site.js"></script>
-<script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 {% for script in page.scripts %}<script src="{{ script }}"></script>
 {% endfor %}
 <script>

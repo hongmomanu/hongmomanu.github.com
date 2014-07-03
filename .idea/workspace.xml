@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ed177220-555e-4166-87cc-f18f9e527123" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/2014-07-03-clojure1.md" afterPath="$PROJECT_DIR$/_posts/2014-07-03-clojure1.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_layouts/page.tpl" afterPath="$PROJECT_DIR$/_layouts/page.tpl" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -93,8 +92,8 @@
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.118421055" vertical-offset="1386" max-vertical-offset="1746">
-              <caret line="79" column="55" selection-start-line="79" selection-start-column="55" selection-end-line="79" selection-end-column="55" />
+            <state vertical-scroll-proportion="0.8815789" vertical-offset="1226" max-vertical-offset="1746">
+              <caret line="83" column="14" selection-start-line="83" selection-start-column="14" selection-end-line="83" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -556,7 +555,7 @@
       <created>1372042718544</created>
       <updated>1372042718544</updated>
       <workItem from="1397100158254" duration="154000" />
-      <workItem from="1404365698621" duration="3074000" />
+      <workItem from="1404365698621" duration="3838000" />
     </task>
     <task id="LOCAL-00001" summary="new update">
       <created>1373521369114</created>
@@ -706,11 +705,15 @@
       <created>1404368026766</created>
       <updated>1404368026766</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="new update">
+      <created>1404368780110</created>
+      <updated>1404368780110</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3228000" />
+    <option name="totallyTimeSpent" value="3992000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="30" width="1366" height="738" extended-state="0" />
@@ -1153,8 +1156,8 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.118421055" vertical-offset="1386" max-vertical-offset="1746">
-          <caret line="79" column="55" selection-start-line="79" selection-start-column="55" selection-end-line="79" selection-end-column="55" />
+        <state vertical-scroll-proportion="0.8815789" vertical-offset="1226" max-vertical-offset="1746">
+          <caret line="83" column="14" selection-start-line="83" selection-start-column="14" selection-end-line="83" selection-end-column="14" />
           <folding />
         </state>
       </provider>
