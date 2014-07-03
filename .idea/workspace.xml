@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ed177220-555e-4166-87cc-f18f9e527123" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_layouts/page.tpl" afterPath="$PROJECT_DIR$/_layouts/page.tpl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/2014-07-03-clojure1.md" afterPath="$PROJECT_DIR$/_posts/2014-07-03-clojure1.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="hongmomanu.github.com.iws" />
@@ -66,11 +66,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="2014-07-03-clojure1.md" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="2014-07-03-clojure1.md" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/_posts/2014-07-03-clojure1.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.36" vertical-offset="0" max-vertical-offset="450">
-              <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.38181818" vertical-offset="0" max-vertical-offset="450">
+              <caret line="7" column="5" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -86,14 +86,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="page.tpl" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="page.tpl" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/_layouts/page.tpl">
           <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.17763157" vertical-offset="1368" max-vertical-offset="1782">
-              <caret line="79" column="68" selection-start-line="79" selection-start-column="67" selection-end-line="79" selection-end-column="67" />
+            <state vertical-scroll-proportion="-0.7058824" vertical-offset="1368" max-vertical-offset="1782">
+              <caret line="78" column="42" selection-start-line="78" selection-start-column="42" selection-end-line="78" selection-end-column="42" />
               <folding />
             </state>
           </provider>
@@ -200,8 +200,8 @@
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/_posts/2013-08-05-haskellJson.md" />
         <option value="$PROJECT_DIR$/_posts/2013-06-24-linux-.md" />
-        <option value="$PROJECT_DIR$/_posts/2014-07-03-clojure1.md" />
         <option value="$PROJECT_DIR$/_layouts/page.tpl" />
+        <option value="$PROJECT_DIR$/_posts/2014-07-03-clojure1.md" />
       </list>
     </option>
   </component>
@@ -555,7 +555,7 @@
       <created>1372042718544</created>
       <updated>1372042718544</updated>
       <workItem from="1397100158254" duration="154000" />
-      <workItem from="1404365698621" duration="4527000" />
+      <workItem from="1404365698621" duration="4613000" />
     </task>
     <task id="LOCAL-00001" summary="new update">
       <created>1373521369114</created>
@@ -725,11 +725,15 @@
       <created>1404370041114</created>
       <updated>1404370041114</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="new update">
+      <created>1404370232490</created>
+      <updated>1404370232490</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4681000" />
+    <option name="totallyTimeSpent" value="4767000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="30" width="1366" height="738" extended-state="0" />
@@ -1108,14 +1112,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/2013-08-05-haskellJson.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="612">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/_posts/2013-08-2-sqlite.md">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-7.2" vertical-offset="0" max-vertical-offset="1692">
@@ -1136,14 +1132,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-12.28" vertical-offset="269" max-vertical-offset="828">
           <caret line="32" column="31" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/2014-07-03-clojure1.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.36" vertical-offset="0" max-vertical-offset="450">
-          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1172,8 +1160,24 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.17763157" vertical-offset="1368" max-vertical-offset="1782">
-          <caret line="79" column="68" selection-start-line="79" selection-start-column="67" selection-end-line="79" selection-end-column="67" />
+        <state vertical-scroll-proportion="-0.7058824" vertical-offset="1368" max-vertical-offset="1782">
+          <caret line="78" column="42" selection-start-line="78" selection-start-column="42" selection-end-line="78" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/2013-08-05-haskellJson.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="612">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/2014-07-03-clojure1.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.38181818" vertical-offset="0" max-vertical-offset="450">
+          <caret line="7" column="5" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="5" />
           <folding />
         </state>
       </provider>
