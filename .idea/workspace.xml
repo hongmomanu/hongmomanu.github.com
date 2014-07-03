@@ -69,8 +69,8 @@
       <file leaf-file-name="2014-07-03-clojure1.md" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/_posts/2014-07-03-clojure1.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.38181818" vertical-offset="0" max-vertical-offset="450">
-              <caret line="7" column="5" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="5" />
+            <state vertical-scroll-proportion="0.4909091" vertical-offset="0" max-vertical-offset="468">
+              <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -555,7 +555,7 @@
       <created>1372042718544</created>
       <updated>1372042718544</updated>
       <workItem from="1397100158254" duration="154000" />
-      <workItem from="1404365698621" duration="4613000" />
+      <workItem from="1404365698621" duration="4727000" />
     </task>
     <task id="LOCAL-00001" summary="new update">
       <created>1373521369114</created>
@@ -729,11 +729,15 @@
       <created>1404370232490</created>
       <updated>1404370232490</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="new update">
+      <created>1404370318260</created>
+      <updated>1404370318260</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4767000" />
+    <option name="totallyTimeSpent" value="4881000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="30" width="1366" height="738" extended-state="0" />
@@ -1176,8 +1180,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/_posts/2014-07-03-clojure1.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.38181818" vertical-offset="0" max-vertical-offset="450">
-          <caret line="7" column="5" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="5" />
+        <state vertical-scroll-proportion="0.4909091" vertical-offset="0" max-vertical-offset="468">
+          <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
           <folding />
         </state>
       </provider>
