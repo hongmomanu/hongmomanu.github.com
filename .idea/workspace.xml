@@ -2,60 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ed177220-555e-4166-87cc-f18f9e527123" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/img/bg.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/img/bg1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/css/eater.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/css/pen.cur" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/css/sourcecode.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/css/tangerine.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/js/mixjs/.npmignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/js/mixjs/Gruntfile.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/js/mixjs/MIT-LICENSE.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/js/mixjs/src/Module.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/js/mixjs/src/Promise.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/js/mixjs/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/css/animation.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/js/event/broadcast.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/js/mixjs/lib/event/broadcast.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/js/mixjs/src/browser.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/clojure1.htm" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/js/mixjs/src/core.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/js/highlight/default.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/js/mixjs/src/getCurrentScript.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/js/mixjs/src/getPath.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/js/highlight/googlecode.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/js/highlight/highlight.pack.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/js/img.screenfull.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/js/mixjs/src/intro.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/js/mixjs/research/js.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/js/mixjs/research/load-test.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/js/mixjs/src/loadcss-img.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/js/mixjs/src/loadcss.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/js/mixjs/research/loadjs.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/js/mixjs/src/loadjs.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/js/mixjs/lib/mix-0.2.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/js/mixjs/lib/mix.0.3.0.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/js/mixjs/lib/mix.0.3.0.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/js/mixjs/lib/mix.0.3.0.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/js/highlight/monokai.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/js/nodeppt.control.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/js/nodeppt.control.postMessage.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/js/nodeppt.control.socket.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/css/nodeppt.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/js/nodeppt.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/js/mixjs/src/outro.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/js/mixjs/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/css/pdf.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/css/phone.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/js/prettify.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/js/qrcode.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/js/shake.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/js/socket.io.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/js/highlight/solarized_dark.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/js/mixjs/src/typeof.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/js/mixjs/research/userAgent.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/js/mixjs/src/vars.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/js/mixjs/lib/event/wait.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/assets/clojure1.htm" afterPath="$PROJECT_DIR$/assets/html/clojure1.htm" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="hongmomanu.github.com.iws" />
@@ -163,11 +110,16 @@
         </entry>
       </file>
       <file leaf-file-name="clojure1.htm" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/assets/clojure1.htm">
+        <entry file="file://$PROJECT_DIR$/assets/html/clojure1.htm">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.33834586" vertical-offset="0" max-vertical-offset="8100">
-              <caret line="10" column="45" selection-start-line="10" selection-start-column="45" selection-end-line="10" selection-end-column="45" />
-              <folding />
+            <state vertical-scroll-proportion="0.5588235" vertical-offset="7168" max-vertical-offset="8100">
+              <caret line="413" column="44" selection-start-line="413" selection-start-column="41" selection-end-line="413" selection-end-column="41" />
+              <folding>
+                <element signature="n#style#0;n#slide#0;n#slides#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#slide#1;n#slides#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#slide#6;n#slides#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#h2#0;n#article#0;n#slide#27;n#slides#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -329,25 +281,7 @@
               <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="category" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hongmomanu.github.com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hongmomanu.github.com" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="category" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="haskell" />
+              <option name="myItemId" value="assets" />
               <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -364,18 +298,8 @@
               <option name="myItemId" value="assets" />
               <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
-          </PATH>
-          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="hongmomanu.github.com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hongmomanu.github.com" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="_posts" />
+              <option name="myItemId" value="html" />
               <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -401,6 +325,7 @@
       <recent name="$PROJECT_DIR$/_posts" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/assets/html" />
       <recent name="$PROJECT_DIR$/assets" />
     </key>
   </component>
@@ -605,7 +530,7 @@
       <workItem from="1397100158254" duration="154000" />
       <workItem from="1404365698621" duration="6897000" />
       <workItem from="1404375167512" duration="7496000" />
-      <workItem from="1404445957282" duration="1524000" />
+      <workItem from="1404445957282" duration="1905000" />
     </task>
     <task id="LOCAL-00001" summary="new update">
       <created>1373521369114</created>
@@ -843,11 +768,15 @@
       <created>1404451404668</created>
       <updated>1404451404669</updated>
     </task>
-    <option name="localTasksCounter" value="60" />
+    <task id="LOCAL-00060" summary="new update">
+      <created>1404452358124</created>
+      <updated>1404452358125</updated>
+    </task>
+    <option name="localTasksCounter" value="61" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16071000" />
+    <option name="totallyTimeSpent" value="16452000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="30" width="1366" height="738" extended-state="0" />
@@ -872,7 +801,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18712121" sideWeight="0.671521" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18712121" sideWeight="0.671521" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -1315,11 +1244,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/clojure1.htm">
+    <entry file="file://$PROJECT_DIR$/assets/html/clojure1.htm">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33834586" vertical-offset="0" max-vertical-offset="8100">
-          <caret line="10" column="45" selection-start-line="10" selection-start-column="45" selection-end-line="10" selection-end-column="45" />
-          <folding />
+        <state vertical-scroll-proportion="0.5588235" vertical-offset="7168" max-vertical-offset="8100">
+          <caret line="413" column="44" selection-start-line="413" selection-start-column="41" selection-end-line="413" selection-end-column="41" />
+          <folding>
+            <element signature="n#style#0;n#slide#0;n#slides#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#slide#1;n#slides#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#slide#6;n#slides#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h2#0;n#article#0;n#slide#27;n#slides#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
