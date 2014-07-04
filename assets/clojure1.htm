@@ -1,0 +1,444 @@
+<!--
+    Powered By nodePPT
+    version: 0.6.7
+    site: https://github.com/ksky521/nodePPT
+-->
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>clojure基础 - By Jack</title>
+    <link rel="stylesheet" media="all" href="/css/nodeppt.css">
+    <link rel="stylesheet" media="only screen and (max-device-width: 480px)" href="/css/phone.css">
+    <link rel="stylesheet" href="/js/highlight/monokai.css">
+</head>
+<body>
+
+<slides id="container">
+    <slide class="slide fill" style="background-image:url('/img/bg.jpg	')"><hgroup>
+<h2>什么是clojure</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li><p>Clojure 是一套现代的Lisp语言的动态语言版，它是一个函数式多用途的语言，其语法和其他的Lisp一样，都是建立在 S-expression 之上，即”全是括号，前缀表达式”的语言</p>
+</li>
+<li><p>Clojure可以执行于Java虚拟机（JVM）引擎之上。</p>
+</li>
+<li><p>与其他Lisp一样，Clojure认为代码即数据。</p>
+</li>
+</ul>
+
+</article></slide>
+<slide class="slide fill" style="background-image:url('/img/bg.jpg	')"><hgroup>
+<h2>clojure的特性和理念</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li><p>Clojure是一个动态类型语言</p>
+</li>
+<li><p>Clojure是运行在JVM(JDK5.0以上）的 </p>
+</li>
+<li><p>Clojure是可以和java代码互操作的函数式语言 </p>
+</li>
+<li><p>Clojure天然的并发特性 </p>
+</li>
+<li><p>Clojure主要目标让编程变得简单，安全，可靠</p>
+</li>
+</ul>
+
+</article></slide>
+<slide class="slide"><hgroup>
+<h2>最原始的Hello World</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li><p>确认计算机中已安装好java</p>
+</li>
+<li><p>下载<a href="http://central.maven.org/maven2/org/clojure/clojure/1.6.0/">clojure.jar</a>  </p>
+</li>
+<li><p>在cmd或终端中敲入如下代码</p>
+<pre><code class="bash">
+       java -jar clojure-1.6.0.jar</code></pre>
+</li>
+<li><p>ok,敲入最简单的    hello world 吧.</p>
+<pre><code class="clojure">
+   (println &quot;hell world!&quot;)</code></pre>
+</li>
+</ul>
+
+</article></slide>
+<slide class="slide"><hgroup>
+<h2>clojure项目开发利器 Leiningen</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li><p>什么是Leiningen</p>
+<ul class="build">
+<li>Leiningen是一个用于自动化（构建）clojure项目的工具</li>
+<li>让你更加专注于开发</li>
+</ul>
+</li>
+<li><p><a href="http://leiningen.org/">Leiningen官网下载</a> </p>
+</li>
+</ul>
+
+</article></slide>
+<slide class="slide"><hgroup>
+<h2>Leiningen特性</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li>创建新项目</li>
+<li>管理你的项目的依赖关系</li>
+<li>运行测试</li>
+<li>运行一个REPL（你不需要再关心如何将依赖加入classpath)</li>
+<li>编译Java源码（如果有的话）</li>
+<li>运行项目（如果项目是一个app的话）</li>
+<li>为项目产生一个Maven风格的pom文件</li>
+<li>部署，编译和打包项目</li>
+<li>发布类库到Maven仓库，例如Clojars  </li>
+</ul>
+
+</article></slide>
+<slide class="slide"><article class="flexbox vleft">
+<h1>封面样式2</h1>
+<h2>左对齐</h2>
+
+</article></slide>
+<slide class="slide fill" style="background-image:url('/img/bg1.png')"><article class="flexbox vleft">
+<h1>背景图片</h1>
+<h2>使用方法：&#91;slide style=&quot;background-image:url(&#39;/img/bg1.png&#39;)&quot;&#93;</h2>
+
+</article></slide>
+<slide class="slide"><hgroup>
+<h2>使用.class/#id/自定义属性样式</h2>
+
+</hgroup><article>
+
+<pre><code class="html">使用：.class{:.class}
+使用：#id{:#id}
+组合使用：{:.class.class2 width=&quot;200px&quot;}
+父元素样式：{:&amp;.class}</code></pre>
+
+</article></slide>
+<slide class="slide"><hgroup>
+<h2>主页面样式</h2>
+<h3>----是上下分界线</h3>
+
+</hgroup><article>
+
+<p>nodeppt是基于nodejs写的支持 <strong>Markdown!</strong> 语法的网页PPT</p>
+<p>nodeppt：<a href="https://github.com/ksky521/nodePPT">https://github.com/ksky521/nodePPT</a></p>
+
+</article></slide>
+<slide class="slide"><hgroup>
+<h2>这是一个列表</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li>列表支持淡入淡出<ul class="build">
+<li>上下左右方向键翻页</li>
+<li>支持多级列表</li>
+<li>使用方法，markdown列表第一条加上：{:&amp;.build}</li>
+</ul>
+</li>
+<li>完全基于markdown语法哦</li>
+</ul>
+
+</article></slide>
+<slide class="slide"><hgroup>
+<h2>表格示例</h2>
+<h3>市面上主要的css预处理器：less\sass\stylus</h3>
+
+</hgroup><article>
+
+<table>
+<thead>
+<tr>
+<th align="left"></th>
+<th align="center">less</th>
+<th align="right">sass</th>
+<th>stylus</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">环境</td>
+<td align="center">js/nodejs</td>
+<td align="right">Ruby</td>
+<td>nodejs</td>
+</tr>
+<tr>
+<td align="left">扩展名</td>
+<td align="center">.less</td>
+<td align="right">.sass/.scss</td>
+<td>.styl</td>
+</tr>
+<tr>
+<td align="left">特点</td>
+<td align="center">老牌，用户多，支持js解析</td>
+<td align="right">功能全，有成型框架，发展快</td>
+<td>语法多样，小众</td>
+</tr>
+<tr>
+<td align="left">案例/框架</td>
+<td align="center"><a href="http://getbootstrap.com/">Bootstrap</a></td>
+<td align="right"><a href="http://compass-style.org">compass</a> <a href="http://bourbon.io">bourbon</a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+</article></slide>
+<slide class="slide"><hgroup>
+<h2>代码格式化</h2>
+<h3>使用 <strong>highlightjs</strong></h3>
+
+</hgroup><article>
+
+<pre><code class="javascript">(function(window, document){
+    var a = 1;
+    var test = function(){
+        var b = 1;
+        alert(b);
+    };
+    //泛数组转换为数组
+    function toArray(arrayLike) {
+        return [].slice.call(arrayLike);
+    }
+}(window, document));</code></pre>
+
+</article></slide>
+<slide class="slide"><hgroup>
+<h2>支持 HTML 语法插入</h2>
+
+</hgroup><article>
+
+
+<div class="file-setting">
+    <p>这是html</p>
+</div>
+<p id="css-demo">这是css样式</p>
+<p>使用&#91;code]&#91;/code]包裹的代码，会直接插入到页面</p>
+<p>具体看下项目中 ppts/demo.md 代码</p>
+<script>
+    function testScriptTag(){
+
+    }
+    console.log(typeof testScriptTag);
+</script>
+<style>
+#css-demo{
+    color: red;
+}
+</style>
+
+</article></slide>
+<slide class="slide"><hgroup>
+<h2>iframe</h2>
+
+</hgroup><article>
+
+<iframe data-src="http://www.google.com/doodle4google/resources/history.html" src="about:blank;"></iframe>
+
+
+</article></slide>
+<slide class="slide"><hgroup>
+<h2>居中图片</h2>
+
+</hgroup><article class="flexbox vcenter">
+
+
+<p><img src="https://raw.github.com/ksky521/FEinit/master/pic/feinit.png" alt="FEinit帮助界面" title="FEinit帮助界面"></p>
+<p>npm install -g feinit</p>
+
+</article></slide>
+<slide class="slide"><aside class="note">
+<section>
+<h2>这里是note</h2>
+<p>使用n键，才能显示</p>
+
+</section>
+</aside><hgroup>
+<h2>使用note笔记</h2>
+<h3>note笔记是多窗口，或者自己做一些笔记用的</h3>
+
+</hgroup><article>
+
+<p>按下键盘【n】键测试下note，</p>
+<p>markdown语法如下：</p>
+<pre><code class="markdown">[note]
+这里是note，{ 要换成中括号啊！！
+{/note]</code></pre>
+
+</article></slide>
+<slide class="slide"><hgroup>
+<h2>使用画笔</h2>
+<h3>使用画笔做标记哦~你也可以随便作画啊！</h3>
+
+</hgroup><article>
+
+<p>按下键盘【p】键。按下鼠标左键，在此处乱花下看看效果。</p>
+<p>按下键盘【c】键。清空画板</p>
+
+</article></slide>
+<slide class="slide"><hgroup>
+<h2>使用宽屏模式</h2>
+
+</hgroup><article>
+
+<p>按下键盘【w】键。看下效果。</p>
+<p>再按下键盘【w】键。</p>
+
+</article></slide>
+<slide class="slide"><hgroup>
+<h2>使用overview模式</h2>
+
+</hgroup><article>
+
+<p>按下键盘【o】键。看下效果。</p>
+<p>在overview模式下，方向键下一页，【enter】键进入选中页</p>
+<p>或者按下键盘【o】键，退出overview模式</p>
+
+</article></slide>
+<slide class="slide"><hgroup>
+<h2>多窗口演示</h2>
+<h2>双屏演示不out！</h2>
+
+</hgroup><article>
+
+<p>本页面网址改成 url?_muliscreen=1，支持多屏演示哦！</p>
+<p>跟powderpoint一样的双屏功能，带有备注信息。</p>
+
+</article></slide>
+<slide class="slide"><hgroup>
+<h2>多种转场动画随心换</h2>
+
+</hgroup><article>
+
+<p>支持的动画包括：</p>
+<ul>
+<li>horizontal3d</li>
+<li>horizontal</li>
+<li>vertical3d</li>
+<li>zoomin</li>
+<li>zoomout</li>
+<li>cards</li>
+</ul>
+<p>当然你可以自己写更炫的动画啊，记得<a href="https://github.com/ksky521/nodePPT">fork</a>代码然后push给我哦~</p>
+
+</article></slide>
+<slide class="slide" data-transition="zoomin"><hgroup>
+<h2>这是一个zoomin的动画</h2>
+
+</hgroup><article>
+
+<p>使用方法：</p>
+<p>&#91;slide data-transition=&quot;zoomin&quot;&#93;</p>
+
+</article></slide>
+<slide class="slide" data-transition="vertical3d"><hgroup>
+<h2>这是一个vertical3d的动画</h2>
+
+</hgroup><article>
+
+<p>使用方法：</p>
+<p>&#91;slide data-transition=&quot;vertical3d&quot;&#93;</p>
+
+</article></slide>
+<slide class="slide" data-outcallback="outcallback" data-incallback="incallback" ><hgroup>
+<h2>使用回调</h2>
+
+</hgroup><article>
+
+<p>使用方法：</p>
+<p>&#91;slide data-outcallback=&quot;outcallback&quot; data-incallback=&quot;incallback&quot;&#93;</p>
+<p>即：</p>
+<ul>
+<li>进入执行回调incallback函数</li>
+<li>退出执行outcallback函数</li>
+</ul>
+
+</article></slide>
+<slide class="slide"><hgroup>
+<h2>设置slide？</h2>
+<h3>修改 markdown 文件头部内容</h3>
+
+</hgroup><article>
+
+<pre><code class="javascript">title: nodeppt markdown 演示 //演讲主题名字
+speaker: Theo Wang //演讲者名称
+url: https://github.com/ksky521/nodePPT //网址
+transition: zoomin //通用动画名称，可在
+files: /js/demo.js,/css/demo.css //引入的文件，在页面底部</code></pre>
+
+</article></slide>
+<slide class="slide"><hgroup>
+<h2>更多玩法</h2>
+
+</hgroup><article>
+
+<p><a href="https://github.com/ksky521/nodePPT">https://github.com/ksky521/nodePPT</a></p>
+<p>什么？这些功能还不够用？</p>
+<p>极客模式：查看源码的nodeppt.js，相信你会找到牛逼的手机互动（摇一摇换页）功能</p>
+<p>查看项目目录ppts获取更多帮助信息</p>
+
+</article></slide>
+    <slide class="slide thank-you-slide segue nobackground">
+        <article class="flexbox vleft auto-fadein">
+            <h2>Q &amp; A</h2>
+            <h3>&lt;Thank You!&gt;</h3>
+        </article>
+    </slide>
+    <slide class="slide logoslide dark nobackground">
+        <article class="flexbox vcenter">
+          <h2 style="color: white;">Powered By nodePPT v0.6.7</h2>
+        </article>
+      </slide>
+    <div class="slideTip" id="tip"></div>
+</slides>
+<canvas id="drawBoard" class="draw-board" width="900" height="700"></canvas>
+<div class="progress"><span id="progress"></span></div>
+<script src="/js/mixjs/lib/mix.0.3.0.min.js"></script>
+<script>
+var base = location.protocol + '//' + location.host + '/';
+MixJS.config({
+    baseURL:base + 'js/'
+});
+MixJS.use('event/broadcast', function($){
+    $.loadJS('/js/nodeppt.js',function(){
+        Slide.init({
+            containerID: 'container',
+            drawBoardID: 'drawBoard',
+            slideClass: '.slide',
+            buildClass: '.build',
+            progressID: 'progress',
+            transition: 'cards',
+            width: 1100,
+            dir: '/js/',
+            
+            //打开下面的注释就开启postMessage方式
+            //访问网址127.0.0.1:8080/ppt/demo#client
+            control:{
+                type: 'postMessage'
+            },
+            
+            tipID: 'tip'
+        });
+    }).loadJS('/js/highlight/highlight.pack.js',function(){
+
+        hljs.tabReplace = '  ';
+        hljs.initHighlightingOnLoad();
+    });
+});
+</script>
+<script src="/js/demo.js"></script>
+<link rel="stylesheet" href="/css/demo.css">
+</body>
+</html>
