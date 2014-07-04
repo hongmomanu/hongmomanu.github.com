@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ed177220-555e-4166-87cc-f18f9e527123" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/css/demo.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/js/demo.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/html/clojure1.htm" afterPath="$PROJECT_DIR$/assets/html/clojure1.htm" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -114,13 +112,12 @@
       <file leaf-file-name="clojure1.htm" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/assets/html/clojure1.htm">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.19009902" vertical-offset="7266" max-vertical-offset="8100">
-              <caret line="409" column="63" selection-start-line="409" selection-start-column="63" selection-end-line="409" selection-end-column="63" />
+            <state vertical-scroll-proportion="0.075630255" vertical-offset="2898" max-vertical-offset="3672">
+              <caret line="163" column="63" selection-start-line="163" selection-start-column="63" selection-end-line="163" selection-end-column="63" />
               <folding>
                 <element signature="n#style#0;n#slide#0;n#slides#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#slide#1;n#slides#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#slide#6;n#slides#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#h2#0;n#article#0;n#slide#27;n#slides#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#h2#0;n#article#0;n#slide#8;n#slides#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -340,9 +337,9 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/assets/html" />
       <recent name="$PROJECT_DIR$/assets/js" />
       <recent name="$PROJECT_DIR$/assets/css" />
-      <recent name="$PROJECT_DIR$/assets/html" />
       <recent name="$PROJECT_DIR$/assets" />
       <recent name="$PROJECT_DIR$/_posts" />
     </key>
@@ -552,7 +549,7 @@
       <workItem from="1397100158254" duration="154000" />
       <workItem from="1404365698621" duration="6897000" />
       <workItem from="1404375167512" duration="7496000" />
-      <workItem from="1404445957282" duration="2186000" />
+      <workItem from="1404445957282" duration="2936000" />
     </task>
     <task id="LOCAL-00001" summary="new update">
       <created>1373521369114</created>
@@ -798,11 +795,15 @@
       <created>1404452655575</created>
       <updated>1404452655576</updated>
     </task>
-    <option name="localTasksCounter" value="62" />
+    <task id="LOCAL-00062" summary="new update">
+      <created>1404452935644</created>
+      <updated>1404452935644</updated>
+    </task>
+    <option name="localTasksCounter" value="63" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16733000" />
+    <option name="totallyTimeSpent" value="17483000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="30" width="1366" height="738" extended-state="0" />
@@ -827,7 +828,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16969697" sideWeight="0.671521" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16969697" sideWeight="0.671521" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -1270,13 +1271,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/html/clojure1.htm">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.19009902" vertical-offset="7266" max-vertical-offset="8100">
-          <caret line="409" column="63" selection-start-line="409" selection-start-column="63" selection-end-line="409" selection-end-column="63" />
+        <state vertical-scroll-proportion="0.075630255" vertical-offset="2898" max-vertical-offset="3672">
+          <caret line="163" column="63" selection-start-line="163" selection-start-column="63" selection-end-line="163" selection-end-column="63" />
           <folding>
             <element signature="n#style#0;n#slide#0;n#slides#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#slide#1;n#slides#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#slide#6;n#slides#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h2#0;n#article#0;n#slide#27;n#slides#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h2#0;n#article#0;n#slide#8;n#slides#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
