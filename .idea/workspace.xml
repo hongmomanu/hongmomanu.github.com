@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ed177220-555e-4166-87cc-f18f9e527123" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/2014-07-03-clojure1.md" afterPath="$PROJECT_DIR$/_posts/2014-07-03-clojure1.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="hongmomanu.github.com.iws" />
@@ -65,14 +66,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="2014-07-03-clojure1.md" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="2014-07-03-clojure1.md" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/_posts/2014-07-03-clojure1.md">
           <provider editor-type-id="MarkdownPreviewEditor">
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.6153846" vertical-offset="0" max-vertical-offset="468">
-              <caret line="11" column="81" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="81" />
+            <state vertical-scroll-proportion="0.36263737" vertical-offset="0" max-vertical-offset="546">
+              <caret line="11" column="61" selection-start-line="11" selection-start-column="61" selection-end-line="11" selection-end-column="61" />
               <folding />
             </state>
           </provider>
@@ -98,11 +99,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="clojure1.htm" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="clojure1.htm" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/html/clojure1.htm">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.45378152" vertical-offset="2808" max-vertical-offset="3672">
-              <caret line="168" column="44" selection-start-line="168" selection-start-column="43" selection-end-line="168" selection-end-column="43" />
+            <state vertical-scroll-proportion="-1.3975904" vertical-offset="3196" max-vertical-offset="3672">
+              <caret line="184" column="62" selection-start-line="184" selection-start-column="12" selection-end-line="184" selection-end-column="12" />
               <folding>
                 <element signature="n#style#0;n#slide#0;n#slides#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#slide#1;n#slides#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -194,9 +195,9 @@
         <option value="$PROJECT_DIR$/_posts/2013-08-05-haskellJson.md" />
         <option value="$PROJECT_DIR$/_posts/2013-06-24-linux-.md" />
         <option value="$PROJECT_DIR$/_layouts/page.tpl" />
-        <option value="$PROJECT_DIR$/_posts/2014-07-03-clojure1.md" />
         <option value="$PROJECT_DIR$/assets/html/test.html" />
         <option value="$PROJECT_DIR$/assets/html/clojure1.htm" />
+        <option value="$PROJECT_DIR$/_posts/2014-07-03-clojure1.md" />
       </list>
     </option>
   </component>
@@ -250,6 +251,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="hongmomanu.github.com" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hongmomanu.github.com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hongmomanu.github.com" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="_posts" />
               <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -480,7 +495,7 @@
       <workItem from="1397100158254" duration="154000" />
       <workItem from="1404365698621" duration="6897000" />
       <workItem from="1404375167512" duration="7496000" />
-      <workItem from="1404445957282" duration="3522000" />
+      <workItem from="1404445957282" duration="3952000" />
     </task>
     <task id="LOCAL-00001" summary="new update">
       <created>1373521369114</created>
@@ -738,11 +753,15 @@
       <created>1404458373640</created>
       <updated>1404458373640</updated>
     </task>
-    <option name="localTasksCounter" value="65" />
+    <task id="LOCAL-00065" summary="new update">
+      <created>1404458470980</created>
+      <updated>1404458470981</updated>
+    </task>
+    <option name="localTasksCounter" value="66" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18069000" />
+    <option name="totallyTimeSpent" value="18499000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="30" width="1366" height="738" extended-state="0" />
@@ -1130,17 +1149,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/2014-07-03-clojure1.md">
-      <provider editor-type-id="MarkdownPreviewEditor">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.6153846" vertical-offset="0" max-vertical-offset="468">
-          <caret line="11" column="81" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="81" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/_posts/2013-07-17-linux环境变量-.md">
       <provider editor-type-id="MarkdownPreviewEditor">
         <state />
@@ -1210,13 +1218,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/html/clojure1.htm">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.45378152" vertical-offset="2808" max-vertical-offset="3672">
-          <caret line="168" column="44" selection-start-line="168" selection-start-column="43" selection-end-line="168" selection-end-column="43" />
+        <state vertical-scroll-proportion="-1.3975904" vertical-offset="3196" max-vertical-offset="3672">
+          <caret line="184" column="62" selection-start-line="184" selection-start-column="12" selection-end-line="184" selection-end-column="12" />
           <folding>
             <element signature="n#style#0;n#slide#0;n#slides#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#slide#1;n#slides#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#h2#0;n#article#0;n#slide#8;n#slides#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/2014-07-03-clojure1.md">
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.36263737" vertical-offset="0" max-vertical-offset="546">
+          <caret line="11" column="61" selection-start-line="11" selection-start-column="61" selection-end-line="11" selection-end-column="61" />
+          <folding />
         </state>
       </provider>
     </entry>
