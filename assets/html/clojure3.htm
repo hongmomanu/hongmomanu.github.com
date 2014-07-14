@@ -1,0 +1,681 @@
+<!--
+    Powered By nodePPT
+    version: 0.6.7
+    site: https://github.com/ksky521/nodePPT
+-->
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>clojure语法学习之基本函数 - By Jack</title>
+    <link rel="stylesheet" media="all" href="/css/nodeppt.css">
+    <link rel="stylesheet" media="only screen and (max-device-width: 480px)" href="/css/phone.css">
+    <link rel="stylesheet" href="/js/highlight/monokai.css">
+</head>
+<body>
+
+<slides id="container">
+    <slide class="slide fill" style="background-image:url('/img/bg.jpg	')"><hgroup>
+<h2>函数定义</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li><p>创建函数(一） </p>
+<ul class="build">
+<li><p>fn： fn是一个宏，用于定义一个简单的函数，如下 </p>
+<pre><code class="clojure">
+          user=&gt; (fn [] &quot;hello&quot;)  
+          #&lt;user$eval375$fn__376 user$eval375$fn__376@eabd2f&gt;  
+          user=&gt; ((fn [] &quot;hello&quot;))  
+          &quot;hello&quot;  
+          user=&gt; ((fn [x] x) &quot;hello&quot;) ; 带参数  
+          &quot;hello&quot;  
+          user=&gt; ((fn [x] (str &quot;hello &quot; x)) &quot;ithomer&quot;)
+          &quot;hello ithomer&quot;</code></pre>
+</li>
+</ul>
+</li>
+</ul>
+
+</article></slide>
+<slide class="slide fill" style="background-image:url('/img/bg.jpg	')"><hgroup>
+<h2>函数定义</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li><p>创建函数(二） </p>
+<ul class="build">
+<li><p>简短的函数可以使用#()，%表示唯一的参数；%1、%2 ..依次表示第1、2、..个参数；%&amp;表示所有参数，如下： </p>
+<pre><code class="clojure">
+          user=&gt; (#(/ % 3) 4)   ;结果为 4/3
+          4/3  
+          user=&gt; (#(/ %2 %1) 3 4)   ;结果为 4/3 
+          4/3  
+          user=&gt; (#(apply / %&amp;) 3 5 7)   ;结果为3/5/7  
+          3/35</code></pre>
+</li>
+</ul>
+</li>
+</ul>
+
+</article></slide>
+<slide class="slide fill" style="background-image:url('/img/bg.jpg	')"><hgroup>
+<h2>函数定义</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li><p>创建函数(三） </p>
+<ul class="build">
+<li><p>下面是几个定义函数的例子： </p>
+<pre><code class="clojure">
+          user=&gt; ((fn [x] (+ 1 x)) 3)  ;一个参数完成加1的功能  
+          4  
+          user=&gt; (#(+ 1 %) 3)  ;使用#符号完成加1的功能  
+          4  
+          user=&gt; ((fn [x y] (* x y)) 3 4)  ;两个参数，实现乘积的功能  
+          12  
+          user=&gt; (#(* %1 %2) 3 4)  ;使用#符号完成两个参数乘积的功能  
+          12</code></pre>
+</li>
+</ul>
+</li>
+</ul>
+
+</article></slide>
+<slide class="slide fill" style="background-image:url('/img/bg.jpg	')"><hgroup>
+<h2>函数定义</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li><p>创建函数(四） </p>
+<ul class="build">
+<li><p>defn： defn 宏用来定义一个函数。它的参数包括一个函数名字，一个可选的注释字符串，参数列表，然后一个方法体。而函数的返回值则是方法体里面最后一个表达式的值。所有的函数都会返回一个值， 只是有的返回的值是nil。  </p>
+<pre><code class="clojure">
+          user=&gt; (defn f1 [] &quot;hello ithomer&quot;)                ;定义无参函数  
+          #&#39;user/f1
+          user=&gt; (f1)
+          &quot;hello ithomer&quot;
+          user=&gt; (defn f2 [x] (format &quot;hello %s&quot; x))        ;定义一个参数函数 
+          #&#39;user/f2
+          user=&gt; (f2 &quot;ithomer&quot;)
+          &quot;hello ithomer&quot;</code></pre>
+</li>
+</ul>
+</li>
+</ul>
+
+</article></slide>
+<slide class="slide fill" style="background-image:url('/img/bg.jpg	')"><hgroup>
+<h2>函数定义</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li><p>创建函数(五） </p>
+<ul>
+<li><p>defn（续）{:&amp;.build}</p>
+<pre><code class="clojure">
+          user=&gt; (defn f3 [x y] (+ x y))                    ;定义两个参数相加的函数  
+          #&#39;user/f3  
+          user=&gt; (f3 2 4)  
+          6  
+          user=&gt; (defn f4 &quot;f4 function comment&quot; [] (println &quot;f4 function here&quot;))        ;带注释的函数  
+          #&#39;user/f4  
+          user=&gt; (f4)  
+          f4 function here
+          nil</code></pre>
+</li>
+</ul>
+</li>
+</ul>
+
+</article></slide>
+<slide class="slide fill" style="background-image:url('/img/bg.jpg	')"><hgroup>
+<h2>函数定义</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li><p>创建函数(六） </p>
+<ul class="build">
+<li><p>defn (续) </p>
+<pre><code class="clojure">      user=&gt; (doc f4)            ;通过doc查看函数注释信息  
+      user/f4
+      ([])
+        f4 function comment
+      nil
+      user=&gt; (defn f5 ([] (str &quot;no parameter&quot;))  
+                      ([name] (str &quot;my name is &quot; name)))        ;定义重载的函数（无参数、一个参数）
+      #&#39;user/f5  
+      user=&gt; (f5)                  ; 无参数
+      &quot;no parameter&quot;</code></pre>
+</li>
+</ul>
+</li>
+</ul>
+
+</article></slide>
+<slide class="slide fill" style="background-image:url('/img/bg.jpg	')"><hgroup>
+<h2>函数定义</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li><p>创建函数(七） </p>
+<ul class="build">
+<li><p>defn（续）</p>
+<pre><code class="clojure">      user=&gt; (f5 &quot;clojure&quot;)          ; 一个参数
+                  &quot;my name is clojure&quot;  
+
+      user=&gt; (defn f1 [&amp; a] (str a))        ;定义变参函数  
+      #&#39;user/f1 
+      user=&gt; (f1 1 2 3)  
+      &quot;(1 2 3)&quot;  
+      user=&gt; (defn m [&amp; arg] (str arg &quot;, size=&quot; (count arg)))        ;定义变参函数  
+      #&#39;user/m  
+      user=&gt; (m 1 2 3 4 5)  
+      &quot;(1 2 3 4 5), size=5&quot;</code></pre>
+</li>
+</ul>
+</li>
+</ul>
+
+</article></slide>
+<slide class="slide fill" style="background-image:url('/img/bg.jpg	')"><hgroup>
+<h2>函数定义</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li><p>创建函数(八） </p>
+<ul class="build">
+<li><p>defn（续）</p>
+<pre><code class="clojure">      user=&gt; (m &quot;a&quot; 1 2.3 -1)  
+      &quot;(\&quot;a\&quot; 1 2.3 -1), size=4&quot;  
+      user=&gt; (defn exp [a f1 b f2 c] (f2 (f1 a b) c))                ;函数作为参数  
+      #&#39;user/exp  
+      user=&gt; (exp 5 - 2 + 3)  
+      6  
+      user=&gt; (defn f [a] (fn [b] (- a b)))                        ;函数作为返回值  
+      #&#39;user/f  
+      user=&gt; ((f 7) 4)  
+      3</code></pre>
+</li>
+</ul>
+</li>
+</ul>
+
+</article></slide>
+<slide class="slide fill" style="background-image:url('/img/bg.jpg	')"><hgroup>
+<h2>函数定义</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li><p>创建函数(九） </p>
+<ul class="build">
+<li><p>defn-： defn-与defn功能一致，都是用于定义函数的，defn-定义的函数作用域是私有的，而defn定义的函数是公有的，如下：</p>
+<pre><code class="clojure">      user=&gt; (ns test1)                    ;ns的意思是切换到指定的命名空间，如果不存在，则新建该命名空间  
+      nil  
+      test1=&gt; (defn- foo [] &quot;hello ithomer&quot;)            ;定义私有函数foo，返回字符串world  
+      #&#39;test1/foo  
+      test1=&gt; (defn bar [] (str &quot;hello &quot; (foo)))        ;定义公有函数bar，并调用私有函数foo  
+      #&#39;test1/bar  
+      test1=&gt; (foo)            ;当前命名空间内调用foo函数  
+      &quot;hello ithomer&quot;</code></pre>
+</li>
+</ul>
+</li>
+</ul>
+
+</article></slide>
+<slide class="slide fill" style="background-image:url('/img/bg.jpg	')"><hgroup>
+<h2>函数定义</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li><p>创建函数(十） </p>
+<ul>
+<li><p>defn-（续）{:&amp;.build}</p>
+<pre><code class="clojure">      test1=&gt; (bar)            ;当前命名空间内调用bar函数  
+      &quot;hello hello ithomer&quot; 
+      test1=&gt; (ns test2)        ;切换到test2命名空间中  
+      nil  
+      test2=&gt; (test1/bar)        ;调用test1命名空间的bar函数，返回成功  
+      &quot;hello hello ithomer&quot;
+      test2=&gt; (test1/foo)        ;调用test1命名空间的foo函数，出现异常，提示test1的foo函数不是公开的  
+      java.lang.IllegalStateException: var: #&#39;test1/foo is not public (NO_SOURCE_FILE:79)</code></pre>
+</li>
+</ul>
+</li>
+</ul>
+
+</article></slide>
+<slide class="slide fill" style="background-image:url('/img/bg.jpg	')"><hgroup>
+<h2>函数定义</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li><p>创建函数(十一） </p>
+<ul class="build">
+<li><p>组合函数comp： 形如   ((comp f1 f2 .. fn) arg1 arg2 .. argn)<br>就是对参数从右到左组合执行所有函数，可以转变为： (f1 (f2 (.. (fn arg1 arg2 .. argn))))<br>举例如下： </p>
+<pre><code class="clojure">      user=&gt; (defn f [x y] (- (* x y)));使用defn定义函数方式  
+      #user/f  
+      user=&gt; (f 2 4)  
+      -8  
+      user=&gt; (def fc (comp - *));使用comp定义组合函数方式  
+      #user/fc  
+      user=&gt; (fc 2 4)  
+      -8</code></pre>
+</li>
+</ul>
+</li>
+</ul>
+
+</article></slide>
+<slide class="slide fill" style="background-image:url('/img/bg.jpg	')"><hgroup>
+<h2>函数定义</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li>创建函数(十二） <ul class="build">
+<li>偏函数partial： 形如 ((partial  f  arg1 arg2 .. argn)  arga argb .. argz)<br>就是执行： (f  arg1 arg2 .. argn  arga argb .. argz)<br>注意：偏函数的第一个参数是一个函数，后面至少有1个其他参数<br>partial函数称为“偏函数”或者“部分完整函数”，因为它是不完整的，定义也用def而不是defn。 </li>
+</ul>
+</li>
+</ul>
+
+</article></slide>
+<slide class="slide fill" style="background-image:url('/img/bg.jpg	')"><hgroup>
+<h2>函数定义</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li>创建函数(十三） <ul class="build">
+<li>偏函数partial（续） <pre><code class="clojure">          user=&gt; (defn f [n] (* n 10));正常函数  
+          #&#39;user/f  
+          user=&gt; (f 2)  
+          20  
+          user=&gt; (def fp (partial * 10));偏函数  
+          #&#39;user/fp  
+          user=&gt; (fp 2)  
+          20</code></pre>
+</li>
+</ul>
+</li>
+</ul>
+
+</article></slide>
+<slide class="slide fill" style="background-image:url('/img/bg.jpg	')"><hgroup>
+<h2>函数定义</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li><p>创建函数(十四） </p>
+<ul class="build">
+<li><p>constantly函数： constantly函数接受一个参数x，并返回一个变参函数，该变参函数无论参数是什么，都返回这个x值。 </p>
+<pre><code class="clojure">      user=&gt; (def consf (constantly &quot;a&quot;))  
+      #&#39;user/consf  
+      user=&gt; (consf 1 2 3)  
+      &quot;a&quot;  
+      user=&gt; (consf &quot;a&quot;)  
+      &quot;a&quot;  
+      user=&gt; (consf [1 2 3])  
+      &quot;a&quot;</code></pre>
+</li>
+</ul>
+</li>
+</ul>
+
+</article></slide>
+<slide class="slide fill" style="background-image:url('/img/bg.jpg	')"><hgroup>
+<h2>函数定义</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li><p>函数调用（一）  </p>
+<ul class="build">
+<li><p>-&gt;：宏-&gt; 我们也称为 “thread” 宏，它本质上是调用一系列的函数，前一个函数的返回值作为后一个函数的参数，返回最后一次函数调用的值，比如下面两行代码的作用是一样的： </p>
+<pre><code class="clojure">
+      user=&gt; (.replace (.toUpperCase &quot;a b c d&quot;) &quot;A&quot; &quot;X&quot;)
+      &quot;X B C D&quot;
+      user=&gt; (-&gt; &quot;a b c d&quot; .toUpperCase (.replace &quot;A&quot; &quot;X&quot;))
+      &quot;X B C D&quot;</code></pre>
+</li>
+</ul>
+</li>
+</ul>
+
+</article></slide>
+<slide class="slide fill" style="background-image:url('/img/bg.jpg	')"><hgroup>
+<h2>函数定义</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li><p>函数调用（二）  </p>
+<ul class="build">
+<li><p>-&gt;&gt;： 后面的函数迭代使用之前的函数结果作为最后一个参数，返回最后一次函数调用的值，试看下面两个语句：  </p>
+<pre><code class="clojure">
+      user=&gt; (-&gt; 10 (/ 3))      ; 10/3  10作为/函数第一个参数  
+      10/3
+      user=&gt; (-&gt;&gt; 10 (/ 3))     ; 3/10  10作为/函数最后一个参数  
+      3/10</code></pre>
+</li>
+</ul>
+</li>
+</ul>
+
+</article></slide>
+<slide class="slide fill" style="background-image:url('/img/bg.jpg	')"><hgroup>
+<h2>函数定义</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li><p>函数调用（三）  </p>
+<ul class="build">
+<li><p>eval： eval解析表达式数据结构（不是字符串），并返回结果。  </p>
+<pre><code class="clojure">
+      user=&gt; (eval (str &quot;(println 1)&quot;))            ;str函数返回字符串
+      &quot;(println 1)&quot;
+      user=&gt; (read-string &quot;(println 1)&quot;)            ;而read-string函数用于从字符串中读取数据结构
+      (println 1)
+      user=&gt; (eval (read-string &quot;(println 1)&quot;))  
+      1
+      nil</code></pre>
+</li>
+</ul>
+</li>
+</ul>
+
+</article></slide>
+<slide class="slide fill" style="background-image:url('/img/bg.jpg	')"><hgroup>
+<h2>函数定义</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li><p>函数调用（四）  </p>
+<ul class="build">
+<li><p>apply函数： apply 把给定的集合里面的所有元素一次性地给指定的函数作为参数调用，然后返回这个函数的返回值。可以把apply看作是SQL里面的聚合函数，如下：   </p>
+<pre><code class="clojure">
+      user=&gt; (apply + [1 2 3 4])  
+      10</code></pre>
+</li>
+</ul>
+</li>
+</ul>
+
+</article></slide>
+<slide class="slide fill" style="background-image:url('/img/bg.jpg	')"><hgroup>
+<h2>函数定义</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li><p>函数检查   </p>
+<ul class="build">
+<li><p>fn?： fn?用于检查给定的参数是否为函数，是返回true，否则返回false，如：    </p>
+<pre><code class="clojure">
+      user=&gt; (fn? #(&quot;test&quot;))  
+      true
+      user=&gt; (fn? 1)  
+      false
+      user=&gt; (fn? nil)
+      false
+      user=&gt; (fn? +)</code></pre>
+</li>
+</ul>
+</li>
+</ul>
+
+</article></slide>
+<slide class="slide fill" style="background-image:url('/img/bg.jpg	')"><hgroup>
+<h2>集合函数</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li><p>何为集合   </p>
+<ul class="build">
+<li><p>集合，就是我们在基本语法上面说的序列，Map这些存放多个数据的数据结构总称    </p>
+<pre><code class="clojure">
+      user=&gt; [1 2 3]          ;序列是集合
+      [1 2 3]
+      user=&gt; {:name 1 :sex 2}  ;Map 也是集合  
+      {:name 1 :sex 2}</code></pre>
+</li>
+</ul>
+</li>
+</ul>
+
+</article></slide>
+<slide class="slide fill" style="background-image:url('/img/bg.jpg	')"><hgroup>
+<h2>集合函数</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li><p>count函数   </p>
+<ul class="build">
+<li><p>count 返回集合里面的元素个数，比如：    </p>
+<pre><code class="clojure">
+      (count [19 &quot;yellow&quot; true]) ; -&gt; 3</code></pre>
+</li>
+</ul>
+</li>
+</ul>
+
+</article></slide>
+<slide class="slide fill" style="background-image:url('/img/bg.jpg	')"><hgroup>
+<h2>集合函数</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li><p>conj函数   </p>
+<ul class="build">
+<li><p>conj 函数是 conjoin的缩写, 添加一个元素到集合里面去:    </p>
+<pre><code class="clojure">
+      (conj [19 &quot;yellow&quot; true] &quot;name&quot;) ; -&gt; [19 &quot;yellow&quot; true &quot;name&quot;]</code></pre>
+</li>
+</ul>
+</li>
+</ul>
+
+</article></slide>
+<slide class="slide fill" style="background-image:url('/img/bg.jpg	')"><hgroup>
+<h2>集合函数</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li><p>reverse函数   </p>
+<ul class="build">
+<li><p>reverse 函数是把集合里面的元素反转.    </p>
+<pre><code class="clojure">
+      (reverse [2 4 7]) ; -&gt; (7 4 2)</code></pre>
+</li>
+</ul>
+</li>
+</ul>
+
+</article></slide>
+<slide class="slide fill" style="background-image:url('/img/bg.jpg	')"><hgroup>
+<h2>集合函数</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li>map函数   <ul class="build">
+<li>map 对一个给定的集合里面的每一个元素调用一个指定的方法，然后这些方法的所有返回值构成一个新的集合（LazySeq）返回。<br>这个指定了函数也可以有多个参数，那么你就需要给map多个集合了。<br>如果这些给的集合的个数不一样，那么执行这个函数的次数取决于个数最少的集合的长度。    </li>
+</ul>
+</li>
+</ul>
+
+</article></slide>
+<slide class="slide fill" style="background-image:url('/img/bg.jpg	')"><hgroup>
+<h2>集合函数</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li><p>map函数例子   </p>
+<pre><code class="clojure">      (map #(+ % 3) [2 4 7]) ; -&gt; (5 7 10)
+      (map + [2 4 7] [5 6] [1 2 3 4]) ;  -&gt; (8 12)</code></pre>
+</li>
+</ul>
+
+</article></slide>
+<slide class="slide fill" style="background-image:url('/img/bg.jpg	')"><hgroup>
+<h2>集合函数</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li><p>apply函数   </p>
+<ul class="build">
+<li><p>apply 把给定的集合里面的所有元素一次性地给指定的函数作为参数调用，然后返回这个函数的返回值。<br>所以apply与map的区别就是map返回的还是一个集合，<br>而apply返回的是一个元素， 可以把apply看作是SQL里面的聚合函数。</p>
+<pre><code class="clojure">
+       (apply + [2 4 7]); -&gt; 13</code></pre>
+</li>
+</ul>
+</li>
+</ul>
+
+</article></slide>
+<slide class="slide fill" style="background-image:url('/img/bg.jpg	')"><hgroup>
+<h2>集合函数</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li><p>取集合中元素（一）   </p>
+<ul class="build">
+<li><p>有很多函数从一个集合里面获取一个元素，比如：。</p>
+<pre><code class="clojure">
+       (def stooges [&quot;Moe&quot; &quot;Larry&quot; &quot;Curly&quot; &quot;Shemp&quot;])
+       (first stooges) ; -&gt; &quot;Moe&quot;
+       (second stooges) ; -&gt; &quot;Larry&quot;
+       (last stooges) ; -&gt; &quot;Shemp&quot;
+       (nth stooges 2) ; indexes start at 0 -&gt; &quot;Curly&quot;</code></pre>
+</li>
+</ul>
+</li>
+</ul>
+
+</article></slide>
+<slide class="slide fill" style="background-image:url('/img/bg.jpg	')"><hgroup>
+<h2>集合函数</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li><p>取集合中元素（二）   </p>
+<ul class="build">
+<li><p>也有一些函数从一个集合里面获取多个元素，比如：</p>
+<pre><code class="clojure">
+       (next stooges) ; -&gt; (&quot;Larry&quot; &quot;Curly&quot; &quot;Shemp&quot;)
+       (butlast stooges) ; -&gt; (&quot;Moe&quot; &quot;Larry&quot; &quot;Curly&quot;)
+       (drop-last 2 stooges) ; -&gt; (&quot;Moe&quot; &quot;Larry&quot;)
+       (nthnext stooges 2) ; -&gt; (&quot;Curly&quot; &quot;Shemp&quot;)</code></pre>
+</li>
+</ul>
+</li>
+</ul>
+
+</article></slide>
+<slide class="slide fill" style="background-image:url('/img/bg.jpg	')"><hgroup>
+<h2>集合函数</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li><p>into 函数   </p>
+<ul class="build">
+<li><p>into 函数把两个list里面的元素合并成一个新的大list</p>
+<pre><code class="clojure">
+       (def kids-of-mike &#39;(&quot;Greg&quot; &quot;Peter&quot; &quot;Bobby&quot;))
+       (def kids-of-carol &#39;(&quot;Marcia&quot; &quot;Jan&quot; &quot;Cindy&quot;))
+       (def brady-bunch (into kids-of-mike kids-of-carol))
+       (println brady-bunch) ; -&gt; (Cindy Jan Marcia Greg Peter Bobby)</code></pre>
+</li>
+</ul>
+</li>
+</ul>
+
+</article></slide>
+<slide class="slide fill" style="background-image:url('/img/bg.jpg	')"><hgroup>
+<h2>作业</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li>在作业一的基础上，根据输入打印出名字的镜像。   </li>
+<li>如输入 jack，打印出Hello, jack ! i am kcaj.</li>
+<li>作业就两三行代码，也很简单，不会占用大家多少时间，大家写好，发到我邮箱里面 hongmomanu@163.com，时间截至，下一堂课之前        </li>
+</ul>
+
+</article></slide>
+    <slide class="slide thank-you-slide segue nobackground">
+        <article class="flexbox vleft auto-fadein">
+            <h2>Q &amp; A</h2>
+            <h3>&lt;Thank You!&gt;</h3>
+        </article>
+    </slide>
+    <slide class="slide logoslide dark nobackground">
+        <article class="flexbox vcenter">
+          <h2 style="color: white;">Powered By nodePPT v0.6.7</h2>
+        </article>
+      </slide>
+    <div class="slideTip" id="tip"></div>
+</slides>
+<canvas id="drawBoard" class="draw-board" width="900" height="700"></canvas>
+<div class="progress"><span id="progress"></span></div>
+<script src="/js/mixjs/lib/mix.0.3.0.min.js"></script>
+<script>
+var base = location.protocol + '//' + location.host + '/';
+MixJS.config({
+    baseURL:base + 'js/'
+});
+MixJS.use('event/broadcast', function($){
+    $.loadJS('/js/nodeppt.js',function(){
+        Slide.init({
+            containerID: 'container',
+            drawBoardID: 'drawBoard',
+            slideClass: '.slide',
+            buildClass: '.build',
+            progressID: 'progress',
+            transition: 'cards',
+            width: 1100,
+            dir: '/js/',
+            
+            //打开下面的注释就开启postMessage方式
+            //访问网址127.0.0.1:8080/ppt/demo#client
+            control:{
+                type: 'postMessage'
+            },
+            
+            tipID: 'tip'
+        });
+    }).loadJS('/js/highlight/highlight.pack.js',function(){
+
+        hljs.tabReplace = '  ';
+        hljs.initHighlightingOnLoad();
+    });
+});
+</script>
+<script src="/js/demo.js"></script>
+<link rel="stylesheet" href="/css/demo.css">
+</body>
+</html>

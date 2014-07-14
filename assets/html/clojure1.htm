@@ -23,7 +23,7 @@
 <ul class="build">
 <li><p>Clojure 是一套现代的Lisp语言的动态语言版，它是一个函数式多用途的语言，其语法和其他的Lisp一样，都是建立在 S-expression 之上，即”全是括号，前缀表达式”的语言</p>
 </li>
-<li><p>Clojure可以执行于Java虚拟机（JVM）引擎之上。</p>
+<li><p>Clojure 语言在直觉和观感上比历史上的lisp更易于阅读. 你会发现虽然仍有各种括号,但是代码容易读和写。</p>
 </li>
 <li><p>与其他Lisp一样，Clojure认为代码即数据。</p>
 </li>
@@ -44,8 +44,154 @@
 </li>
 <li><p>Clojure天然的并发特性 </p>
 </li>
-<li><p>Clojure主要目标让编程变得简单，安全，可靠</p>
+<li><p>Clojure主要目标让编程变得灵活，简单，安全，可靠，强大。</p>
 </li>
+<li><p>支持懒惰计算（lazy evaluation）和引用透明性。</p>
+</li>
+</ul>
+
+</article></slide>
+<slide class="slide"><hgroup>
+<h2>引用网上的一段话，大家读一读，也许会有感觉</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li>函数式编程是一种强调函数必须被当成第一等公民对待， 并且这些函数是“纯”的编程方式。</li>
+<li>这是受<a href="http://en.wikipedia.org/wiki/Lambda_calculus">lambda</a>表达式启发的。</li>
+<li>纯函数的意思是同一个函数对于同样的参数，它的返回值始终是一样的 — 而不会因为前一次调用修改了某个全局变量而使得后面的调用和前面调用的结果不一样。</li>
+<li>这使得这种程序十分容易理解、调试、测试。它们没有副作用 — 修改某些全局变量， 进行一些IO操作（文件IO和数据库）。</li>
+<li>状态被维护在方法的参数上面， 而这些参数被存放在栈(stack)上面（通常通过递归调用）， 而不是被维护在全局的堆（heap）上面。</li>
+<li>这使得函数可以被执行多次而不用担心它会更改什么全局的状态。</li>
+</ul>
+
+</article></slide>
+<slide class="slide"><hgroup>
+<h2>网上一段话（续）</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li><p>在实际生活中，我们的程序是需要一定的副作用的。Haskel的主力开发Simon Peyton-Jones曾经曰。</p>
+</li>
+<li><p>“到最后，任何程序都需要修改状态，一个没有副作用的程序对我们来说只是一个黑盒， 你唯一可以感觉到的是：这个黑盒在变热。。”</p>
+</li>
+<li><p>问题的关键是我们要控制副作用的范围， 清晰地定位它们，避免这种副作用在代码里面到处都是。</p>
+</li>
+<li>把函数当作“第一公民”的语言可以把函数赋值给一个变量，作为参数来调用别的函数， 同时一个函数也可以返回一个函数。</li>
+<li>可以把函数作为返回值的能力使得我们选择之后程序的行为。</li>
+</ul>
+
+</article></slide>
+<slide class="slide"><hgroup>
+<h2>网上一段话（续）</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li>接受函数作为参数的函数我们称为“高阶函数”。</li>
+<li>从某个方面来说，高阶函数的行为是由传进来的函数来配置的，这个函数可以被执行任意次，也可以从不执行。</li>
+<li>函数式语言里面的数据是不可修改的。</li>
+<li>这使得多个线程可以在不用锁的情况下并发地访问这个数据。</li>
+<li>因为数据不会改变，所以根本不需要上锁。</li>
+<li>随着多核处理器的越发流行，函数式语言对并发语言的简化可能是它最大的优点。</li>
+<li>许多人觉得函数式语言并不比面向对象的语言难，它们只是风格不同罢了。</li>
+</ul>
+
+</article></slide>
+<slide class="slide fill" style="background-image:url('../img/bg.jpg	')"><hgroup>
+<h2>就几个例子简单说说(一)</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li><p>不可变数据</p>
+<pre><code class="clojure">
+       (def a &#39;( 1 2))
+       (def b (cons 0 a))
+       (println a b)</code></pre>
+</li>
+</ul>
+
+</article></slide>
+<slide class="slide fill" style="background-image:url('../img/bg.jpg	')"><hgroup>
+<h2>就几个例子简单说说(二)</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li><p>高级函数，一个函数可以作为另一个函数的输入</p>
+<pre><code class="clojure">
+       (defn my-func [a b]
+
+          (b a )
+       )
+       (my-func &quot;hello jack !&quot;  println)</code></pre>
+</li>
+</ul>
+
+</article></slide>
+<slide class="slide fill" style="background-image:url('../img/bg.jpg	')"><hgroup>
+<h2>就几个例子简单说说(三)</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li><p>高级函数，一个函数可以作为另一个函数的输出</p>
+<pre><code class="clojure">
+       (defn my-func-a [s]
+
+          (str &quot;func a: &quot;  s)
+       )
+       (defn my-func-b [s]
+
+         (str &quot;func b: &quot;  s)
+       )
+       (defn my-func-out [n]
+        (cond 
+          (&gt; n 0) my-func-a
+          :else my-func-b
+        )
+       )
+       (println ((my-func-out 0) &quot;高阶函数测试&quot;) )</code></pre>
+</li>
+</ul>
+
+</article></slide>
+<slide class="slide fill" style="background-image:url('../img/bg.jpg	')"><hgroup>
+<h2>就几个例子简单说说(四)</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li><p>懒惰计算</p>
+<pre><code class="clojure">       (println (take 10 (iterate inc 1)))</code></pre>
+</li>
+</ul>
+
+</article></slide>
+<slide class="slide fill" style="background-image:url('../img/bg.jpg	')"><hgroup>
+<h2>关于引用透明性</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li><p>相同的输入一定会返回相同的输出，即：一个函数的计算过程不会因为任何外部环境的改变而发生变化</p>
+<pre><code class="clojure">       (println (take 10 (iterate inc 1)))</code></pre>
+</li>
+</ul>
+
+</article></slide>
+<slide class="slide fill" style="background-image:url('../img/bg.jpg	')"><hgroup>
+<h2>处理数据，用函数式会更加简洁</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li><p>遍历列表，提取每个奇数并都乘以2,最后求和打印出来</p>
+<pre><code class="clojure">           (println (reduce + (map #(* 2 %) (filter odd? (range 0 4)))))</code></pre>
+</li>
+<li>大家想一想，如果用java写，要多少行代码，需要声明多少个中间变量。</li>
 </ul>
 
 </article></slide>
@@ -105,28 +251,35 @@
 
 </article></slide>
 <slide class="slide"><hgroup>
-<h2>Leiningen简单使用例子</h2>
+<h2>Leiningen简单使用例子(一)</h2>
 
 </hgroup><article>
 
 <ul class="build">
 <li><p>创建新项目</p>
 <pre><code class="bash">
-       lein new luminus mytestapp</code></pre>
+       lein new app hello</code></pre>
 </li>
 <li><p>运行一个REPL</p>
 <pre><code class="bash">
           lein repl</code></pre>
 </li>
+</ul>
+
+</article></slide>
+<slide class="slide"><hgroup>
+<h2>Leiningen简单使用例子(二)</h2>
+
+</hgroup><article>
+
+<ul>
 <li><p>运行项目</p>
 <pre><code class="bash">
-       lein ring server-headless</code></pre>
+       lein run</code></pre>
 </li>
 <li><p>部署编译并打包项目</p>
 <pre><code class="bash">
-       lein ring uberjar   //一个独立运行的jar包
-
-       lein ring uberwar   //可发布在任何java容器下的war包 ，tomcat jetty weblogic等</code></pre>
+       lein uberjar   //一个独立运行的jar包</code></pre>
 </li>
 </ul>
 
@@ -137,9 +290,26 @@
 </hgroup><article>
 
 <ul class="build">
-<li><p>如果你精通eclipse，netbean甚至其它编辑器，请坚持你的选择。</p>
+<li><p>idea是一个和 eclipse，netbeans等集成环境类似的工具，只是性能更好一点。</p>
 </li>
-<li><p>如果你没有找到一个满意的idea，可以选择<a href="http://www.jetbrains.com/idea/download/">IntelIdea下载</a></p>
+<li><p>idea下载地址，可以选择<a href="http://www.jetbrains.com/idea/download/">IntelIdea下载</a></p>
+</li>
+</ul>
+
+</article></slide>
+<slide class="slide"><hgroup>
+<h2>课后作业</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li><p>下载安装Leiningen。</p>
+</li>
+<li><p>下载安装idea。</p>
+</li>
+<li><p>新建一个应用项目，并导入到idea</p>
+</li>
+<li><p>运行项目根据提示输入打印内容。</p>
 </li>
 </ul>
 
