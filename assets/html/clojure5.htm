@@ -1,0 +1,500 @@
+<!--
+    Powered By nodePPT
+    version: 0.6.7
+    site: https://github.com/ksky521/nodePPT
+-->
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>clojure语法学习之web框架学习 - By Jack</title>
+    <link rel="stylesheet" media="all" href="../css/nodeppt.css">
+    <link rel="stylesheet" media="only screen and (max-device-width: 480px)" href="../css/phone.css">
+    <link rel="stylesheet" href="../js/highlight/monokai.css">
+</head>
+<body>
+
+<slides id="container">
+    <slide class="slide fill" style="background-image:url('../img/bg.jpg	')"><hgroup>
+<h2>Luminus 框架介绍</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li><p>什么是Luminus </p>
+<ul class="build">
+<li><p>&quot;&quot; </p>
+<pre><code class="text">
+          Luminus是基于一组轻量级库的微架构。它的目的是提供一个健壮的，可扩展的，易于使用的平台。
+          Luminus使程序员可以专注于开发你的应用程序，减少web开发的复杂度。</code></pre>
+</li>
+</ul>
+</li>
+</ul>
+
+</article></slide>
+<slide class="slide fill" style="background-image:url('../img/bg.jpg	')"><hgroup>
+<h2>Luminus 框架介绍（续）</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li><p>新建Luminus项目，在终端下执行如下命令 </p>
+<ul class="build">
+<li><p>&quot;&quot; </p>
+<pre><code class="bash">
+          lein new luminus myappname</code></pre>
+</li>
+</ul>
+</li>
+</ul>
+
+</article></slide>
+<slide class="slide fill" style="background-image:url('../img/bg.jpg	')"><hgroup>
+<h2>Luminus 框架介绍（续）</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li><p>运行Luminus项目，在终端下执行如下命令 </p>
+<ul class="build">
+<li><p>&quot;&quot; </p>
+<pre><code class="bash">
+          cd myappname
+          lein ring server  
+          or lein ring server-headless
+          or lein ring server-headless 8000</code></pre>
+</li>
+</ul>
+</li>
+</ul>
+
+</article></slide>
+<slide class="slide fill" style="background-image:url('../img/bg.jpg	')"><hgroup>
+<h2>定义 routes</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li><p>所有标准的 HTTP 请求入口，都是由routes定义，如get,post 等方法 </p>
+<ul class="build">
+<li><p>&quot;&quot; </p>
+<pre><code class="clojure">
+          (defroutes app-routes
+            (GET &quot;/&quot; [] &quot;Hello World!&quot;)
+            (POST &quot;/hello&quot; []  &quot; Hello post&quot; )
+            )</code></pre>
+</li>
+</ul>
+</li>
+</ul>
+
+</article></slide>
+<slide class="slide fill" style="background-image:url('../img/bg.jpg	')"><hgroup>
+<h2>定义 routes （续）</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li><p>获取参数 </p>
+<ul class="build">
+<li><p>&quot;&quot; </p>
+<pre><code class="clojure">
+          (defroutes app-routes
+            (GET &quot;/&quot; [name] （str &quot;Hello World!&quot; name))
+            )</code></pre>
+</li>
+</ul>
+</li>
+</ul>
+
+</article></slide>
+<slide class="slide fill" style="background-image:url('../img/bg.jpg	')"><hgroup>
+<h2>返回数据</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li><p>返回json </p>
+<ul class="build">
+<li><p>&quot;&quot; </p>
+<pre><code class="clojure">
+          (defroutes app-routes
+            (GET &quot;/hellojson&quot; [name] (resp/json {:response &quot;ok&quot;}))
+            (GET &quot;/hellojson&quot; [name] (resp/json [{:name &quot;ok&quot;} {:name &quot;all right&quot;}]))
+            )</code></pre>
+</li>
+</ul>
+</li>
+</ul>
+
+</article></slide>
+<slide class="slide fill" style="background-image:url('../img/bg.jpg	')"><hgroup>
+<h2>返回数据(续)</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li><p>返回jsonp </p>
+<ul class="build">
+<li><p>&quot;&quot; </p>
+<pre><code class="clojure">
+          (defroutes app-routes
+            (GET &quot;/hellojsonp&quot; [name] (resp/jsonp name {:response &quot;ok&quot;}))
+            (GET &quot;/hellojsonp&quot; [name] (resp/jsonp name [{:name &quot;ok&quot;} {:name &quot;all right&quot;}]))
+            )</code></pre>
+</li>
+</ul>
+</li>
+</ul>
+
+</article></slide>
+<slide class="slide fill" style="background-image:url('../img/bg.jpg	')"><hgroup>
+<h2>返回数据（续）</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li><p>返回xml </p>
+<ul class="build">
+<li><p>&quot;&quot; </p>
+<pre><code class="clojure">
+          (defroutes app-routes
+            (GET &quot;/helloxml&quot; [name] (resp/xml &quot;&lt;foo&gt;&lt;name value=\&quot;same\&quot;&gt;&lt;/name&gt;&lt;/foo&gt;&quot;))
+            )</code></pre>
+</li>
+</ul>
+</li>
+</ul>
+
+</article></slide>
+<slide class="slide fill" style="background-image:url('../img/bg.jpg	')"><hgroup>
+<h2>数据库操作</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li><p>添加依赖 </p>
+<ul class="build">
+<li><p>首先在project.clj中添加 Korma 依赖 : </p>
+<pre><code class="bash">
+          [korma &quot;0.3.2&quot;]</code></pre>
+</li>
+<li><p>其次在project.clj中添加 数据库jdbc 依赖，如连接sqlite数据库 :  {:&amp;.build}</p>
+<pre><code class="bash">
+          [org.xerial/sqlite-jdbc &quot;3.7.15-M1&quot;]</code></pre>
+</li>
+</ul>
+</li>
+</ul>
+
+</article></slide>
+<slide class="slide fill" style="background-image:url('../img/bg.jpg	')"><hgroup>
+<h2>数据库操作（续）</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li><p>配置数据库连接 </p>
+<ul class="build">
+<li><p>新建models文件夹，新建schema.clj文件，输入如下配置（sqlite连接）: </p>
+<pre><code class="clojure">
+          (def db-spec-sqlite {:classname &quot;org.sqlite.JDBC&quot;
+                               :subprotocol &quot;sqlite&quot;
+                               :subname (str datapath db-store-sqlite)
+                               })</code></pre>
+</li>
+</ul>
+</li>
+</ul>
+
+</article></slide>
+<slide class="slide fill" style="background-image:url('../img/bg.jpg	')"><hgroup>
+<h2>数据库操作（续）</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li><p>korma语法简介（一） </p>
+<ul class="build">
+<li><p>定义一个数据源: </p>
+<pre><code class="clojure">          (defdb db schema/db-spec-sqlite)</code></pre>
+</li>
+</ul>
+</li>
+</ul>
+
+</article></slide>
+<slide class="slide fill" style="background-image:url('../img/bg.jpg	')"><hgroup>
+<h2>数据库操作（续）</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li><p>korma语法简介（二） </p>
+<ul class="build">
+<li><p>定义一个表model: </p>
+<pre><code class="clojure">          (defentity users
+            (database db)
+            )</code></pre>
+</li>
+</ul>
+</li>
+</ul>
+
+</article></slide>
+<slide class="slide fill" style="background-image:url('../img/bg.jpg	')"><hgroup>
+<h2>数据库操作（续）</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li><p>korma语法简介（三） </p>
+<ul class="build">
+<li><p>增: </p>
+<pre><code class="clojure">          (insert users
+            (values {:name &quot;doe&quot;}))</code></pre>
+</li>
+</ul>
+</li>
+</ul>
+
+</article></slide>
+<slide class="slide fill" style="background-image:url('../img/bg.jpg	')"><hgroup>
+<h2>数据库操作（续）</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li><p>korma语法简介（四） </p>
+<ul class="build">
+<li><p>删: </p>
+<pre><code class="clojure">          (delete users
+            (where {:id 1}))</code></pre>
+</li>
+</ul>
+</li>
+</ul>
+
+</article></slide>
+<slide class="slide fill" style="background-image:url('../img/bg.jpg	')"><hgroup>
+<h2>数据库操作（续）</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li><p>korma语法简介（五） </p>
+<ul class="build">
+<li><p>改: </p>
+<pre><code class="clojure">
+            (update users
+            (set-fields data)
+            (where {:id id}))</code></pre>
+</li>
+</ul>
+</li>
+</ul>
+
+</article></slide>
+<slide class="slide fill" style="background-image:url('../img/bg.jpg	')"><hgroup>
+<h2>数据库操作（续）</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li><p>korma语法简介（六） </p>
+<ul class="build">
+<li><p>查: </p>
+<pre><code class="clojure">       (select users
+           (where {:username &quot;name&quot;})
+           )</code></pre>
+</li>
+</ul>
+</li>
+</ul>
+
+</article></slide>
+<slide class="slide fill" style="background-image:url('../img/bg.jpg	')"><hgroup>
+<h2>数据库操作（续）</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li>korma语法简介（七） <ul class="build">
+<li>更多资料，详细用法，请看官网<a href="http://sqlkorma.com/docs">korma 官网api文档</a>: </li>
+</ul>
+</li>
+</ul>
+
+</article></slide>
+<slide class="slide fill" style="background-image:url('../img/bg.jpg	')"><hgroup>
+<h2>数据库操作（续）</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li><p>新建中间逻辑操作层 </p>
+<ul class="build">
+<li><p>新建controller文件夹，新建home.clj文件（这里名字和routes统一，目的是为了使层次对应清晰），在其中写入业务操作逻辑: </p>
+<pre><code class="clojure">
+          (defn create-user [username]
+            (resp/json {:results (db/create-user {:username username})})
+            )
+
+            (defn select-user [username]
+                              (resp/json {:results (db/create-user {:username username})})
+                              )</code></pre>
+</li>
+</ul>
+</li>
+</ul>
+
+</article></slide>
+<slide class="slide fill" style="background-image:url('../img/bg.jpg	')"><hgroup>
+<h2>数据库操作（续）</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li><p>新建数据库操作层 </p>
+<ul class="build">
+<li><p>在models文件夹中，新建新建db.clj文件，与controller中的方法对应，写入如下语句: </p>
+<pre><code class="clojure">          (defn create-user [user]
+            (insert users
+                    (values user))
+            )
+            (defn user-list [username]
+              (select users
+                (where {:username [like (str &quot;%&quot; station &quot;%&quot;)]})
+                )
+              )</code></pre>
+</li>
+</ul>
+</li>
+</ul>
+
+</article></slide>
+<slide class="slide fill" style="background-image:url('../img/bg.jpg	')"><hgroup>
+<h2>数据库操作（续）</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li><p>定义访问入口 </p>
+<ul class="build">
+<li><p>好，万事具备，此时我们在routes定义访问入口即可: </p>
+<pre><code class="clojure">
+          (GET &quot;/helloadduser&quot; [username] (home/create-user username))
+          (GET &quot;/hellouselistr&quot; [username] (home/select-user username))</code></pre>
+</li>
+</ul>
+</li>
+</ul>
+
+</article></slide>
+<slide class="slide fill" style="background-image:url('../img/bg.jpg	')"><hgroup>
+<h2>数据库操作（续）</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li><p>其它数据库连接配置 </p>
+<ul class="build">
+<li><p>本次演示的是sqlite数据库访问，其它数据库与此类似，如mysql: </p>
+<pre><code class="clojure">
+          (def db-mysql {:subprotocol &quot;mysql&quot;
+                         :subname &quot;//10.33.5.103:3306/jopens&quot;
+                         :user &quot;root&quot;
+                         :password &quot;rootme&quot;
+                         })</code></pre>
+</li>
+<li>其它数据库如postgis sqlserver oracle 等，我已经写好模板，详看<a href="https://github.com/hongmomanu/hvit/blob/master/src/hvit/models/schema.clj">hvit</a>    </li>
+</ul>
+</li>
+</ul>
+
+</article></slide>
+<slide class="slide fill" style="background-image:url('../img/bg.jpg	')"><hgroup>
+<h2>项目发布</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li><p>通过lein 打包 </p>
+<ul class="build">
+<li><p>打包成独立运行的jar包: </p>
+<pre><code class="bash">          lein ring uberjar</code></pre>
+</li>
+<li><p>打包成web容器应用项目，如tomcat jetty weblogic 等</p>
+<pre><code class="bash">         lein ring uberwar</code></pre>
+</li>
+</ul>
+</li>
+</ul>
+
+</article></slide>
+<slide class="slide fill" style="background-image:url('../img/bg.jpg	')"><hgroup>
+<h2>作业</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li>新建一个web项目 </li>
+<li>将前面作业的方法发布成web接口</li>
+<li>补全增删改查功能（课件中已经完成增，查功能）</li>
+<li>效果演示</li>
+</ul>
+
+</article></slide>
+    <slide class="slide thank-you-slide segue nobackground">
+        <article class="flexbox vleft auto-fadein">
+            <h2>Q &amp; A</h2>
+            <h3>&lt;Thank You!&gt;</h3>
+        </article>
+    </slide>
+    <slide class="slide logoslide dark nobackground">
+        <article class="flexbox vcenter">
+          <h2 style="color: white;">Powered By nodePPT v0.6.7</h2>
+        </article>
+      </slide>
+    <div class="slideTip" id="tip"></div>
+</slides>
+<canvas id="drawBoard" class="draw-board" width="900" height="700"></canvas>
+<div class="progress"><span id="progress"></span></div>
+<script src="../js/mixjs/lib/mix.0.3.0.min.js"></script>
+<script>
+var base = location.protocol + '//' + location.host +  '/assets/';
+MixJS.config({
+    baseURL:base + 'js/'
+});
+MixJS.use('event/broadcast', function($){
+    $.loadJS('../js/nodeppt.js',function(){
+        Slide.init({
+            containerID: 'container',
+            drawBoardID: 'drawBoard',
+            slideClass: '.slide',
+            buildClass: '.build',
+            progressID: 'progress',
+            transition: 'cards',
+            width: 1100,
+            dir: '../js/',
+            
+            //打开下面的注释就开启postMessage方式
+            //访问网址127.0.0.1:8080/ppt/demo#client
+            control:{
+                type: 'postMessage'
+            },
+            
+            tipID: 'tip'
+        });
+    }).loadJS('../js/highlight/highlight.pack.js',function(){
+
+        hljs.tabReplace = '  ';
+        hljs.initHighlightingOnLoad();
+    });
+});
+</script>
+<script src="../js/demo.js"></script>
+<link rel="stylesheet" href="../css/demo.css">
+</body>
+</html>
