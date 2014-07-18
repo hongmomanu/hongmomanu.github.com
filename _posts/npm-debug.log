@@ -1,0 +1,343 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/node', '/usr/bin/npm', 'install', '-g', 'nodeppt' ]
+2 info using npm@1.4.9
+3 info using node@v0.10.28
+4 verbose cache add [ 'nodeppt', null ]
+5 verbose cache add name=undefined spec="nodeppt" args=["nodeppt",null]
+6 verbose parsed url { protocol: null,
+6 verbose parsed url   slashes: null,
+6 verbose parsed url   auth: null,
+6 verbose parsed url   host: null,
+6 verbose parsed url   port: null,
+6 verbose parsed url   hostname: null,
+6 verbose parsed url   hash: null,
+6 verbose parsed url   search: null,
+6 verbose parsed url   query: null,
+6 verbose parsed url   pathname: 'nodeppt',
+6 verbose parsed url   path: 'nodeppt',
+6 verbose parsed url   href: 'nodeppt' }
+7 silly lockFile 0cc041a0-nodeppt nodeppt
+8 verbose lock nodeppt /home/jack/.npm/0cc041a0-nodeppt.lock
+9 silly lockFile 0cc041a0-nodeppt nodeppt
+10 silly lockFile 0cc041a0-nodeppt nodeppt
+11 verbose addNamed [ 'nodeppt', '' ]
+12 verbose addNamed [ null, '*' ]
+13 silly lockFile 2e1d4dbd-nodeppt nodeppt@
+14 verbose lock nodeppt@ /home/jack/.npm/2e1d4dbd-nodeppt.lock
+15 silly addNameRange { name: 'nodeppt', range: '*', hasData: false }
+16 verbose url raw nodeppt
+17 verbose url resolving [ 'https://registry.npmjs.org/', './nodeppt' ]
+18 verbose url resolved https://registry.npmjs.org/nodeppt
+19 info trying registry request attempt 1 at 16:28:18
+20 http GET https://registry.npmjs.org/nodeppt
+21 http 200 https://registry.npmjs.org/nodeppt
+22 silly registry.get cb [ 200,
+22 silly registry.get   { date: 'Thu, 03 Jul 2014 08:28:20 GMT',
+22 silly registry.get     server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+22 silly registry.get     etag: '"D2G609NB5MW1TZDV0VSLOROJI"',
+22 silly registry.get     'content-type': 'application/json',
+22 silly registry.get     'cache-control': 'max-age=30',
+22 silly registry.get     'content-length': '36743',
+22 silly registry.get     'accept-ranges': 'bytes',
+22 silly registry.get     via: '1.1 varnish',
+22 silly registry.get     age: '0',
+22 silly registry.get     'x-served-by': 'cache-ty67-TYO',
+22 silly registry.get     'x-cache': 'MISS',
+22 silly registry.get     'x-cache-hits': '0',
+22 silly registry.get     'x-timer': 'S1404376099.730822,VS0,VE447',
+22 silly registry.get     vary: 'Accept',
+22 silly registry.get     'keep-alive': 'timeout=10, max=50',
+22 silly registry.get     connection: 'Keep-Alive' } ]
+23 silly addNameRange number 2 { name: 'nodeppt', range: '*', hasData: true }
+24 silly addNameRange versions [ 'nodeppt',
+24 silly addNameRange   [ '0.2.5',
+24 silly addNameRange     '0.2.6',
+24 silly addNameRange     '0.2.7',
+24 silly addNameRange     '0.2.8',
+24 silly addNameRange     '0.2.9',
+24 silly addNameRange     '0.3.0',
+24 silly addNameRange     '0.3.1',
+24 silly addNameRange     '0.4.0',
+24 silly addNameRange     '0.4.1',
+24 silly addNameRange     '0.3.2',
+24 silly addNameRange     '0.4.2',
+24 silly addNameRange     '0.4.3',
+24 silly addNameRange     '0.4.5',
+24 silly addNameRange     '0.4.6',
+24 silly addNameRange     '0.4.7',
+24 silly addNameRange     '0.4.8',
+24 silly addNameRange     '0.4.9',
+24 silly addNameRange     '0.5.0',
+24 silly addNameRange     '0.6.0',
+24 silly addNameRange     '0.6.1',
+24 silly addNameRange     '0.6.2',
+24 silly addNameRange     '0.6.3',
+24 silly addNameRange     '0.6.4',
+24 silly addNameRange     '0.6.5',
+24 silly addNameRange     '0.6.7' ] ]
+25 verbose addNamed [ 'nodeppt', '0.6.7' ]
+26 verbose addNamed [ '0.6.7', '0.6.7' ]
+27 silly lockFile 299ae05b-nodeppt-0-6-7 nodeppt@0.6.7
+28 verbose lock nodeppt@0.6.7 /home/jack/.npm/299ae05b-nodeppt-0-6-7.lock
+29 silly lockFile ca016ebc-js-org-nodeppt-nodeppt-0-6-7-tgz https://registry.npmjs.org/nodeppt/-/nodeppt-0.6.7.tgz
+30 verbose lock https://registry.npmjs.org/nodeppt/-/nodeppt-0.6.7.tgz /home/jack/.npm/ca016ebc-js-org-nodeppt-nodeppt-0-6-7-tgz.lock
+31 verbose addRemoteTarball [ 'https://registry.npmjs.org/nodeppt/-/nodeppt-0.6.7.tgz',
+31 verbose addRemoteTarball   '7ee6a6529b7b2c041a55498d632e28f4700fe653' ]
+32 info retry fetch attempt 1 at 16:28:20
+33 verbose fetch to= /home/jack/tmp/npm-27828-irmZEzlz/1404376100837-0.9144497618544847/tmp.tgz
+34 http GET https://registry.npmjs.org/nodeppt/-/nodeppt-0.6.7.tgz
+35 http 200 https://registry.npmjs.org/nodeppt/-/nodeppt-0.6.7.tgz
+36 verbose tar unpack /home/jack/tmp/npm-27828-irmZEzlz/1404376100837-0.9144497618544847/tmp.tgz
+37 silly lockFile b053cd5d-e-jack-npm-nodeppt-0-6-7-package tar:///home/jack/.npm/nodeppt/0.6.7/package
+38 verbose lock tar:///home/jack/.npm/nodeppt/0.6.7/package /home/jack/.npm/b053cd5d-e-jack-npm-nodeppt-0-6-7-package.lock
+39 silly lockFile c4aa38da-00837-0-9144497618544847-tmp-tgz tar:///home/jack/tmp/npm-27828-irmZEzlz/1404376100837-0.9144497618544847/tmp.tgz
+40 verbose lock tar:///home/jack/tmp/npm-27828-irmZEzlz/1404376100837-0.9144497618544847/tmp.tgz /home/jack/.npm/c4aa38da-00837-0-9144497618544847-tmp-tgz.lock
+41 silly gunzTarPerm modes [ '755', '644' ]
+42 silly gunzTarPerm extractEntry package.json
+43 silly gunzTarPerm modified mode [ 'package.json', 438, 420 ]
+44 silly gunzTarPerm extractEntry .npmignore
+45 silly gunzTarPerm modified mode [ '.npmignore', 438, 420 ]
+46 silly gunzTarPerm extractEntry README.md
+47 silly gunzTarPerm modified mode [ 'README.md', 438, 420 ]
+48 silly gunzTarPerm extractEntry Gruntfile.js
+49 silly gunzTarPerm modified mode [ 'Gruntfile.js', 438, 420 ]
+50 silly gunzTarPerm extractEntry config.json
+51 silly gunzTarPerm modified mode [ 'config.json', 438, 420 ]
+52 silly gunzTarPerm extractEntry config.rb
+53 silly gunzTarPerm modified mode [ 'config.rb', 438, 420 ]
+54 silly gunzTarPerm extractEntry demo.gif
+55 silly gunzTarPerm modified mode [ 'demo.gif', 438, 420 ]
+56 silly gunzTarPerm extractEntry assets/css/animation.css
+57 silly gunzTarPerm modified mode [ 'assets/css/animation.css', 438, 420 ]
+58 silly gunzTarPerm extractEntry assets/css/eater.woff
+59 silly gunzTarPerm modified mode [ 'assets/css/eater.woff', 438, 420 ]
+60 silly gunzTarPerm extractEntry assets/css/nodeppt.css
+61 silly gunzTarPerm modified mode [ 'assets/css/nodeppt.css', 438, 420 ]
+62 silly gunzTarPerm extractEntry assets/css/pdf.css
+63 silly gunzTarPerm modified mode [ 'assets/css/pdf.css', 438, 420 ]
+64 silly gunzTarPerm extractEntry assets/css/pen.cur
+65 silly gunzTarPerm modified mode [ 'assets/css/pen.cur', 438, 420 ]
+66 silly gunzTarPerm extractEntry assets/css/phone.css
+67 silly gunzTarPerm modified mode [ 'assets/css/phone.css', 438, 420 ]
+68 silly gunzTarPerm extractEntry assets/css/sourcecode.woff
+69 silly gunzTarPerm modified mode [ 'assets/css/sourcecode.woff', 438, 420 ]
+70 silly gunzTarPerm extractEntry assets/css/tangerine.woff
+71 silly gunzTarPerm modified mode [ 'assets/css/tangerine.woff', 438, 420 ]
+72 silly gunzTarPerm extractEntry assets/img/bg.jpg
+73 silly gunzTarPerm modified mode [ 'assets/img/bg.jpg', 438, 420 ]
+74 silly gunzTarPerm extractEntry assets/img/bg1.png
+75 silly gunzTarPerm modified mode [ 'assets/img/bg1.png', 438, 420 ]
+76 silly gunzTarPerm extractEntry assets/js/socket.io.js
+77 silly gunzTarPerm modified mode [ 'assets/js/socket.io.js', 438, 420 ]
+78 silly gunzTarPerm extractEntry assets/js/img.screenfull.js
+79 silly gunzTarPerm modified mode [ 'assets/js/img.screenfull.js', 438, 420 ]
+80 silly gunzTarPerm extractEntry assets/js/shake.js
+81 silly gunzTarPerm modified mode [ 'assets/js/shake.js', 438, 420 ]
+82 silly gunzTarPerm extractEntry assets/js/nodeppt.control.js
+83 silly gunzTarPerm modified mode [ 'assets/js/nodeppt.control.js', 438, 420 ]
+84 silly gunzTarPerm extractEntry assets/js/nodeppt.control.postMessage.js
+85 silly gunzTarPerm modified mode [ 'assets/js/nodeppt.control.postMessage.js', 438, 420 ]
+86 silly gunzTarPerm extractEntry assets/js/qrcode.js
+87 silly gunzTarPerm modified mode [ 'assets/js/qrcode.js', 438, 420 ]
+88 silly gunzTarPerm extractEntry assets/js/nodeppt.js
+89 silly gunzTarPerm modified mode [ 'assets/js/nodeppt.js', 438, 420 ]
+90 silly gunzTarPerm extractEntry assets/js/prettify.js
+91 silly gunzTarPerm modified mode [ 'assets/js/prettify.js', 438, 420 ]
+92 silly gunzTarPerm extractEntry assets/js/nodeppt.control.socket.js
+93 silly gunzTarPerm modified mode [ 'assets/js/nodeppt.control.socket.js', 438, 420 ]
+94 silly gunzTarPerm extractEntry assets/js/highlight/highlight.pack.js
+95 silly gunzTarPerm modified mode [ 'assets/js/highlight/highlight.pack.js', 438, 420 ]
+96 silly gunzTarPerm extractEntry assets/js/highlight/default.css
+97 silly gunzTarPerm modified mode [ 'assets/js/highlight/default.css', 438, 420 ]
+98 silly gunzTarPerm extractEntry assets/js/highlight/googlecode.css
+99 silly gunzTarPerm modified mode [ 'assets/js/highlight/googlecode.css', 438, 420 ]
+100 silly gunzTarPerm extractEntry assets/js/highlight/monokai.css
+101 silly gunzTarPerm modified mode [ 'assets/js/highlight/monokai.css', 438, 420 ]
+102 silly gunzTarPerm extractEntry assets/js/highlight/solarized_dark.css
+103 silly gunzTarPerm modified mode [ 'assets/js/highlight/solarized_dark.css', 438, 420 ]
+104 silly gunzTarPerm extractEntry assets/js/mixjs/package.json
+105 silly gunzTarPerm modified mode [ 'assets/js/mixjs/package.json', 438, 420 ]
+106 silly gunzTarPerm extractEntry assets/js/mixjs/.npmignore
+107 silly gunzTarPerm modified mode [ 'assets/js/mixjs/.npmignore', 438, 420 ]
+108 silly gunzTarPerm extractEntry assets/js/mixjs/README.md
+109 silly gunzTarPerm modified mode [ 'assets/js/mixjs/README.md', 438, 420 ]
+110 silly gunzTarPerm extractEntry assets/js/mixjs/Gruntfile.js
+111 silly gunzTarPerm modified mode [ 'assets/js/mixjs/Gruntfile.js', 438, 420 ]
+112 silly gunzTarPerm extractEntry assets/js/mixjs/lib/mix-0.2.js
+113 silly gunzTarPerm modified mode [ 'assets/js/mixjs/lib/mix-0.2.js', 438, 420 ]
+114 silly gunzTarPerm extractEntry assets/js/mixjs/lib/mix.0.3.0.js
+115 silly gunzTarPerm modified mode [ 'assets/js/mixjs/lib/mix.0.3.0.js', 438, 420 ]
+116 silly gunzTarPerm extractEntry assets/js/mixjs/lib/mix.0.3.0.min.js
+117 silly gunzTarPerm modified mode [ 'assets/js/mixjs/lib/mix.0.3.0.min.js', 438, 420 ]
+118 silly gunzTarPerm extractEntry assets/js/mixjs/lib/event/broadcast.js
+119 silly gunzTarPerm modified mode [ 'assets/js/mixjs/lib/event/broadcast.js', 438, 420 ]
+120 silly gunzTarPerm extractEntry assets/js/mixjs/lib/event/wait.js
+121 silly gunzTarPerm modified mode [ 'assets/js/mixjs/lib/event/wait.js', 438, 420 ]
+122 silly gunzTarPerm extractEntry assets/js/mixjs/lib/mix.0.3.0.map
+123 silly gunzTarPerm modified mode [ 'assets/js/mixjs/lib/mix.0.3.0.map', 438, 420 ]
+124 silly gunzTarPerm extractEntry assets/js/mixjs/MIT-LICENSE.txt
+125 silly gunzTarPerm modified mode [ 'assets/js/mixjs/MIT-LICENSE.txt', 438, 420 ]
+126 silly gunzTarPerm extractEntry assets/js/mixjs/research/js.php
+127 silly gunzTarPerm modified mode [ 'assets/js/mixjs/research/js.php', 438, 420 ]
+128 silly gunzTarPerm extractEntry assets/js/mixjs/research/load-test.html
+129 silly gunzTarPerm modified mode [ 'assets/js/mixjs/research/load-test.html', 438, 420 ]
+130 silly gunzTarPerm extractEntry assets/js/mixjs/research/loadjs.html
+131 silly gunzTarPerm modified mode [ 'assets/js/mixjs/research/loadjs.html', 438, 420 ]
+132 silly gunzTarPerm extractEntry assets/js/mixjs/research/userAgent.html
+133 silly gunzTarPerm modified mode [ 'assets/js/mixjs/research/userAgent.html', 438, 420 ]
+134 silly gunzTarPerm extractEntry assets/js/mixjs/src/browser.js
+135 silly gunzTarPerm modified mode [ 'assets/js/mixjs/src/browser.js', 438, 420 ]
+136 silly gunzTarPerm extractEntry assets/js/mixjs/src/getPath.js
+137 silly gunzTarPerm modified mode [ 'assets/js/mixjs/src/getPath.js', 438, 420 ]
+138 silly gunzTarPerm extractEntry assets/js/mixjs/src/intro.js
+139 silly gunzTarPerm modified mode [ 'assets/js/mixjs/src/intro.js', 438, 420 ]
+140 silly gunzTarPerm extractEntry assets/js/mixjs/src/loadcss-img.js
+141 silly gunzTarPerm modified mode [ 'assets/js/mixjs/src/loadcss-img.js', 438, 420 ]
+142 silly gunzTarPerm extractEntry assets/js/mixjs/src/getCurrentScript.js
+143 silly gunzTarPerm modified mode [ 'assets/js/mixjs/src/getCurrentScript.js', 438, 420 ]
+144 silly gunzTarPerm extractEntry assets/js/mixjs/src/loadjs.js
+145 silly gunzTarPerm modified mode [ 'assets/js/mixjs/src/loadjs.js', 438, 420 ]
+146 silly gunzTarPerm extractEntry assets/js/mixjs/src/Module.js
+147 silly gunzTarPerm modified mode [ 'assets/js/mixjs/src/Module.js', 438, 420 ]
+148 silly gunzTarPerm extractEntry assets/js/mixjs/src/outro.js
+149 silly gunzTarPerm modified mode [ 'assets/js/mixjs/src/outro.js', 438, 420 ]
+150 silly gunzTarPerm extractEntry assets/js/mixjs/src/Promise.js
+151 silly gunzTarPerm modified mode [ 'assets/js/mixjs/src/Promise.js', 438, 420 ]
+152 silly gunzTarPerm extractEntry assets/js/mixjs/src/typeof.js
+153 silly gunzTarPerm modified mode [ 'assets/js/mixjs/src/typeof.js', 438, 420 ]
+154 silly gunzTarPerm extractEntry assets/js/mixjs/src/core.js
+155 silly gunzTarPerm modified mode [ 'assets/js/mixjs/src/core.js', 438, 420 ]
+156 silly gunzTarPerm extractEntry assets/js/mixjs/src/vars.js
+157 silly gunzTarPerm modified mode [ 'assets/js/mixjs/src/vars.js', 438, 420 ]
+158 silly gunzTarPerm extractEntry assets/js/mixjs/src/loadcss.js
+159 silly gunzTarPerm modified mode [ 'assets/js/mixjs/src/loadcss.js', 438, 420 ]
+160 silly gunzTarPerm extractEntry assets/js/event/broadcast.js
+161 silly gunzTarPerm modified mode [ 'assets/js/event/broadcast.js', 438, 420 ]
+162 silly gunzTarPerm extractEntry assets/scss/animation.scss
+163 silly gunzTarPerm modified mode [ 'assets/scss/animation.scss', 438, 420 ]
+164 silly gunzTarPerm extractEntry assets/scss/nodeppt.scss
+165 silly gunzTarPerm modified mode [ 'assets/scss/nodeppt.scss', 438, 420 ]
+166 silly gunzTarPerm extractEntry assets/scss/pdf.scss
+167 silly gunzTarPerm modified mode [ 'assets/scss/pdf.scss', 438, 420 ]
+168 silly gunzTarPerm extractEntry assets/scss/phone.scss
+169 silly gunzTarPerm modified mode [ 'assets/scss/phone.scss', 438, 420 ]
+170 silly gunzTarPerm extractEntry assets/scss/_base.scss
+171 silly gunzTarPerm modified mode [ 'assets/scss/_base.scss', 438, 420 ]
+172 silly gunzTarPerm extractEntry lib/copy.js
+173 silly gunzTarPerm modified mode [ 'lib/copy.js', 438, 420 ]
+174 silly gunzTarPerm extractEntry lib/generate.js
+175 silly gunzTarPerm modified mode [ 'lib/generate.js', 438, 420 ]
+176 silly gunzTarPerm extractEntry lib/helper.js
+177 silly gunzTarPerm modified mode [ 'lib/helper.js', 438, 420 ]
+178 silly gunzTarPerm extractEntry lib/md_parser.js
+179 silly gunzTarPerm modified mode [ 'lib/md_parser.js', 438, 420 ]
+180 silly gunzTarPerm extractEntry lib/nodePPT.js
+181 silly gunzTarPerm modified mode [ 'lib/nodePPT.js', 438, 420 ]
+182 silly gunzTarPerm extractEntry lib/pdf.js
+183 silly gunzTarPerm modified mode [ 'lib/pdf.js', 438, 420 ]
+184 silly gunzTarPerm extractEntry lib/server.js
+185 silly gunzTarPerm modified mode [ 'lib/server.js', 438, 420 ]
+186 silly gunzTarPerm extractEntry lib/mime.json
+187 silly gunzTarPerm modified mode [ 'lib/mime.json', 438, 420 ]
+188 silly gunzTarPerm extractEntry MIT-LICENSE.txt
+189 silly gunzTarPerm modified mode [ 'MIT-LICENSE.txt', 438, 420 ]
+190 silly gunzTarPerm extractEntry changelog.md
+191 silly gunzTarPerm modified mode [ 'changelog.md', 438, 420 ]
+192 silly gunzTarPerm extractEntry ppts/css/demo.css
+193 silly gunzTarPerm modified mode [ 'ppts/css/demo.css', 438, 420 ]
+194 silly gunzTarPerm extractEntry ppts/demo.html
+195 silly gunzTarPerm modified mode [ 'ppts/demo.html', 438, 420 ]
+196 silly gunzTarPerm extractEntry ppts/demo.md
+197 silly gunzTarPerm modified mode [ 'ppts/demo.md', 438, 420 ]
+198 silly gunzTarPerm extractEntry ppts/js/demo.js
+199 silly gunzTarPerm modified mode [ 'ppts/js/demo.js', 438, 420 ]
+200 silly gunzTarPerm extractEntry bin/install
+201 silly gunzTarPerm modified mode [ 'bin/install', 438, 420 ]
+202 silly gunzTarPerm extractEntry bin/nodeppt
+203 silly gunzTarPerm modified mode [ 'bin/nodeppt', 438, 420 ]
+204 silly gunzTarPerm extractEntry template/default.ejs
+205 silly gunzTarPerm modified mode [ 'template/default.ejs', 438, 420 ]
+206 silly gunzTarPerm extractEntry template/defaultmd.ejs
+207 silly gunzTarPerm modified mode [ 'template/defaultmd.ejs', 438, 420 ]
+208 silly gunzTarPerm extractEntry template/list.ejs
+209 silly gunzTarPerm modified mode [ 'template/list.ejs', 438, 420 ]
+210 silly gunzTarPerm extractEntry template/markdown.ejs
+211 silly gunzTarPerm modified mode [ 'template/markdown.ejs', 438, 420 ]
+212 silly lockFile b053cd5d-e-jack-npm-nodeppt-0-6-7-package tar:///home/jack/.npm/nodeppt/0.6.7/package
+213 silly lockFile b053cd5d-e-jack-npm-nodeppt-0-6-7-package tar:///home/jack/.npm/nodeppt/0.6.7/package
+214 silly lockFile c4aa38da-00837-0-9144497618544847-tmp-tgz tar:///home/jack/tmp/npm-27828-irmZEzlz/1404376100837-0.9144497618544847/tmp.tgz
+215 silly lockFile c4aa38da-00837-0-9144497618544847-tmp-tgz tar:///home/jack/tmp/npm-27828-irmZEzlz/1404376100837-0.9144497618544847/tmp.tgz
+216 silly lockFile ca016ebc-js-org-nodeppt-nodeppt-0-6-7-tgz https://registry.npmjs.org/nodeppt/-/nodeppt-0.6.7.tgz
+217 silly lockFile ca016ebc-js-org-nodeppt-nodeppt-0-6-7-tgz https://registry.npmjs.org/nodeppt/-/nodeppt-0.6.7.tgz
+218 silly lockFile 299ae05b-nodeppt-0-6-7 nodeppt@0.6.7
+219 silly lockFile 299ae05b-nodeppt-0-6-7 nodeppt@0.6.7
+220 silly lockFile 2e1d4dbd-nodeppt nodeppt@
+221 silly lockFile 2e1d4dbd-nodeppt nodeppt@
+222 silly resolved [ { name: 'nodeppt',
+222 silly resolved     jsname: 'nodeppt',
+222 silly resolved     description: 'Create a PowerPoint presentation with Markdown',
+222 silly resolved     version: '0.6.7',
+222 silly resolved     site: 'https://github.com/ksky521/nodePPT',
+222 silly resolved     author: { name: 'Theo Wang', email: 'ksky521@gmail.com' },
+222 silly resolved     bin: { nodeppt: 'bin/nodeppt' },
+222 silly resolved     repository: { type: 'git', url: 'git://github.com/ksky521/nodePPT' },
+222 silly resolved     dependencies:
+222 silly resolved      { ejs: '0.8.4',
+222 silly resolved        read: '>=1.0.4',
+222 silly resolved        colors: '>=0.6.0-1',
+222 silly resolved        connect: '2.11.0',
+222 silly resolved        cookie: '>=0.1.0',
+222 silly resolved        marked: '0.2.9',
+222 silly resolved        'socket.io': '0.9.13' },
+222 silly resolved     devDependencies:
+222 silly resolved      { grunt: '>=0.4.0',
+222 silly resolved        'grunt-contrib-jshint': '>=0.1.1',
+222 silly resolved        'grunt-contrib-uglify': '>=0.2',
+222 silly resolved        'grunt-contrib-nodeunit': '>=0.1.2' },
+222 silly resolved     keywords: [ 'ppt', 'presentation', 'PowerPoint', 'slideshow', 'markdown' ],
+222 silly resolved     readmeFilename: 'README.md',
+222 silly resolved     readme: 'nodePPT - 让每个人都能写出高大上的网页版ppt！\r\n=============\r\n![nodePPT演示](https://raw.github.com/ksky521/nodePPT/master/demo.gif "nodePPT演示")\r\n## 0.6.6\r\n * 添加slide动画\r\n * 修改帮助\r\n * overview状态下bugfix\r\n\r\n## 安装\r\n\r\n```bash\r\nnpm install -g nodeppt\r\n```\r\n\r\n## shell使用\r\n\r\n### 启动\r\n\r\n```bash\r\n# 获取帮助\r\nnodeppt start -h\r\n# 绑定端口\r\nnodeppt start -p <port>\r\n```\r\n\r\n```bash\r\nnodeppt start -p 8090 -d path/for/ppts\r\n# 绑定host，默认绑定0.0.0.0\r\nnodeppt start -p 8080 -d path/for/ppts -h 127.0.0.1\r\n# 使用socket通信（按Q键显示/关闭二维码，手机扫描，即可控制）\r\n# socket须知：1、注意手机和pc要可以相互访问，2、防火墙，3、ip\r\nnodeppt start -c socket\r\n# 不加-c默认使用postMessage，窗口联动，即list页面【多窗口】链接\r\n```\r\n### 导出ppt\r\n这么高端大气上档次的ppt，怎么能不导出分享给大家呢？？\r\n\r\n导出ppt有两种，一种是**pdf版**，一种是**html版**\r\n\r\n#### pdf版\r\n需要安装[phantomJS](http://phantomjs.org/)。\r\n\r\n```bash\r\n# 安装phantomjs，如果安装了，请忽略\r\nnpm install -g phantomjs\r\n# 启动nodeppt server\r\nnodeppt start\r\n# 导出文件\r\nnodeppt pdf http://127.0.0.1:8080/md/demo.md -o a.pdf\r\n```\r\n#### html版\r\n\r\n```bash\r\n# 获取generate帮助\r\nnodeppt generate -h\r\n# 使用generate命令\r\nnodeppt generate filepath\r\n# 导出全部，包括nodeppt的js、img和css文件夹\r\n# 默认导出在publish文件夹\r\nnodeppt generate ./ppts/demo.md -a\r\n# 指定导出文件夹\r\nnodeppt generate ./ppts/demo.md -a -o output/path\r\n```\r\n导出目录下所有ppt，并且生成ppt list首页：\r\n\r\n```bash\r\nnodeppt path -o output/path -a\r\n```\r\n\r\n### 创建\r\n支持markdown语法快速创建网页幻灯片。\r\n\r\n```bash\r\nnodeppt create markdown_file_name\r\n```\r\n\r\n按照提示输入基本信息后就可以创建，默认创建是markdown版本，如果需要创建html版本，可以使用：\r\n\r\n```bash\r\nnodeppt create ppt-name.html\r\n# or\r\nnodeppt create ppt-name.htm\r\n```\r\n\r\n#### markdown语法\r\nnodeppt是支持**marked**语法的，但是为了制作出来更加完美的ppt，扩展了下面的语法\r\n\r\n#### 配置\r\n基本配置如下：\r\n```markdown\r\ntitle: 这是演讲的题目\r\nspeaker: 演讲者名字\r\nurl: 可以设置链接\r\ntransition: 转场效果，例如：zoomin/cards/slide\r\nfiles: 引入js和css的地址，如果有的话~自动放在页面底部\r\n```\r\n**目录关系**：可以在md同级目录下创建img、js、css等文件夹，然后在markdown里面引用，nodeppt默认会先查找md文件同级目录下面的静态资源，没有再找默认的```assets```文件夹下静态内容\r\n\r\n\r\n支持的转场动画包括：\r\n\r\n * horizontal3d\r\n * horizontal\r\n * vertical3d\r\n * zoomin\r\n * zoomout\r\n * cards\r\n * slide\r\n\r\n如果设置单页动画，请参考下面的**单页动画设置**部分~\r\n\r\n#### 分页\r\n通过```[slide]```作为每页ppt的间隔，如果需要添加单页背景，使用下面的语法：\r\n\r\n```markdown\r\n[slide style="background-image:url(\'/img/bg1.png\')"]\r\n# 这是个有背景的家伙\r\n## 我是副标题\r\n```\r\n\r\n#### 单页ppt上下布局\r\n```markdown\r\n[slide]\r\n## 主页面样式\r\n### ----是上下分界线\r\n----\r\nnodeppt是基于nodejs写的支持 **Markdown!** 语法的网页PPT\r\n\r\nnodeppt：https://github.com/ksky521/nodePPT\r\n```\r\n\r\n#### 代码格式化\r\n语法跟**Github Flavored Markdown** 一样~\r\n\r\n#### 单页动画设置\r\n在md文件，顶部 ```配置``` 可以设置全局转场动画，如果要设置单页的转场动画，可以通过下面的语法\r\n\r\n```markdown\r\n[slide data-transition="vertical3d"]\r\n## 这是一个vertical3d的动画\r\n```\r\n\r\n#### 插入html代码\r\n如果需要完全diy自己的ppt内容，可以使用```[code][/code]``` 来包裹html代码。例如：\r\n\r\n```markdown\r\n[code]\r\n<div class="file-setting">\r\n    <p>这是html</p>\r\n</div>\r\n<p id="css-demo">这是css样式</p>\r\n<p>使用&#91;code]&#91;/code]包裹的代码，会直接插入到页面</p>\r\n<p>具体看下项目中 ppts/demo.md 代码</p>\r\n<script>\r\n    function testScriptTag(){\r\n\r\n    }\r\n    console.log(typeof testScriptTag);\r\n</script>\r\n<style>\r\n#css-demo{\r\n    color: red;\r\n}\r\n</style>\r\n[/code]\r\n```\r\n\r\n#### 出入回调\r\n前端的ppt，难免会在页面中演示一些demo，除了上面的插入html语法：```[code][/code]``` 之外，还提供了```in-callback```和```out-callback```，分别用于：切换（切走）到当前ppt，执行的js函数名。例如：\r\n\r\n```markdown\r\n[slide data-outcallback="outcallback" data-incallback="incallback"]\r\n## 当进入此页，就执行incallback函数\r\n## 当离开此页面，就执行outcallback函数\r\n```\r\n\r\n#### 表格实例\r\n```markodwn\r\n### 市面上主要的css预处理器：less\\sass\\stylus\r\n---\r\n |less| sass | stylus\r\n:-------|:------:|-------:|--------\r\n环境 |js/nodejs | Ruby | nodejs\r\n扩展名 | .less | .sass/.scss | .styl\r\n特点 | 老牌，用户多，支持js解析 | 功能全，有成型框架，发展快 | 语法多样，小众\r\n案例/框架 | [Bootstrap](http://getbootstrap.com/) | [compass](http://compass-style.org) [bourbon](http://bourbon.io) |\r\n```\r\n\r\n#### 插入iframe\r\n使用```data-src```作为iframe的url，这样只有切换到当前页才会加载url内容~\r\n```markdown\r\n<iframe data-src="http://www.baidu.com" src="about:blank;"></iframe>\r\n```\r\n\r\n\r\n#### 示例\r\n类似下面的语法：(更多用法查看ppts/demo.md文件)\r\n```markdown\r\ntitle: nodeppt markdown 演示\r\nspeaker: Theo Wang\r\nurl: https://github.com/ksky521/nodePPT\r\ntransition: zoomin\r\n\r\n[slide]\r\n\r\n# 封面样式\r\n## h1是作为封面用的，内部的都用h2\r\n\r\n[slide style="background-image:url(\'/img/bg1.png\')"]\r\n\r\n# 背景图片 {:&.flexbox.vleft}\r\n## 使用方法：&#91;slide style="background-image:url(\'/img/bg1.png\')"&#93;\r\n\r\n[slide]\r\n\r\n## 主页面样式\r\n### ----是上下分界线\r\n----\r\n\r\nnodeppt是基于nodejs写的支持 **Markdown!** 语法的网页PPT\r\n\r\nnodeppt：https://github.com/ksky521/nodePPT\r\n\r\n[slide]\r\n\r\n什么？这些功能还不够用？\r\n\r\n极客模式：查看源码的nodeppt.js，相信你会找到牛逼的手机互动（摇一摇换页）功能\r\n\r\n查看项目目录ppts获取更多帮助信息\r\n```\r\n\r\n更多demo，查看 ```ppts``` 目录的demo\r\n\r\n### 查看帮助\r\n\r\n```bash\r\nnodeppt -h\r\n# 任何命令都可以输入-h查看帮助\r\nnodeppt start -h\r\n```\r\n\r\n## demo演示 & 使用方法\r\n\r\n * 执行 ```nodeppt start```\r\n * 访问 [http://127.0.0.1:8080/](http://127.0.0.1:8080/)\r\n * 查看在线demo：[http://myslide.duapp.com/](http://myslide.duapp.com/)\r\n',
+222 silly resolved     bugs: { url: 'https://github.com/ksky521/nodePPT/issues' },
+222 silly resolved     homepage: 'https://github.com/ksky521/nodePPT',
+222 silly resolved     _id: 'nodeppt@0.6.7',
+222 silly resolved     _shasum: '7ee6a6529b7b2c041a55498d632e28f4700fe653',
+222 silly resolved     _from: 'nodeppt@',
+222 silly resolved     _resolved: 'https://registry.npmjs.org/nodeppt/-/nodeppt-0.6.7.tgz' } ]
+223 info install nodeppt@0.6.7 into /usr/lib
+224 info installOne nodeppt@0.6.7
+225 info /usr/lib/node_modules/nodeppt unbuild
+226 verbose tar unpack /home/jack/.npm/nodeppt/0.6.7/package.tgz
+227 silly lockFile b8fcf72f-tar-usr-lib-node-modules-nodeppt tar:///usr/lib/node_modules/nodeppt
+228 verbose lock tar:///usr/lib/node_modules/nodeppt /home/jack/.npm/b8fcf72f-tar-usr-lib-node-modules-nodeppt.lock
+229 silly lockFile 60624cf5-ck-npm-nodeppt-0-6-7-package-tgz tar:///home/jack/.npm/nodeppt/0.6.7/package.tgz
+230 verbose lock tar:///home/jack/.npm/nodeppt/0.6.7/package.tgz /home/jack/.npm/60624cf5-ck-npm-nodeppt-0-6-7-package-tgz.lock
+231 silly gunzTarPerm modes [ '755', '644' ]
+232 error Error: EACCES, mkdir '/usr/lib/node_modules/nodeppt'
+232 error  { [Error: EACCES, mkdir '/usr/lib/node_modules/nodeppt']
+232 error   errno: 3,
+232 error   code: 'EACCES',
+232 error   path: '/usr/lib/node_modules/nodeppt',
+232 error   fstream_type: 'Directory',
+232 error   fstream_path: '/usr/lib/node_modules/nodeppt',
+232 error   fstream_class: 'DirWriter',
+232 error   fstream_stack:
+232 error    [ '/usr/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:36:23',
+232 error      '/usr/lib/node_modules/npm/node_modules/mkdirp/index.js:37:53',
+232 error      'Object.oncomplete (fs.js:107:15)' ] }
+233 error Please try running this command again as root/Administrator.
+234 error System Linux 3.14.4-1-ARCH
+235 error command "/usr/bin/node" "/usr/bin/npm" "install" "-g" "nodeppt"
+236 error cwd /home/jack/soft/hongmomanu.github.com/_posts
+237 error node -v v0.10.28
+238 error npm -v 1.4.9
+239 error path /usr/lib/node_modules/nodeppt
+240 error fstream_path /usr/lib/node_modules/nodeppt
+241 error fstream_type Directory
+242 error fstream_class DirWriter
+243 error code EACCES
+244 error errno 3
+245 error stack Error: EACCES, mkdir '/usr/lib/node_modules/nodeppt'
+246 error fstream_stack /usr/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:36:23
+246 error fstream_stack /usr/lib/node_modules/npm/node_modules/mkdirp/index.js:37:53
+246 error fstream_stack Object.oncomplete (fs.js:107:15)
+247 verbose exit [ 3, true ]
