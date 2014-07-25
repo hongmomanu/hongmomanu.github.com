@@ -1,0 +1,851 @@
+<!--
+    Powered By nodePPT
+    version: 0.6.7
+    site: https://github.com/ksky521/nodePPT
+-->
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>前端语法学习之javascript基础 - By Jack</title>
+    <link rel="stylesheet" media="all" href="../css/nodeppt.css">
+    <link rel="stylesheet" media="only screen and (max-device-width: 480px)" href="../css/phone.css">
+    <link rel="stylesheet" href="../js/highlight/monokai.css">
+</head>
+<body>
+
+<slides id="container">
+    <slide class="slide fill" style="background-image:url('../img/bg.jpg	')"><hgroup>
+<h2>前言</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li><p>网页的解剖。在我们深入了解JavaScript语言之前, 让我们解剖一下一个网页主要有哪些Web技术. </p>
+</li>
+<li><p>HTML 是内容:</p>
+<pre><code class="bash">
+       HTML是用来定义和描述的内容的标记语言。无论是博客文章，搜索引擎结果，
+       或电子商务网站，一个网页的核心内容是用HTML编写的。
+       HTML是用来描述内容的通用术语（标题，段落，图片等）</code></pre>
+</li>
+</ul>
+
+</article></slide>
+<slide class="slide fill" style="background-image:url('../img/bg.jpg	')"><hgroup>
+<h2>前言（续）</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li><p>CSS 用来渲染:  </p>
+<pre><code class="bash">
+       CSS为HTML文档添加适当风格的附加语言。 
+       CSS是所有有关使内容通过定义字体，颜色和其他视觉美感更好看。 
+       CSS的强大功能来自于一个事实，即你可以将不同的样式应用到同一块内容，
+       构建看跨终端的良好响应的网站时，这是至关重要的。</code></pre>
+</li>
+</ul>
+
+</article></slide>
+<slide class="slide fill" style="background-image:url('../img/bg.jpg	')"><hgroup>
+<h2>前言（续）</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li><p>JavaScript  用来交互:   </p>
+<pre><code class="bash">        在浏览器中，JavaScript对HTML内容增添交互性和行为。
+        没有JavaScript，网页将是静态的，枯燥的。 
+        JavaScript的帮助把一个网页变的有生命。</code></pre>
+</li>
+</ul>
+
+</article></slide>
+<slide class="slide fill" style="background-image:url('../img/bg.jpg	')"><hgroup>
+<h2>前言（续）</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li><p>看一个简单的例子，看看CSS and JavaScrip是怎么一起工作的:   </p>
+<pre><code class="html">      &lt;!doctype html&gt;
+      &lt;html lang=&quot;zh&quot;&gt;
+      &lt;head&gt;
+          &lt;meta charset=&quot;utf-8&quot; /&gt;
+          &lt;title&gt;Hello World&lt;/title&gt;
+
+          &lt;!-- CSS for presentation. --&gt;
+          &lt;style&gt;
+          h1 { font-size: 14px; color: hotpink; }
+          button { color: red; }
+          &lt;/style&gt;
+      &lt;/head&gt;</code></pre>
+</li>
+</ul>
+
+</article></slide>
+<slide class="slide fill" style="background-image:url('../img/bg.jpg	')"><hgroup>
+<h2>前言（续）</h2>
+
+</hgroup><article>
+
+<ul>
+<li><p>续上:</p>
+<pre><code class="html">      &lt;body&gt;
+          &lt;h1&gt;Hello World&lt;/h1&gt;
+          &lt;button&gt;Click Me!&lt;/button&gt;
+          &lt;!-- JavaScript for interactivity. --&gt;
+          &lt;script&gt;
+          var button = document.querySelector( &quot;button&quot; );
+          button.addEventListener( &quot;click&quot;, function( ev ) {
+              alert( &quot;Hello&quot; );
+          }, false);
+          &lt;/script&gt;
+      &lt;/body&gt;
+      &lt;/html&gt;</code></pre>
+</li>
+</ul>
+
+</article></slide>
+<slide class="slide fill" style="background-image:url('../img/bg.jpg	')"><hgroup>
+<h2>运行代码</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li><p>从外部引入.最优先和建议的选项是在外部文件（扩展名为。js扩展名）编写代码，<br>然后可以使用HTML script标签和指向src属性文件的位置被包含在我们的网页。<br>如果你想重新使用它在其他页面，在一个单独的文件会减少代码重复。<br>它也将允许在远程客户端的计算机上的浏览器缓存文件，减少页面加载时间.: </p>
+<pre><code class="html">
+      &lt;script src=&quot;/path/to/example.js&quot;&gt;&lt;/script&gt;</code></pre>
+</li>
+</ul>
+
+</article></slide>
+<slide class="slide fill" style="background-image:url('../img/bg.jpg	')"><hgroup>
+<h2>运行代码(续)</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li><p>内嵌运行。第二个选项是直接内联代码在网页上。<br>这也需要使用HTML script 标记，但不是指向src属性到一个文件中，代码被放置在标签之间。<br>虽然也有这样使用的运行代码的情况，但大部分的时间，最好是保持我们的代码在上面讲的外部文件中来引用。: </p>
+<pre><code class="html">
+      &lt;script&gt;
+      alert( &quot;Hello World!&quot; );
+      &lt;/script&gt;</code></pre>
+</li>
+</ul>
+
+</article></slide>
+<slide class="slide fill" style="background-image:url('../img/bg.jpg	')"><hgroup>
+<h2>运行代码(续)</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li><p>在属性中。最后一个选项是使用HTML元素的事件处理属性。这种写法维护困难，可扩展性差，无法重复利用，解藕性差，是强烈反对的：。: </p>
+<pre><code class="html">
+      &lt;a href=&quot;javascript:alert( &#39;Hello World&#39; );&quot;&gt;Click Me!&lt;/a&gt;
+      &lt;button onClick=&quot;alert( &#39;Good Bye World&#39; );&quot;&gt;Click Me Too!&lt;/button&gt;</code></pre>
+</li>
+</ul>
+
+</article></slide>
+<slide class="slide fill" style="background-image:url('../img/bg.jpg	')"><hgroup>
+<h2>运行代码(续)</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li><p>运行位置。在节点加载之前。: </p>
+<pre><code class="html">
+      &lt;!doctype html&gt;
+      &lt;html&gt;
+      &lt;head&gt;
+          &lt;script&gt;
+          // Attempting to access an element too early will have unexpected results.
+          var title = document.getElementById( &quot;hello-world&quot; );
+          console.log( title );
+          &lt;/script&gt;
+      &lt;/head&gt;
+      &lt;body&gt;
+
+      &lt;h1 id=&quot;hello-world&quot;&gt;Hello World&lt;/h1&gt;
+
+      &lt;/body&gt;
+      &lt;/html&gt;</code></pre>
+</li>
+</ul>
+
+</article></slide>
+<slide class="slide fill" style="background-image:url('../img/bg.jpg	')"><hgroup>
+<h2>运行代码(续)</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li><p>运行位置。在节点加载之后。: </p>
+<pre><code class="html">
+      &lt;!doctype html&gt;
+      &lt;html&gt;
+      &lt;body&gt;
+      &lt;h1 id=&quot;hello-world&quot;&gt;Hello World&lt;/h1&gt;
+        &lt;script&gt;
+          var title = document.getElementById( &quot;hello-world&quot; );
+          console.log( title );
+        &lt;/script&gt;
+      &lt;/body&gt;
+      &lt;/html&gt;</code></pre>
+</li>
+</ul>
+
+</article></slide>
+<slide class="slide fill" style="background-image:url('../img/bg.jpg	')"><hgroup>
+<h2>语法基础知识</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li><p>空白。在JavaScript中空白也是被忽略的，通常添加空白是为了可读性。: </p>
+<pre><code class="javascript">
+      //添加空白，较好阅读!
+      var foo = function() {
+          for ( var i = 0; i &lt; 10; i++ ) {
+              alert( i );
+          }
+      };
+      foo();
+      // 较少空白，不好阅读!
+      var foo=function() {for(var i=0;i&lt;10;i++){alert(i);}};foo();</code></pre>
+</li>
+</ul>
+
+</article></slide>
+<slide class="slide fill" style="background-image:url('../img/bg.jpg	')"><hgroup>
+<h2>语法基础知识（续）</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li>标识符。标识符是用来给变量和函数的唯一名称，使他们随后可以通过该名称被引用。标识符的名称必须遵循一些规则：。: </li>
+<li>不能是保留字。</li>
+<li>只能由字母，数字，美元符号和下划线。 </li>
+<li>第一个字符不能是数字.</li>
+</ul>
+
+</article></slide>
+<slide class="slide fill" style="background-image:url('../img/bg.jpg	')"><hgroup>
+<h2>语法基础知识(续)</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li><p>命名标识符的最好的方式就是让你或者其它开发者，能很快明白它的意思: </p>
+<pre><code class="javascript">
+      // Valid identifier names.
+      var myAwesomeVariable = &quot;a&quot;;
+      var myAwesomeVariable2 = &quot;b&quot;;
+      var my_awesome_variable = &quot;c&quot;;
+      var $my_AwesomeVariable = &quot;d&quot;;
+      var _my_awesome_variable_$ = &quot;e&quot;;</code></pre>
+</li>
+</ul>
+
+</article></slide>
+<slide class="slide fill" style="background-image:url('../img/bg.jpg	')"><hgroup>
+<h2>语法基础知识(续)</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li><p>变量定义.变量定义可以使用多个var语句，或者在单个合并var语句来定义: </p>
+<pre><code class="javascript">      // 合法:
+      var test = 1;
+      var test2 = function() { ... };
+      var test3 = test2( test );
+      // 也合法:
+      var test4 = 1,
+          test5 = function() { ... },
+          test6 = test2( test );</code></pre>
+</li>
+<li>变量可以在不给他们分配一个值来声明。没有值声明的变量的值是undefined。 <pre><code class="javascript">      var x;
+      x === undefined; // true</code></pre>
+</li>
+</ul>
+
+</article></slide>
+<slide class="slide fill" style="background-image:url('../img/bg.jpg	')"><hgroup>
+<h2>类型</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li>在JavaScript类型分为两类：基本类型和对象。基本类型包括： </li>
+<li>String</li>
+<li>Number</li>
+<li>Boolean</li>
+<li>null</li>
+<li>undefined</li>
+</ul>
+
+</article></slide>
+<slide class="slide fill" style="background-image:url('../img/bg.jpg	')"><hgroup>
+<h2>String</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li><p>字符串是文本包裹在单引号或双引号。这是最好的做法是始终使用一个或另一个。<br>有时可能当字符串中包含有用于创建字符串的引号时,<br>在这种情况下，无论是使用\反斜杠转义字符，还是另一个引号，都可以。： </p>
+<pre><code class="javascript">      // Strings can be created with double or single quotes.
+      var a = &quot;I am a string&quot;;
+      var b = &#39;So am I!&#39;;
+      // Sometimes a string may contain quotation marks.
+      var statement1 = &#39;He said &quot;JavaScript is awesome!&quot;&#39;;
+      var statement2 = &quot;He said \&quot;JavaScript is awesome!\&quot;&quot;;</code></pre>
+</li>
+</ul>
+
+</article></slide>
+<slide class="slide fill" style="background-image:url('../img/bg.jpg	')"><hgroup>
+<h2>Number</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li><p>数值类型是任意的正的或负的数值。整数和浮点值之间没有任何区别： </p>
+<pre><code class="javascript">      // Numbers are any whole or floating point integer.
+      var num1 = 100;
+      var num2 = 100.10;
+      var num3 = 0.10;</code></pre>
+</li>
+</ul>
+
+</article></slide>
+<slide class="slide fill" style="background-image:url('../img/bg.jpg	')"><hgroup>
+<h2>Boolean</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li>布尔类型值是true或false。： <pre><code class="javascript">      // Boolean values.
+      var okay = true;
+      var fail = false;</code></pre>
+</li>
+</ul>
+
+</article></slide>
+<slide class="slide fill" style="background-image:url('../img/bg.jpg	')"><hgroup>
+<h2>null and undefined</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li><p>null和undefined是特殊类型的JavaScript。<br>null类型是表示值为空的，类似于许多其他编程语言的null。<br>undefined类型代表没有被分配值。这种类型以两种方式建立的：通过使用undefined关键字或根本给定值。： </p>
+<pre><code class="javascript">      // Define a null value.
+      var foo = null;
+
+      // Two ways to achieve an undefined value.
+      var bar1 = undefined;
+      var bar2;</code></pre>
+</li>
+</ul>
+
+</article></slide>
+<slide class="slide fill" style="background-image:url('../img/bg.jpg	')"><hgroup>
+<h2>Objects</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li>除了以上基本类型，所有其它都是对象，我们这里将设计到以下内容： </li>
+<li>Object</li>
+<li>Array</li>
+<li>Function</li>
+</ul>
+
+</article></slide>
+<slide class="slide fill" style="background-image:url('../img/bg.jpg	')"><hgroup>
+<h2>Object</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li>创建一个对象，最简单的方法是既可以通过对象的构造函数或称为对象文字的简写语法。<br>这些简单的对象是无序的键/值对。属性值可以是任何有效的JavaScript类型，<br>甚至另一个对象。创建或访问一个对象的属性，我们使用了被称为“点号”或“括号符号。” <pre><code class="javascript">      // Creating an object with the constructor:
+      var person1 = new Object;
+      person1.firstName = &quot;John&quot;;person1.lastName = &quot;Doe&quot;;
+      alert( person1.firstName + &quot; &quot; + person1.lastName );
+      // Creating an object with the object literal syntax:
+      var person2 = {
+          firstName: &quot;Jane&quot;,
+          lastName: &quot;Doe&quot;
+      };
+      alert( person2.firstName + &quot; &quot; + person2.lastName );</code></pre>
+</li>
+</ul>
+
+</article></slide>
+<slide class="slide fill" style="background-image:url('../img/bg.jpg	')"><hgroup>
+<h2>Array</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li>一个数组是一个包含多个对象的对象。<br>索引从零开始，length是数组的属性。类似于一个基本对象，数组可以使用Array构造函数或称为数组的简写语法来创建。 <pre><code class="javascript">      // Creating an array with the constructor:
+      var foo = new Array;
+      // Creating an array with the array literal syntax:
+      var bar = [];</code></pre>
+</li>
+</ul>
+
+</article></slide>
+<slide class="slide fill" style="background-image:url('../img/bg.jpg	')"><hgroup>
+<h2>Array（续）</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li><p>Array的常用方法。 </p>
+<pre><code class="javascript">      // Using the push(), pop(), unshift() and shift() methods on an array.
+
+      var foo = [];
+      foo.push( &quot;a&quot; );
+      foo.push( &quot;b&quot; );
+
+      alert( foo[ 0 ] ); // a
+      alert( foo[ 1 ] ); // b
+
+      alert( foo.length ); // 2</code></pre>
+</li>
+</ul>
+
+</article></slide>
+<slide class="slide fill" style="background-image:url('../img/bg.jpg	')"><hgroup>
+<h2>Array（续）</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li><p>Array的常用方法（续）。 </p>
+<pre><code class="javascript">      foo.pop();
+
+      alert( foo[ 0 ] ); // a
+      alert( foo[ 1 ] ); // undefined
+
+      alert( foo.length ); // 1
+
+      foo.unshift( &quot;z&quot; );
+
+      alert( foo[ 0 ] ); // z
+      alert( foo[ 1 ] ); // a
+
+      alert( foo.length ); // 2</code></pre>
+</li>
+</ul>
+
+</article></slide>
+<slide class="slide fill" style="background-image:url('../img/bg.jpg	')"><hgroup>
+<h2>Array（续）</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li><p>Array的常用方法（续）。 </p>
+<pre><code class="javascript">      foo.shift();
+      alert( foo[ 0 ] ); // a
+      alert( foo[ 1 ] ); // undefined
+
+      alert( foo.length ); // 1</code></pre>
+</li>
+</ul>
+
+</article></slide>
+<slide class="slide fill" style="background-image:url('../img/bg.jpg	')"><hgroup>
+<h2>Function</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li><p>Function 定义。 </p>
+<pre><code class="javascript">      var func_a=function(){
+        alert(&quot;func_a&quot;)
+      }
+
+      function func_b(){
+        alert(&quot;func_b&quot;)
+      }</code></pre>
+</li>
+</ul>
+
+</article></slide>
+<slide class="slide fill" style="background-image:url('../img/bg.jpg	')"><hgroup>
+<h2>运算</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li><p>基本运算。 </p>
+<pre><code class="javascript">     var foo = &quot;hello&quot;;
+     var bar = &quot;world&quot;;
+     console.log( foo + &quot; &quot; + bar ); // &quot;hello world&quot;
+     // Multiplication and division
+     2 * 3;
+     2 / 3;
+     // Incrementing and decrementing
+     var i = 1;
+     console.log( ++i ); // 2 - because i was incremented before evaluation
+     console.log( i );   // 2
+     var i = 1;
+     console.log( i++ ); // 1 - because i was evaluated to 1 and _then_ incremented
+     console.log( i );   // 2</code></pre>
+</li>
+</ul>
+
+</article></slide>
+<slide class="slide fill" style="background-image:url('../img/bg.jpg	')"><hgroup>
+<h2>运算</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li><p>对数字和字符串操作。 </p>
+<pre><code class="javascript">     // Addition vs. Concatenation
+     var foo = 1;
+     var bar = &quot;2&quot;;
+     console.log( foo + bar ); // 12
+
+     // Coercing a string to act as a number.
+     var foo = 1;
+     var bar = &quot;2&quot;;
+
+     console.log( foo + Number(bar) ); // 3</code></pre>
+</li>
+</ul>
+
+</article></slide>
+<slide class="slide fill" style="background-image:url('../img/bg.jpg	')"><hgroup>
+<h2>运算</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li><p>逻辑运算符.逻辑运算符使用AND（&amp;&amp;）和OR（| |）运算。。 </p>
+<pre><code class="javascript">     var foo = 1;
+     var bar = 0;
+     var baz = 2;
+     // returns 1, which is true
+     foo || bar;
+     // returns 1, which is true
+     bar || foo;
+     // returns 0, which is false
+     foo &amp;&amp; bar;</code></pre>
+</li>
+</ul>
+
+</article></slide>
+<slide class="slide fill" style="background-image:url('../img/bg.jpg	')"><hgroup>
+<h2>比较操作符</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li><p>逻辑运算符.逻辑运算符使用AND（&amp;&amp;）和OR（| |）运算。。 </p>
+<pre><code class="javascript">     var foo = 1;
+     var bar = 0;
+     var baz = &quot;1&quot;;
+     var bim = 2;
+     foo == bar; // false
+     foo != bar; // true
+     foo == baz; // true; but note that the types are different
+     foo === baz;             // false
+     foo !== baz;             // true
+     foo === parseInt( baz ); // true
+     foo &gt; bim;  // false
+     bim &gt; baz;  // true
+     foo &lt;= baz; // true</code></pre>
+</li>
+</ul>
+
+</article></slide>
+<slide class="slide fill" style="background-image:url('../img/bg.jpg	')"><hgroup>
+<h2>条件代码</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li><p>逻辑运算符.逻辑运算符使用AND（&amp;&amp;）和OR（| |）运算。。 </p>
+<pre><code class="javascript">     var bar = false;
+
+     if ( bar ) {
+         // This code will never run.
+         console.log( &quot;hello true!&quot; );
+     }else{
+         console.log( &quot;hello false!&quot; );
+     }</code></pre>
+</li>
+</ul>
+
+</article></slide>
+<slide class="slide fill" style="background-image:url('../img/bg.jpg	')"><hgroup>
+<h2>条件代码</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li><p>值得真假。 </p>
+<pre><code class="javascript">     // Values that evaluate to false:
+     false
+     &quot;&quot; // An empty string.
+     NaN // JavaScript&#39;s &quot;not-a-number&quot; variable.
+     null
+     undefined // Be careful -- undefined can be redefined!
+     0 // The number zero.
+     // Everything else evaluates to true, some examples:
+     &quot;0&quot;
+     &quot;any string&quot;
+     [] // An empty array.
+     {} // An empty object.
+     1 // Any non-zero number.</code></pre>
+</li>
+</ul>
+
+</article></slide>
+<slide class="slide fill" style="background-image:url('../img/bg.jpg	')"><hgroup>
+<h2>条件代码</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li><p>三元表达式。 </p>
+<pre><code class="javascript">     // Set foo to 1 if bar is true; otherwise, set foo to 0:
+     var bar=&quot;&quot;;
+     var foo = bar ? 1 : 0;
+     console.log(foo);</code></pre>
+</li>
+</ul>
+
+</article></slide>
+<slide class="slide fill" style="background-image:url('../img/bg.jpg	')"><hgroup>
+<h2>条件代码</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li><p>Switch 语句。 </p>
+<pre><code class="javascript">     var foo=&quot;&quot;;
+     switch ( foo ) {
+         case &quot;bar&quot;:
+             alert( &quot;the value was bar -- yay!&quot; );
+             break;
+         case &quot;baz&quot;:
+             alert( &quot;boo baz :(&quot; );
+             break;
+         default:
+             alert( &quot;everything else is just ok&quot; );
+     }</code></pre>
+</li>
+</ul>
+
+</article></slide>
+<slide class="slide fill" style="background-image:url('../img/bg.jpg	')"><hgroup>
+<h2>循环</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li><p>for 语句。 </p>
+<pre><code class="javascript">      for ( var i = 0; i &lt; 5; i++ ) {
+
+          console.log( &quot;try &quot; + i );
+      }</code></pre>
+</li>
+</ul>
+
+</article></slide>
+<slide class="slide fill" style="background-image:url('../img/bg.jpg	')"><hgroup>
+<h2>循环</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li><p>while 语句。 </p>
+<pre><code class="javascript">      var i = 0;
+      while ( i &lt; 100 ) {
+          console.log( &quot;Currently at &quot; + i );
+          i++; 
+      }</code></pre>
+</li>
+</ul>
+
+</article></slide>
+<slide class="slide fill" style="background-image:url('../img/bg.jpg	')"><hgroup>
+<h2>循环</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li><p>do-while 语句。 </p>
+<pre><code class="javascript">      do {
+          alert( &quot;Hi there!&quot; );
+      } while ( false );</code></pre>
+</li>
+</ul>
+
+</article></slide>
+<slide class="slide fill" style="background-image:url('../img/bg.jpg	')"><hgroup>
+<h2>循环</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li><p>break and continue 语句。 </p>
+<pre><code class="javascript">      for ( var i = 0; i &lt; 10; i++ ) {
+          if ( i==5 ) {
+              break;
+          }
+          console.log(i);
+      }
+      for ( var i = 0; i &lt; 10; i++ ) {
+          if ( i==5 ) {
+              continue;
+          }
+          console.log(i);
+      }</code></pre>
+</li>
+</ul>
+
+</article></slide>
+<slide class="slide fill" style="background-image:url('../img/bg.jpg	')"><hgroup>
+<h2>数组的方法和属性</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li><p>.length。 </p>
+<pre><code class="javascript">      // Length of an array
+
+      var myArray = [ &quot;hello&quot;, &quot;world&quot;, &quot;!&quot; ];
+
+      console.log( myArray.length ); // 3</code></pre>
+</li>
+</ul>
+
+</article></slide>
+<slide class="slide fill" style="background-image:url('../img/bg.jpg	')"><hgroup>
+<h2>数组的方法和属性</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li><p>.join()。 </p>
+<pre><code class="javascript">      var myArray = [ &quot;hello&quot;, &quot;world&quot;, &quot;!&quot; ];
+
+      // The default separator is a comma.
+      console.log( myArray.join() );     // &quot;hello,world,!&quot;
+
+      // Any string can be used as separator...
+      console.log( myArray.join( &quot; &quot; ) );  // &quot;hello world !&quot;;
+      console.log( myArray.join( &quot;!!&quot; ) ); // &quot;hello!!world!!!&quot;;
+
+      // ...including an empty one.
+      console.log( myArray.join( &quot;&quot; ) );   // &quot;helloworld!&quot;</code></pre>
+</li>
+</ul>
+
+</article></slide>
+<slide class="slide fill" style="background-image:url('../img/bg.jpg	')"><hgroup>
+<h2>数组的方法和属性</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li><p>.join()。 </p>
+<pre><code class="javascript">      var myArray = [ &quot;hello&quot;, &quot;world&quot;, &quot;!&quot; ];
+
+      // The default separator is a comma.
+      console.log( myArray.join() );     // &quot;hello,world,!&quot;
+
+      // Any string can be used as separator...
+      console.log( myArray.join( &quot; &quot; ) );  // &quot;hello world !&quot;;
+      console.log( myArray.join( &quot;!!&quot; ) ); // &quot;hello!!world!!!&quot;;
+
+      // ...including an empty one.
+      console.log( myArray.join( &quot;&quot; ) );   // &quot;helloworld!&quot;</code></pre>
+</li>
+</ul>
+
+</article></slide>
+<slide class="slide fill" style="background-image:url('../img/bg.jpg	')"><hgroup>
+<h2>数组的方法和属性</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li><p>.reverse()。 </p>
+<pre><code class="javascript">      var myArray = [ &quot;world&quot; , &quot;hello&quot; ];
+      var newArray=myArray.reverse(); // [ &quot;hello&quot;, &quot;world&quot; ]
+      console.log(newArray);</code></pre>
+</li>
+</ul>
+
+</article></slide>
+<slide class="slide fill" style="background-image:url('../img/bg.jpg	')"><hgroup>
+<h2>作业</h2>
+
+</hgroup><article>
+
+<ul>
+<li>在上一堂作业的基础上，添加渐入渐出计数器。</li>
+</ul>
+
+</article></slide>
+    <slide class="slide thank-you-slide segue nobackground">
+        <article class="flexbox vleft auto-fadein">
+            <h2>Q &amp; A</h2>
+            <h3>&lt;Thank You!&gt;</h3>
+        </article>
+    </slide>
+    <slide class="slide logoslide dark nobackground">
+        <article class="flexbox vcenter">
+          <h2 style="color: white;">Powered By nodePPT v0.6.7</h2>
+        </article>
+      </slide>
+    <div class="slideTip" id="tip"></div>
+</slides>
+<canvas id="drawBoard" class="draw-board" width="900" height="700"></canvas>
+<div class="progress"><span id="progress"></span></div>
+<script src="../js/mixjs/lib/mix.0.3.0.min.js"></script>
+<script>
+var base = location.protocol + '//' + location.host +  '/assets/';
+MixJS.config({
+    baseURL:base + 'js/'
+});
+MixJS.use('event/broadcast', function($){
+    $.loadJS('../js/nodeppt.js',function(){
+        Slide.init({
+            containerID: 'container',
+            drawBoardID: 'drawBoard',
+            slideClass: '.slide',
+            buildClass: '.build',
+            progressID: 'progress',
+            transition: 'cards',
+            width: 1100,
+            dir: '../js/',
+            
+            //打开下面的注释就开启postMessage方式
+            //访问网址127.0.0.1:8080/ppt/demo#client
+            control:{
+                type: 'postMessage'
+            },
+            
+            tipID: 'tip'
+        });
+    }).loadJS('../js/highlight/highlight.pack.js',function(){
+
+        hljs.tabReplace = '  ';
+        hljs.initHighlightingOnLoad();
+    });
+});
+</script>
+<script src="../js/demo.js"></script>
+<link rel="stylesheet" href="../css/demo.css">
+</body>
+</html>
