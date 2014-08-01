@@ -1,0 +1,895 @@
+<!--
+    Powered By nodePPT
+    version: 0.6.7
+    site: https://github.com/ksky521/nodePPT
+-->
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>前端语法学习之jquery语法基础 - By Jack</title>
+    <link rel="stylesheet" media="all" href="../css/nodeppt.css">
+    <link rel="stylesheet" media="only screen and (max-device-width: 480px)" href="../css/phone.css">
+    <link rel="stylesheet" href="../js/highlight/monokai.css">
+</head>
+<body>
+
+<slides id="container">
+    <slide class="slide fill" style="background-image:url('../img/bg.jpg	')"><hgroup>
+<h2>$ 和 $()</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li><p>$ 一般是一些自带的实用函数方法，如: </p>
+<pre><code class="javascript">
+       $.trim(&quot;123   &quot;);</code></pre>
+</li>
+<li><p>$()一般是用来选择元素，并对选择的元素进行操作,如:</p>
+<pre><code class="javascript">
+       $( &quot;h1&quot; ).remove();</code></pre>
+</li>
+</ul>
+
+</article></slide>
+<slide class="slide fill" style="background-image:url('../img/bg.jpg	')"><hgroup>
+<h2>$( document ).ready()写法</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li><p>标准用法:  </p>
+<pre><code class="javascript">
+       $( document ).ready(function() {
+           console.log( &quot;ready!&quot; );
+       });</code></pre>
+</li>
+<li><p>简写用法:  </p>
+<pre><code class="javascript">
+       $(function() {
+           console.log( &quot;ready!&quot; );
+       });</code></pre>
+<p>、    </p>
+</li>
+</ul>
+
+</article></slide>
+<slide class="slide fill" style="background-image:url('../img/bg.jpg	')"><hgroup>
+<h2>$( document ).ready()写法（续）</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li><p>分开命名法:  </p>
+<pre><code class="javascript">
+       function readyFn( jQuery ) {
+           console.log( &quot;ready!&quot; );
+       }
+
+       $( document ).ready( readyFn );</code></pre>
+</li>
+</ul>
+
+</article></slide>
+<slide class="slide fill" style="background-image:url('../img/bg.jpg	')"><hgroup>
+<h2>避免与其他库的冲突</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li><p>当项目中存在其它库，如prototype.js, MooTools, or YUI时，可能会发生冲突，这时候你需要启用No-Conflict 模式:   </p>
+<pre><code class="html">        &lt;!-- Putting jQuery into no-conflict mode. --&gt;
+        &lt;script src=&quot;prototype.js&quot;&gt;&lt;/script&gt;
+        &lt;script src=&quot;jquery.js&quot;&gt;&lt;/script&gt;
+        &lt;script&gt;
+        var $j = jQuery.noConflict();
+        // $j is now an alias to the jQuery function; creating the new alias is optional.
+        $j(document).ready(function() {
+            $j( &quot;p&quot; ).hide();
+            var mainDiv = $( &quot;main&quot; );
+            alert(mainDiv);
+        });
+        &lt;/script&gt;</code></pre>
+</li>
+</ul>
+
+</article></slide>
+<slide class="slide fill" style="background-image:url('../img/bg.jpg	')"><hgroup>
+<h2>避免与其他库的冲突(续)</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li><p>如果你不想定义另一个替代全jQuery函数的别名，你也可以这样写:   </p>
+<pre><code class="html">        &lt;!-- Putting jQuery into no-conflict mode. --&gt;
+        &lt;script src=&quot;prototype.js&quot;&gt;&lt;/script&gt;
+        &lt;script src=&quot;jquery.js&quot;&gt;&lt;/script&gt;
+        &lt;script&gt;
+        jQuery.noConflict();
+
+        jQuery( document ).ready(function( $ ) {
+
+            $( &quot;p&quot; ).hide();
+        });
+
+        &lt;/script&gt;</code></pre>
+</li>
+</ul>
+
+</article></slide>
+<slide class="slide fill" style="background-image:url('../img/bg.jpg	')"><hgroup>
+<h2>避免与其他库的冲突(续)</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li><p>包括其他的jQuery库之前:   </p>
+<pre><code class="html">        &lt;!-- Putting jQuery into no-conflict mode. --&gt;
+        &lt;script src=&quot;jquery.js&quot;&gt;&lt;/script&gt;
+        &lt;script src=&quot;prototype.js&quot;&gt;&lt;/script&gt;
+        &lt;script&gt;
+        jQuery.noConflict();
+
+        jQuery( document ).ready(function( $ ) {
+
+            $( &quot;p&quot; ).hide();
+        });
+
+        &lt;/script&gt;</code></pre>
+</li>
+</ul>
+
+</article></slide>
+<slide class="slide fill" style="background-image:url('../img/bg.jpg	')"><hgroup>
+<h2>The .attr() 方法</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li><p>ATTR（）方法同时充当一个getter和setter。ATTR（）可以接受一个键和一个值，或包含一个或多个键/值对的对象。.attr() as a setter:   </p>
+<pre><code class="javascript">      $( &quot;a&quot; ).attr( &quot;href&quot;, &quot;http://www.baidu.com&quot; );
+      $( &quot;a&quot; ).attr({
+          title: &quot;九宵环佩&quot;,
+          href: &quot;http://www.baidu.com&quot;
+      });</code></pre>
+</li>
+</ul>
+
+</article></slide>
+<slide class="slide fill" style="background-image:url('../img/bg.jpg	')"><hgroup>
+<h2>The .attr() 续</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li><p>.attr() as a  getter:   </p>
+<pre><code class="javascript">      console.log($( &quot;a&quot; ).attr( &quot;href&quot;));</code></pre>
+</li>
+</ul>
+
+</article></slide>
+<slide class="slide fill" style="background-image:url('../img/bg.jpg	')"><hgroup>
+<h2>选择元素</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li><p>jQuery的最基本概念是“选择一些元素，然后对他们做一些事。”<br>jQuery的支持大部分CSS3选择器. </p>
+</li>
+<li><p>Selecting Elements by ID         </p>
+<pre><code class="javascript">
+      console.log($( &quot;#myId&quot; ).html());</code></pre>
+</li>
+<li><p>Selecting Elements by Class Name         </p>
+<pre><code class="javascript">
+       console.log($( &quot;.myClass&quot; ).html());</code></pre>
+</li>
+</ul>
+
+</article></slide>
+<slide class="slide fill" style="background-image:url('../img/bg.jpg	')"><hgroup>
+<h2>选择元素(续)</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li><p>判断是否找到元素，如果你做了一个选择,你想知道是否找到了元素.一个常见的错误是: </p>
+<pre><code class="javascript">
+      // Doesn&#39;t work!
+      if ( $( &quot;div.foo&quot; ) ) {
+
+          console.log(&quot;存在&quot;);
+
+      }else{
+
+          console.log(&quot;不存在&quot;);
+      }</code></pre>
+</li>
+</ul>
+
+</article></slide>
+<slide class="slide fill" style="background-image:url('../img/bg.jpg	')"><hgroup>
+<h2>选择元素(续)</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li><p>正确的用法是: </p>
+<pre><code class="javascript">
+     if (  $( &quot;div.foo&quot; ).length  ) {
+
+         console.log(&quot;存在&quot;);
+
+     }else{
+
+         console.log(&quot;不存在&quot;);
+
+     }</code></pre>
+</li>
+</ul>
+
+</article></slide>
+<slide class="slide fill" style="background-image:url('../img/bg.jpg	')"><hgroup>
+<h2>选择元素(续)</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li><p>重复利用.jQuery的不缓存你的元素。如果你做了一次选择，你可能需要再次需要选择，你应该保存选择的变量，而不是重复地做选择。: </p>
+<pre><code class="javascript">
+     var divs = $( &quot;div&quot; );</code></pre>
+</li>
+</ul>
+
+</article></slide>
+<slide class="slide fill" style="background-image:url('../img/bg.jpg	')"><hgroup>
+<h2>选择元素(续)</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li><p>常用的form元素选择。: </p>
+<pre><code class="javascript">
+     $( &quot;form :button&quot; );
+     $( &quot;form :checkbox&quot; );
+     $( &quot;form :checked&quot; );
+     $( &quot;form :disabled&quot; );
+     $( &quot;form :enabled&quot; );</code></pre>
+</li>
+</ul>
+
+</article></slide>
+<slide class="slide fill" style="background-image:url('../img/bg.jpg	')"><hgroup>
+<h2>选择元素(续)</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li><p>常用的form元素选择（续）： </p>
+<pre><code class="javascript">
+    $( &quot;form :file&quot; );
+    $( &quot;form :image&quot; ); 
+    $( &quot;form :input&quot; );
+    $( &quot;form :password&quot; );
+    $( &quot;form :radio&quot; );</code></pre>
+</li>
+</ul>
+
+</article></slide>
+<slide class="slide fill" style="background-image:url('../img/bg.jpg	')"><hgroup>
+<h2>使用选择</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li><p>Getters &amp; Setters。当一个方法被用来设置一个值，它被称为一个setter。<br> 当一个方法被用来获取（或读取）的值，它被称为一个getter。setter影响选择的所有元素。getter仅获取在选择的第一要素所要求的值。 : </p>
+<pre><code class="javascript">
+     $( &quot;h1&quot; ).html( &quot;hello world&quot; );
+
+     $( &quot;h1&quot; ).html();</code></pre>
+</li>
+</ul>
+
+</article></slide>
+<slide class="slide fill" style="background-image:url('../img/bg.jpg	')"><hgroup>
+<h2>使用选择（续）</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li><p>Chaining。如果你调用一个选择的方法，而且该方法返回一个jQuery对象，你可以继续在对象上调用jQuery方法。<br>这种做法被称为“链式操作”：: </p>
+<pre><code class="javascript">
+     $( &quot;body&quot; ).find( &quot;h1&quot; ).eq( 0 ).html( &quot;new text for the first h1!&quot; );</code></pre>
+</li>
+<li><p>为了增加可读性.你也可以这样写:</p>
+<pre><code class="javascript">
+      $( &quot;body&quot; )
+          .find( &quot;h1&quot; )
+          .eq( 0 )
+          .html( &quot;new text for the first h1!&quot; );</code></pre>
+</li>
+</ul>
+
+</article></slide>
+<slide class="slide fill" style="background-image:url('../img/bg.jpg	')"><hgroup>
+<h2>使用选择（续）</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li><p>对于“Chaining”，jQuery的还提供了end（）方法来返回到原来的选择：: </p>
+<pre><code class="javascript">
+     $( &quot;body&quot; )
+         .find( &quot;h1&quot; )
+         .eq( 1 )
+             .html( &quot;new text for the third h1!&quot; )
+             .end()
+         .eq( 0 )
+             .html( &quot;new text for the first h1!&quot; );</code></pre>
+</li>
+</ul>
+
+</article></slide>
+<slide class="slide fill" style="background-image:url('../img/bg.jpg	')"><hgroup>
+<h2>操纵要素</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li><p>Getting and Setting Information About Elements，介绍如下： </p>
+<pre><code class="javascript">
+     .html() – Get or set the HTML contents.
+     .text() – Get or set the text contents; HTML will be stripped.
+     .attr() – Get or set the value of the provided attribute.
+     .width() – Get or set the width in pixels of the first element in the selection as an integer.
+     .height() – Get or set the height in pixels of the first element in the selection as an integer.
+     .position() – Get an object with position information for the first element in the selection, relative to its first positioned ancestor. This is a getter only.
+     .val() – Get or set the value of form elements. $( &quot;form :input&quot; ).val();</code></pre>
+</li>
+</ul>
+
+</article></slide>
+<slide class="slide fill" style="background-image:url('../img/bg.jpg	')"><hgroup>
+<h2>操纵要素</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li><p>Moving Elements，方法有.insertAfter(), .insertBefore(), .appendTo(), and .prependTo() ： </p>
+<pre><code class="javascript">
+     var li = $( &quot;ul.people li:first&quot; ).appendTo( &quot;ul.people&quot; );
+
+     // Another approach to the same problem:
+     $( &quot;ul.people&quot; ).append( $( &quot;ul.people li:first&quot; ));</code></pre>
+</li>
+</ul>
+
+</article></slide>
+<slide class="slide fill" style="background-image:url('../img/bg.jpg	')"><hgroup>
+<h2>操纵要素</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li><p>Cloning Elements，方法为.clone() ： </p>
+<pre><code class="javascript">
+     // Copy the first list item to the end of the list:
+     $( &quot;ul.people li:first&quot; ).clone().appendTo( &quot;ul.people&quot; );</code></pre>
+</li>
+</ul>
+
+</article></slide>
+<slide class="slide fill" style="background-image:url('../img/bg.jpg	')"><hgroup>
+<h2>操纵要素</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li><p>Removing Elements，方法为.remove() ： </p>
+<pre><code class="javascript">
+     // Copy the first list item to the end of the list:
+     $( &quot;ul.people li:first&quot; ).remove() ;
+     //只想清空内容
+      $( &quot;ul.people li:first&quot; ).empty() ;</code></pre>
+</li>
+</ul>
+
+</article></slide>
+<slide class="slide fill" style="background-image:url('../img/bg.jpg	')"><hgroup>
+<h2>操纵要素</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li><p>Creating New Elements，方法为$(&quot;...&quot;)  ： </p>
+<pre><code class="javascript">
+     // Creating new elements from an HTML string.
+     $( &quot;&lt;p&gt;This is a new paragraph&lt;/p&gt;&quot; );
+     $( &quot;&lt;li class=\&quot;new\&quot;&gt;new list item&lt;/li&gt;&quot; );
+
+    // Creating a new element with an attribute object.
+    $( &quot;&lt;a/&gt;&quot;, {
+        html: &quot;This is a &lt;strong&gt;new&lt;/strong&gt; link&quot;,
+        &quot;class&quot;: &quot;new&quot;,
+        href: &quot;foo.html&quot;
+    });</code></pre>
+</li>
+</ul>
+
+</article></slide>
+<slide class="slide fill" style="background-image:url('../img/bg.jpg	')"><hgroup>
+<h2>操纵要素</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li><p>Creating New Elements(续)  ： </p>
+<pre><code class="javascript">
+     var myNewElement = $( &quot;&lt;li&gt;New element&lt;/li&gt;&quot; );
+
+     myNewElement.appendTo( &quot;ul.people&quot; );
+
+     myNewElement.insertAfter( &quot;ul.people li:first&quot; ); 
+
+     $( &quot;ul.people li:first&quot; ).after( myNewElement.clone() );</code></pre>
+</li>
+</ul>
+
+</article></slide>
+<slide class="slide fill" style="background-image:url('../img/bg.jpg	')"><hgroup>
+<h2>操纵要素</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li><p>Creating New Elements(续)  ： </p>
+<pre><code class="javascript">
+     var myItems = [];
+     var myList = $( &quot;ul.people&quot; );
+
+     for ( var i = 0; i &lt; 100; i++ ) {
+         myItems.push( &quot;&lt;li&gt;item &quot; + i + &quot;&lt;/li&gt;&quot; );
+     }
+
+     myList.append( myItems.join( &quot;&quot; ) );</code></pre>
+</li>
+</ul>
+
+</article></slide>
+<slide class="slide fill" style="background-image:url('../img/bg.jpg	')"><hgroup>
+<h2>操纵属性</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li><p>Creating New Elements(续)  ： </p>
+<pre><code class="javascript">
+     // Manipulating a single attribute.
+     $( &quot;#myId a:first&quot; ).attr( &quot;href&quot;, &quot;http://cn.bing.com/&quot; );
+
+     //操作多个属性
+     $( &quot;#myId a:first&quot; ).attr({
+         href: &quot;http://cn.bing.com/&quot;,
+         title: &quot;松石间意&quot;
+     });</code></pre>
+</li>
+</ul>
+
+</article></slide>
+<slide class="slide fill" style="background-image:url('../img/bg.jpg	')"><hgroup>
+<h2>操纵属性</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li><p>Creating New Elements(续)  ： </p>
+<pre><code class="javascript">
+      // Using a function to determine an attribute&#39;s new value.
+     $( &quot;#myId a:first&quot; ).attr( &quot;href&quot;, function( idx, href ) {
+         return &quot;http://&quot; + href;
+     });</code></pre>
+</li>
+</ul>
+
+</article></slide>
+<slide class="slide fill" style="background-image:url('../img/bg.jpg	')"><hgroup>
+<h2>child and parent</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li><p>.parent()  ： </p>
+<pre><code class="javascript">
+     $( &quot;#myId a:first&quot; ).parent();</code></pre>
+</li>
+<li><p>.children()  </p>
+<pre><code class="javascript">
+     $( &quot;#myId&quot; ).children();</code></pre>
+</li>
+</ul>
+
+</article></slide>
+<slide class="slide fill" style="background-image:url('../img/bg.jpg	')"><hgroup>
+<h2>css样式, Dimensions尺寸</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li><p>.css()方法  ： </p>
+<pre><code class="javascript">
+     $( &quot;h1&quot; ).css( &quot;fontSize&quot; );  //get properties
+     $( &quot;h1&quot; ).css( &quot;font-size&quot; ); // Also works.
+     $( &quot;h1&quot; ).css( &quot;fontSize&quot;, &quot;100px&quot; ); // Setting an individual property.
+     // Setting multiple properties.
+     $( &quot;h1&quot; ).css({
+         fontSize: &quot;100px&quot;,
+         color: &quot;red&quot;
+     });</code></pre>
+</li>
+</ul>
+
+</article></slide>
+<slide class="slide fill" style="background-image:url('../img/bg.jpg	')"><hgroup>
+<h2>css样式, Dimensions尺寸</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li><p>使用 CSS Classes for Styling  ： </p>
+<pre><code class="javascript">
+     // Working with classes.
+
+     var h1 = $( &quot;h1&quot; );
+
+     h1.addClass( &quot;big&quot; );
+     h1.removeClass( &quot;big&quot; );
+     h1.toggleClass( &quot;big&quot; );</code></pre>
+</li>
+</ul>
+
+</article></slide>
+<slide class="slide fill" style="background-image:url('../img/bg.jpg	')"><hgroup>
+<h2>Dimensions尺寸</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li><p>下面的代码显示了jQuery中的大小尺寸功能的简要概述。 ： </p>
+<pre><code class="javascript">
+     // Sets the width of all &lt;h1&gt; elements.
+     $( &quot;h1&quot; ).width( &quot;50px&quot; );
+     // Gets the width of the first &lt;h1&gt; element.
+     $( &quot;h1&quot; ).width();
+     // Sets the height of all &lt;h1&gt; elements.
+     $( &quot;h1&quot; ).height( &quot;50px&quot; );
+     // Gets the height of the first &lt;h1&gt; element.
+     $( &quot;h1&quot; ).height();
+
+     // Returns the first &lt;h1&gt; relative to its &quot;offset (positioned) parent&quot;.
+     $( &quot;h1&quot; ).position();</code></pre>
+</li>
+</ul>
+
+</article></slide>
+<slide class="slide fill" style="background-image:url('../img/bg.jpg	')"><hgroup>
+<h2>实用方法</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li><p>jQuery提供的$命名空间中几种实用方法。这些方法是用于实现常规的编程任务有帮助的。 ：</p>
+</li>
+<li><p>$.trim() 方法  </p>
+<pre><code class="javascript">
+     // Returns &quot;lots of extra whitespace&quot;
+     $.trim( &quot;    lots of extra whitespace    &quot; );</code></pre>
+</li>
+</ul>
+
+</article></slide>
+<slide class="slide fill" style="background-image:url('../img/bg.jpg	')"><hgroup>
+<h2>实用方法</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li><p>$.each()方法 ：</p>
+<pre><code class="javascript">
+     $.each([ &quot;foo&quot;, &quot;bar&quot;, &quot;baz&quot; ], function( idx, val ) {
+         console.log( &quot;element &quot; + idx + &quot; is &quot; + val );
+     });
+
+     $.each({ foo: &quot;bar&quot;, baz: &quot;bim&quot; }, function( k, v ) {
+         console.log( k + &quot; : &quot; + v );
+     });</code></pre>
+</li>
+</ul>
+
+</article></slide>
+<slide class="slide fill" style="background-image:url('../img/bg.jpg	')"><hgroup>
+<h2>实用方法</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li><p>$.inArray() ：</p>
+<pre><code class="javascript">
+     //Returns a value&#39;s index in an array, or -1 if the value is not in the array:
+     var myArray = [ 1, 2, 3, 5 ];
+     var index=$.inArray( 4, myArray ); 
+     if (index !== -1 ) {
+         console.log( &quot;found it!index 是:&quot; + index );
+     }</code></pre>
+</li>
+</ul>
+
+</article></slide>
+<slide class="slide fill" style="background-image:url('../img/bg.jpg	')"><hgroup>
+<h2>实用方法</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li><p>$.extend():</p>
+<pre><code class="javascript">
+     var firstObject = { foo: &quot;第一个值&quot;, a: &quot;b&quot; };
+     var secondObject = { foo: &quot;第二个覆盖值&quot; };
+     //改变属性值： 
+     var newObject = $.extend( firstObject, secondObject );
+     console.log( firstObject.foo ); // &quot;第二个覆盖值&quot;
+     console.log( newObject.foo ); // &quot;第二个覆盖值&quot;
+
+     //覆盖而不改变
+     var newObject = $.extend( {}, firstObject, secondObject );
+     console.log( firstObject.foo ); // &quot;第一个值&quot;
+     console.log( newObject.foo ); // &quot;第二个覆盖值&quot;</code></pre>
+</li>
+</ul>
+
+</article></slide>
+<slide class="slide fill" style="background-image:url('../img/bg.jpg	')"><hgroup>
+<h2>事件binding</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li><p>.on():</p>
+<pre><code class="javascript">
+     $( &quot;p&quot; ).on( &quot;click&quot;, function() {
+         console.log( &quot;click&quot; );
+     });
+     //简写方式
+     $( &quot;p&quot; ).click(function() {
+         console.log( &quot;You clicked a paragraph!&quot; );
+     });</code></pre>
+</li>
+</ul>
+
+</article></slide>
+<slide class="slide fill" style="background-image:url('../img/bg.jpg	')"><hgroup>
+<h2>事件binding</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li><p>.off():</p>
+<pre><code class="javascript">
+    // Tearing down all click handlers on a selection
+    $( &quot;p&quot; ).off( &quot;click&quot; );
+
+    var foo = function() { console.log( &quot;foo&quot; ); };
+    var bar = function() { console.log( &quot;bar&quot; ); };
+
+    $( &quot;p&quot; ).on( &quot;click&quot;, foo ).on( &quot;click&quot;, bar );
+    $( &quot;p&quot; ).off( &quot;click&quot;, bar ); // foo is still bound to the click event</code></pre>
+</li>
+</ul>
+
+</article></slide>
+<slide class="slide fill" style="background-image:url('../img/bg.jpg	')"><hgroup>
+<h2>Event Helpers</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li><p>.hover():</p>
+<pre><code class="javascript">
+    // The hover helper function
+    $( &quot;li&quot; ).hover(function() {
+        $( this ).toggleClass( &quot;hover&quot; );
+    });</code></pre>
+</li>
+</ul>
+
+</article></slide>
+<slide class="slide fill" style="background-image:url('../img/bg.jpg	')"><hgroup>
+<h2>Event Helpers</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li><p>.toggle():</p>
+<pre><code class="javascript">
+    $( &quot;p&quot; ).toggle( function() {
+        $( this ).addClass( &quot;hover&quot; );
+    }, function() {
+        $( this ).removeClass( &quot;hover&quot; );
+    });</code></pre>
+</li>
+</ul>
+
+</article></slide>
+<slide class="slide fill" style="background-image:url('../img/bg.jpg	')"><hgroup>
+<h2>Effects 效果</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li><p>.hdie() .show():</p>
+<pre><code class="javascript">
+    $( &quot;p&quot; ).hide(&quot;slow&quot;);
+    $( &quot;p&quot; ).hide(3000);
+    $( &quot;p&quot; ).show(&quot;slow&quot;);
+    $( &quot;p&quot; ).show(3000);</code></pre>
+</li>
+</ul>
+
+</article></slide>
+<slide class="slide fill" style="background-image:url('../img/bg.jpg	')"><hgroup>
+<h2>Effects 效果</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li><p>.slideUp() .slideDown():</p>
+<pre><code class="javascript">
+    $( &quot;p&quot; ).slideUp( 1000 );
+    $( &quot;p&quot; ).slideUp(&quot;slow&quot;);
+
+    $( &quot;p&quot; ).slideDown( 1000 );
+    $( &quot;p&quot; ).slideDown( &quot;fast&quot; );</code></pre>
+</li>
+</ul>
+
+</article></slide>
+<slide class="slide fill" style="background-image:url('../img/bg.jpg	')"><hgroup>
+<h2>Effects 效果</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li><p>.fadeOut() .fadeIn():</p>
+<pre><code class="javascript">
+    $( &quot;p&quot; ).fadeOut( 1000 );
+    $( &quot;p&quot; ).fadeOut(&quot;slow&quot;);
+
+    $( &quot;p&quot; ).fadeIn( 1000 );
+    $( &quot;p&quot; ).fadeIn( &quot;fast&quot; );</code></pre>
+</li>
+</ul>
+
+</article></slide>
+<slide class="slide fill" style="background-image:url('../img/bg.jpg	')"><hgroup>
+<h2>Effects 效果</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li><p>.toggle() .slideToggle() .fadeToggle(): </p>
+<pre><code class="javascript">
+    $( &quot;p&quot; ).toggle( 1000 );
+    $( &quot;p&quot; ).slideToggle(&quot;slow&quot;);
+
+    $( &quot;p&quot; ).fadeToggle( 1000 );</code></pre>
+</li>
+</ul>
+
+</article></slide>
+<slide class="slide fill" style="background-image:url('../img/bg.jpg	')"><hgroup>
+<h2>Effects 效果</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li><p>.animate(): </p>
+<pre><code class="javascript">
+    $( &quot;div.funtimes&quot; ).animate({
+            left: &quot;+=500&quot;,
+            opacity: 0.7
+        },
+        300, // Duration
+        function() { // Callback when the animation is finished
+            console.log( &quot;done!&quot; );
+        }
+    );</code></pre>
+</li>
+</ul>
+
+</article></slide>
+<slide class="slide fill" style="background-image:url('../img/bg.jpg	')"><hgroup>
+<h2>ajax</h2>
+
+</hgroup><article>
+
+<pre><code class="javascript">      $.ajax({
+          url: &quot;post.php&quot;,  // 地址
+          data: {name: 123},               // 提交的参数
+          type: &quot;GET&quot;,// whether this is a POST or GET request
+          dataType : &quot;json&quot;,  // the type of data we expect back
+          success: function( json ) {
+              console.log(json)
+          },
+          error: function( xhr, status, errorThrown ) { //error
+              alert( &quot;Sorry, there was a problem!&quot; );
+          },
+          complete: function( xhr, status ) {  // code to run regardless of success or failure
+              alert( &quot;The request is complete!&quot; );
+          }
+      });</code></pre>
+
+</article></slide>
+<slide class="slide fill" style="background-image:url('../img/bg.jpg	')"><hgroup>
+<h2>作业</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li><p>在上次作业的基础上，添加凌波微步效果: </p>
+</li>
+<li><p>演示如下</p>
+</li>
+</ul>
+
+</article></slide>
+    <slide class="slide thank-you-slide segue nobackground">
+        <article class="flexbox vleft auto-fadein">
+            <h2>Q &amp; A</h2>
+            <h3>&lt;Thank You!&gt;</h3>
+        </article>
+    </slide>
+    <slide class="slide logoslide dark nobackground">
+        <article class="flexbox vcenter">
+          <h2 style="color: white;">Powered By nodePPT v0.6.7</h2>
+        </article>
+      </slide>
+    <div class="slideTip" id="tip"></div>
+</slides>
+<canvas id="drawBoard" class="draw-board" width="900" height="700"></canvas>
+<div class="progress"><span id="progress"></span></div>
+<script src="../js/mixjs/lib/mix.0.3.0.min.js"></script>
+<script>
+var base = location.protocol + '//' + location.host + '/assets/';
+MixJS.config({
+    baseURL:base + 'js/'
+});
+MixJS.use('event/broadcast', function($){
+    $.loadJS('../js/nodeppt.js',function(){
+        Slide.init({
+            containerID: 'container',
+            drawBoardID: 'drawBoard',
+            slideClass: '.slide',
+            buildClass: '.build',
+            progressID: 'progress',
+            transition: 'cards',
+            width: 1100,
+            dir: '../js/',
+            
+            //打开下面的注释就开启postMessage方式
+            //访问网址127.0.0.1:8080/ppt/demo#client
+            control:{
+                type: 'postMessage'
+            },
+            
+            tipID: 'tip'
+        });
+    }).loadJS('../js/highlight/highlight.pack.js',function(){
+
+        hljs.tabReplace = '  ';
+        hljs.initHighlightingOnLoad();
+    });
+});
+</script>
+<script src="../js/demo.js"></script>
+<link rel="stylesheet" href="../css/demo.css">
+</body>
+</html>

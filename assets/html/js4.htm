@@ -1,0 +1,648 @@
+<!--
+    Powered By nodePPT
+    version: 0.6.7
+    site: https://github.com/ksky521/nodePPT
+-->
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>前端语法学习之jQuery Easyui框架介绍 - By Jack</title>
+    <link rel="stylesheet" media="all" href="../css/nodeppt.css">
+    <link rel="stylesheet" media="only screen and (max-device-width: 480px)" href="../css/phone.css">
+    <link rel="stylesheet" href="../js/highlight/monokai.css">
+</head>
+<body>
+
+<slides id="container">
+    <slide class="slide fill" style="background-image:url('../img/bg.jpg	')"><hgroup>
+<h2>什么是jQuery EasyUI</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li>jQuery EasyUI是一组基于jQuery的UI插件集合。 </li>
+</ul>
+<ul>
+<li><p>jQuery EasyUI的目标就是帮助web开发者更轻松的打造出功能丰富并且外观统一的UI界面</p>
+</li>
+<li><p>jQuery EasyUI为我们提供了大多数常用UI控件的使用，如：accordion，combobox，menu，dialog，tabs，validatebox，datagrid，window，tree等等。</p>
+</li>
+</ul>
+
+</article></slide>
+<slide class="slide fill" style="background-image:url('../img/bg.jpg	')"><hgroup>
+<h2>使用jQuery EasyUI</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li><p><a href="http://www.jeasyui.com/download/index.php">官方下载最新版本1.3.6</a>:  </p>
+</li>
+<li><p>引入文件:  </p>
+<pre><code class="html">
+       &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;easyui1.3.6/themes/bootstrap/easyui.css&quot;&gt;
+       &lt;script type=&quot;text/javascript&quot; src=&quot;jquery-1.11.1.js&quot;&gt;&lt;/script&gt;
+       &lt;script type=&quot;text/javascript&quot; src=&quot;easyui1.3.6/jquery.easyui.min.js&quot;&gt;&lt;/script&gt;
+       &lt;script type=&quot;text/javascript&quot; src=&quot;easyui1.3.6/locale/easyui-lang-zh_CN.js&quot;&gt;&lt;/script&gt;</code></pre>
+<p>、    </p>
+</li>
+</ul>
+
+</article></slide>
+<slide class="slide fill" style="background-image:url('../img/bg.jpg	')"><hgroup>
+<h2>hello world</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li><p>引入上述文件后，添加如下标签:  </p>
+<pre><code class="html">       &lt;a href=&quot;#&quot; class=&quot;easyui-linkbutton&quot; &gt;Hello world!&lt;/a&gt;</code></pre>
+</li>
+</ul>
+
+</article></slide>
+<slide class="slide fill" style="background-image:url('../img/bg.jpg	')"><hgroup>
+<h2>另一种写法</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li><p>根据id，动态生成:   </p>
+<pre><code class="javascript">
+        $(&#39;#btn2&#39;).linkbutton();</code></pre>
+</li>
+</ul>
+
+</article></slide>
+<slide class="slide fill" style="background-image:url('../img/bg.jpg	')"><hgroup>
+<h2>添加一个事件</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li><p>两种方式，自带onClick，jquery binding:   </p>
+<pre><code class="javascript">
+     $(&#39;#btn2&#39;).linkbutton({
+       onClick:function(){
+          alert(&quot;自带&quot;)
+       }
+     });       
+
+     $(&#39;#btn2&#39;).bind(&#39;click&#39;,function(){alert(&#39;binding&#39;)});</code></pre>
+</li>
+</ul>
+
+</article></slide>
+<slide class="slide fill" style="background-image:url('../img/bg.jpg	')"><hgroup>
+<h2>Layout 布局</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li><p>Panel.标签方式:   </p>
+<pre><code class="html">
+     &lt;div id=&quot;p&quot; class=&quot;easyui-panel&quot; title=&quot;My Panel&quot; 
+             style=&quot;width:500px;height:150px;padding:10px;background:#fafafa;&quot;
+             data-options=&quot;iconCls:&#39;icon-save&#39;,closable:true,
+                     collapsible:true,minimizable:true,maximizable:true&quot;&gt;
+         &lt;p&gt;panel content.&lt;/p&gt;
+         &lt;p&gt;panel content.&lt;/p&gt;
+     &lt;/div&gt;</code></pre>
+</li>
+</ul>
+
+</article></slide>
+<slide class="slide fill" style="background-image:url('../img/bg.jpg	')"><hgroup>
+<h2>Layout 布局</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li><p>Panel.代码生成:   </p>
+<pre><code class="javascript">
+    $(&#39;#panel&#39;).panel({
+        width:500,
+        height:150,
+        title:&#39;My Panel&#39;,
+        tools:[{
+            iconCls:&#39;icon-add&#39;,
+            handler:function(){alert(&#39;new&#39;)}
+        },{
+            iconCls:&#39;icon-save&#39;,
+            handler:function(){alert(&#39;save&#39;)}
+        }]
+    });</code></pre>
+</li>
+</ul>
+
+</article></slide>
+<slide class="slide fill" style="background-image:url('../img/bg.jpg	')"><hgroup>
+<h2>Layout 布局</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li><p>Tabs.标签引入:   </p>
+<pre><code class="html">
+    &lt;div id=&quot;tt&quot; class=&quot;easyui-tabs&quot; style=&quot;width:500px;height:250px;&quot;&gt;
+        &lt;div title=&quot;Tab1&quot; style=&quot;padding:20px;display:none;&quot;&gt;
+            tab1
+        &lt;/div&gt;
+        &lt;div title=&quot;Tab2&quot; data-options=&quot;closable:true&quot; style=&quot;overflow:auto;padding:20px;display:none;&quot;&gt;
+            tab2
+        &lt;/div&gt;
+        &lt;div title=&quot;Tab3&quot; data-options=&quot;iconCls:&#39;icon-reload&#39;,closable:true&quot; style=&quot;padding:20px;display:none;&quot;&gt;
+            tab3
+        &lt;/div&gt;
+    &lt;/div&gt;</code></pre>
+</li>
+</ul>
+
+</article></slide>
+<slide class="slide fill" style="background-image:url('../img/bg.jpg	')"><hgroup>
+<h2>Layout 布局</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li><p>Tabs.代码生成:   </p>
+<pre><code class="javascript">    $(&#39;#tt&#39;).tabs({
+        border:false,
+        onSelect:function(title){
+            alert(title+&#39; is selected&#39;);
+        }
+    });
+    $(&#39;#tt&#39;).tabs(&#39;add&#39;,{
+        title:&#39;新标签1&#39;,
+        content:&#39;新标签一内容&#39;,
+        closable:true
+    });</code></pre>
+</li>
+</ul>
+
+</article></slide>
+<slide class="slide fill" style="background-image:url('../img/bg.jpg	')"><hgroup>
+<h2>Layout 布局</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li><p>Accordion.标签引入:   </p>
+<pre><code class="html">
+    &lt;div id=&quot;aa&quot; class=&quot;easyui-accordion&quot; style=&quot;width:300px;height:200px;&quot;&gt;
+        &lt;div title=&quot;Title1&quot; data-options=&quot;iconCls:&#39;icon-save&#39;&quot; style=&quot;overflow:auto;padding:10px;&quot;&gt;
+            &lt;h3 style=&quot;color:#0099FF;&quot;&gt;Accordion for jQuery&lt;/h3&gt;
+            &lt;p&gt;Accordion is a part of easyui framework for jQuery. 
+            It lets you define your accordion component on web page more easily.&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div title=&quot;Title2&quot; data-options=&quot;iconCls:&#39;icon-reload&#39;,selected:true&quot; style=&quot;padding:10px;&quot;&gt;
+            content2
+        &lt;/div&gt;
+        &lt;div title=&quot;Title3&quot;&gt;
+            content3
+        &lt;/div&gt;
+    &lt;/div&gt;</code></pre>
+</li>
+</ul>
+
+</article></slide>
+<slide class="slide fill" style="background-image:url('../img/bg.jpg	')"><hgroup>
+<h2>Layout 布局</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li><p>Accordion.代码动态生成:   </p>
+<pre><code class="javascript">    $(&#39;#aa&#39;).accordion({
+        width:200,
+        height:200
+    });
+    $(&#39;#aa&#39;).accordion(&#39;add&#39;, {
+        title: &#39;New Title1&#39;,
+        content: &#39;New Content1&#39;,
+        selected: true
+    });
+    $(&#39;#aa&#39;).accordion(&#39;add&#39;, {
+        title: &#39;New Title2&#39;,
+        content: &#39;New Content2&#39;,
+        selected: false
+    });</code></pre>
+</li>
+</ul>
+
+</article></slide>
+<slide class="slide fill" style="background-image:url('../img/bg.jpg	')"><hgroup>
+<h2>Layout 布局</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li><p>layout.标签引入:   </p>
+<pre><code class="html">
+    &lt;div id=&quot;cc&quot; class=&quot;easyui-layout&quot; style=&quot;width:600px;height:400px;&quot;&gt;
+        &lt;div data-options=&quot;region:&#39;north&#39;,title:&#39;North Title&#39;,split:true&quot; style=&quot;height:100px;&quot;&gt;&lt;/div&gt;
+        &lt;div data-options=&quot;region:&#39;south&#39;,title:&#39;South Title&#39;,split:true&quot; style=&quot;height:100px;&quot;&gt;&lt;/div&gt;
+        &lt;div data-options=&quot;region:&#39;east&#39;,title:&#39;East&#39;,split:true&quot; style=&quot;width:100px;&quot;&gt;&lt;/div&gt;
+        &lt;div data-options=&quot;region:&#39;west&#39;,title:&#39;West&#39;,split:true&quot; style=&quot;width:100px;&quot;&gt;&lt;/div&gt;
+        &lt;div data-options=&quot;region:&#39;center&#39;,title:&#39;center title&#39;&quot; style=&quot;padding:5px;background:#eee;&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;</code></pre>
+</li>
+</ul>
+
+</article></slide>
+<slide class="slide fill" style="background-image:url('../img/bg.jpg	')"><hgroup>
+<h2>Layout 布局</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li><p>layout.代码动态生成:   </p>
+<pre><code class="javascript">
+    $(&#39;#cc&#39;).layout({fit:true});
+    $(&#39;#cc&#39;).layout(&#39;add&#39;,{
+        region: &#39;west&#39;,
+        width: 180,
+        title: &#39;West Title&#39;,
+        split: true
+    });
+    $(&#39;#cc&#39;).layout(&#39;add&#39;,{
+        region: &#39;center&#39;,
+        title: &#39;Center Title&#39;
+    });</code></pre>
+</li>
+</ul>
+
+</article></slide>
+<slide class="slide fill" style="background-image:url('../img/bg.jpg	')"><hgroup>
+<h2>Form 表单</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li><p>form表单引入:   </p>
+<pre><code class="html">
+    &lt;form id=&quot;ff&quot;  method=&quot;post&quot;&gt;
+        &lt;div&gt;
+            &lt;label for=&quot;name&quot;&gt;Name:&lt;/label&gt;
+            &lt;input class=&quot;easyui-validatebox&quot; type=&quot;text&quot; name=&quot;name&quot; data-options=&quot;required:true&quot; /&gt;
+        &lt;/div&gt;
+        &lt;div&gt;
+            &lt;label for=&quot;email&quot;&gt;Email:&lt;/label&gt;
+            &lt;input class=&quot;easyui-validatebox&quot; type=&quot;text&quot; name=&quot;email&quot; data-options=&quot;validType:&#39;email&#39;&quot; /&gt;
+        &lt;/div&gt;
+        ...
+    &lt;/form&gt;</code></pre>
+</li>
+</ul>
+
+</article></slide>
+<slide class="slide fill" style="background-image:url('../img/bg.jpg	')"><hgroup>
+<h2>Form 表单</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li><p>form表单提交:   </p>
+<pre><code class="javascript">
+     $(&#39;#ff&#39;).form({
+         url:&#39;test&#39;,
+         onSubmit: function(){
+             // do some check
+             // return false to prevent submit;
+         },
+         success:function(data){
+             alert(&quot;测试&quot;)
+         }
+     });
+     // submit the form
+     $(&#39;#ff&#39;).submit();</code></pre>
+</li>
+</ul>
+
+</article></slide>
+<slide class="slide fill" style="background-image:url('../img/bg.jpg	')"><hgroup>
+<h2>Form 表单</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li><p>form表单load数据:   </p>
+<pre><code class="javascript">     $(&#39;#ff&#39;).form(&#39;load&#39;,{
+         name:&#39;name2&#39;,
+         email:&#39;mymail@gmail.com&#39;
+
+     });</code></pre>
+</li>
+</ul>
+
+</article></slide>
+<slide class="slide fill" style="background-image:url('../img/bg.jpg	')"><hgroup>
+<h2>Form 表单</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li><p>form表单清空数据:   </p>
+<pre><code class="javascript">     $(&#39;#ff&#39;).form(&#39;clear&#39;);</code></pre>
+</li>
+</ul>
+
+</article></slide>
+<slide class="slide fill" style="background-image:url('../img/bg.jpg	')"><hgroup>
+<h2>Window 窗体</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li><p>window.标签引用:   </p>
+<pre><code class="html">     &lt;div id=&quot;win&quot; class=&quot;easyui-window&quot; title=&quot;My Window&quot; style=&quot;width:600px;height:400px&quot;
+             data-options=&quot;iconCls:&#39;icon-save&#39;,modal:true&quot;&gt;
+         Window Content
+     &lt;/div&gt;</code></pre>
+</li>
+</ul>
+
+</article></slide>
+<slide class="slide fill" style="background-image:url('../img/bg.jpg	')"><hgroup>
+<h2>Window 窗体</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li><p>window.代码生成:   </p>
+<pre><code class="javascript">     $(&#39;#win&#39;).window({
+         width:200,
+         height:100,
+         modal:true
+     });</code></pre>
+</li>
+</ul>
+
+</article></slide>
+<slide class="slide fill" style="background-image:url('../img/bg.jpg	')"><hgroup>
+<h2>Window 窗体</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li><p>dialog.标签引入:   </p>
+<pre><code class="html">     &lt;div id=&quot;dd&quot; class=&quot;easyui-dialog&quot; title=&quot;My Dialog&quot; style=&quot;width:400px;height:200px;&quot;
+             data-options=&quot;iconCls:&#39;icon-save&#39;,resizable:true,modal:true&quot;&gt;
+         Dialog Content.
+     &lt;/div&gt;</code></pre>
+</li>
+</ul>
+
+</article></slide>
+<slide class="slide fill" style="background-image:url('../img/bg.jpg	')"><hgroup>
+<h2>Window 窗体</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li><p>dialog.代码生成:   </p>
+<pre><code class="javascript">     $(&#39;#dd&#39;).dialog({
+         title: &#39;My Dialog&#39;,
+         width: 400,
+         height: 200,
+         closed: false,
+         buttons:[{
+             text:&#39;保存&#39;,
+             handler:function(){alert(1);}
+         },{
+             text:&#39;关闭&#39;,
+             handler:function(){$(&#39;#dd&#39;).dialog(&#39;close&#39;);}
+         }],
+         modal: true
+     });</code></pre>
+</li>
+</ul>
+
+</article></slide>
+<slide class="slide fill" style="background-image:url('../img/bg.jpg	')"><hgroup>
+<h2>Window 窗体</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li><p>messager.alert:   </p>
+<pre><code class="javascript">
+     $.messager.alert(&#39;Warning&#39;,&#39;The warning message&#39;);</code></pre>
+</li>
+</ul>
+
+</article></slide>
+<slide class="slide fill" style="background-image:url('../img/bg.jpg	')"><hgroup>
+<h2>Window 窗体</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li><p>messager.confirm:   </p>
+<pre><code class="javascript">
+     $.messager.confirm(&#39;Confirm&#39;,&#39;Are you sure you want to delete record?&#39;,function(r){
+         if (r){
+             alert(&#39;ok&#39;);
+         }
+     });</code></pre>
+</li>
+</ul>
+
+</article></slide>
+<slide class="slide fill" style="background-image:url('../img/bg.jpg	')"><hgroup>
+<h2>DataGrid and Tree 数据表格和树</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li><p>DataGrid.标签引入:   </p>
+<pre><code class="html">
+     &lt;table class=&quot;easyui-datagrid&quot; style=&quot;width:400px;height:250px&quot;
+             data-options=&quot;url:&#39;datagrid_data.json&#39;,fitColumns:true,singleSelect:true&quot;&gt;
+         &lt;thead&gt;
+             &lt;tr&gt;
+                 &lt;th data-options=&quot;field:&#39;code&#39;,width:100&quot;&gt;Code&lt;/th&gt;
+                 &lt;th data-options=&quot;field:&#39;name&#39;,width:100&quot;&gt;Name&lt;/th&gt;
+                 &lt;th data-options=&quot;field:&#39;price&#39;,width:100,align:&#39;right&#39;&quot;&gt;Price&lt;/th&gt;
+             &lt;/tr&gt;
+         &lt;/thead&gt;
+     &lt;/table&gt;</code></pre>
+</li>
+</ul>
+
+</article></slide>
+<slide class="slide fill" style="background-image:url('../img/bg.jpg	')"><hgroup>
+<h2>DataGrid and Tree 数据表格和树</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li><p>DataGrid.代码生成:   </p>
+<pre><code class="javascript">
+     $(&#39;#dg&#39;).datagrid({
+         url:&#39;datagrid_data.json&#39;,
+         columns:[[
+             {field:&#39;code&#39;,title:&#39;Code&#39;,width:100},
+             {field:&#39;name&#39;,title:&#39;Name&#39;,width:100},
+             {field:&#39;price&#39;,title:&#39;Price&#39;,width:100,align:&#39;right&#39;}
+         ]]
+     });</code></pre>
+</li>
+</ul>
+
+</article></slide>
+<slide class="slide fill" style="background-image:url('../img/bg.jpg	')"><hgroup>
+<h2>DataGrid and Tree 数据表格和树</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li><p>tree.标签引入:   </p>
+<pre><code class="html">     &lt;ul id=&quot;tt&quot; class=&quot;easyui-tree&quot;&gt;
+         &lt;li&gt;
+             &lt;span&gt;Folder&lt;/span&gt;
+             &lt;ul&gt;
+                 &lt;li&gt;
+                     &lt;span&gt;Sub Folder 1&lt;/span&gt;
+                     &lt;ul&gt;
+                         &lt;li&gt;&lt;span&gt;&lt;a href=&quot;#&quot;&gt;File 11&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;
+                     &lt;/ul&gt;
+                 &lt;/li&gt;
+                 &lt;li&gt;&lt;span&gt;File 2&lt;/span&gt;&lt;/li&gt;
+             &lt;/ul&gt;
+         &lt;/li&gt;
+     &lt;/ul&gt;</code></pre>
+</li>
+</ul>
+
+</article></slide>
+<slide class="slide fill" style="background-image:url('../img/bg.jpg	')"><hgroup>
+<h2>DataGrid and Tree 数据表格和树</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li><p>tree.代码生成:   </p>
+<pre><code class="javascript">     $(&#39;#tt&#39;).tree({
+         url:&#39;tree_data.json&#39;
+     });</code></pre>
+</li>
+</ul>
+
+</article></slide>
+<slide class="slide fill" style="background-image:url('../img/bg.jpg	')"><hgroup>
+<h2>DataGrid and Tree 数据表格和树</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li><p>treegrid.标签引入:   </p>
+<pre><code class="html">
+     &lt;table id=&quot;tt&quot; class=&quot;easyui-treegrid&quot; style=&quot;width:600px;height:400px&quot;
+             data-options=&quot;url:&#39;treegrid_data.json&#39;,idField:&#39;id&#39;,treeField:&#39;name&#39;&quot;&gt;
+         &lt;thead&gt;
+             &lt;tr&gt;
+                 &lt;th data-options=&quot;field:&#39;name&#39;,width:180&quot;&gt;Task Name&lt;/th&gt;
+                 &lt;th data-options=&quot;field:&#39;persons&#39;,width:60,align:&#39;right&#39;&quot;&gt;Persons&lt;/th&gt;
+                 &lt;th data-options=&quot;field:&#39;begin&#39;,width:80&quot;&gt;Begin Date&lt;/th&gt;
+                 &lt;th data-options=&quot;field:&#39;end&#39;,width:80&quot;&gt;End Date&lt;/th&gt;
+             &lt;/tr&gt;
+         &lt;/thead&gt;
+     &lt;/table&gt;</code></pre>
+</li>
+</ul>
+
+</article></slide>
+<slide class="slide fill" style="background-image:url('../img/bg.jpg	')"><hgroup>
+<h2>DataGrid and Tree 数据表格和树</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li><p>treegrid.代码生成:   </p>
+<pre><code class="javascript">
+     $(&#39;#tt&#39;).treegrid({
+         url:&#39;treegrid_data.json&#39;,
+         idField:&#39;id&#39;,
+         treeField:&#39;name&#39;,
+         columns:[[
+             {title:&#39;Task Name&#39;,field:&#39;name&#39;,width:180},
+             {field:&#39;persons&#39;,title:&#39;Persons&#39;,width:60,align:&#39;right&#39;},
+             {field:&#39;begin&#39;,title:&#39;Begin Date&#39;,width:80},
+             {field:&#39;end&#39;,title:&#39;End Date&#39;,width:80}
+         ]]
+     });</code></pre>
+</li>
+</ul>
+
+</article></slide>
+<slide class="slide fill" style="background-image:url('../img/bg.jpg	')"><hgroup>
+<h2>作业</h2>
+
+</hgroup><article>
+
+<ul class="build">
+<li><p>在上次作业的基础上添加下面的类容:   </p>
+</li>
+<li><p>添加凌波微步效果，并将踪迹记录写入到datagrid中，三列分别为状态，时间，位置。 </p>
+</li>
+<li><p>拖动图片时，也记录位置。</p>
+</li>
+<li><p>演示如下。</p>
+</li>
+</ul>
+
+</article></slide>
+    <slide class="slide thank-you-slide segue nobackground">
+        <article class="flexbox vleft auto-fadein">
+            <h2>Q &amp; A</h2>
+            <h3>&lt;Thank You!&gt;</h3>
+        </article>
+    </slide>
+    <slide class="slide logoslide dark nobackground">
+        <article class="flexbox vcenter">
+          <h2 style="color: white;">Powered By nodePPT v0.6.7</h2>
+        </article>
+      </slide>
+    <div class="slideTip" id="tip"></div>
+</slides>
+<canvas id="drawBoard" class="draw-board" width="900" height="700"></canvas>
+<div class="progress"><span id="progress"></span></div>
+<script src="../js/mixjs/lib/mix.0.3.0.min.js"></script>
+<script>
+var base = location.protocol + '//' + location.host + '/assets/';
+MixJS.config({
+    baseURL:base + 'js/'
+});
+MixJS.use('event/broadcast', function($){
+    $.loadJS('../js/nodeppt.js',function(){
+        Slide.init({
+            containerID: 'container',
+            drawBoardID: 'drawBoard',
+            slideClass: '.slide',
+            buildClass: '.build',
+            progressID: 'progress',
+            transition: 'cards',
+            width: 1100,
+            dir: '../js/',
+            
+            //打开下面的注释就开启postMessage方式
+            //访问网址127.0.0.1:8080/ppt/demo#client
+            control:{
+                type: 'postMessage'
+            },
+            
+            tipID: 'tip'
+        });
+    }).loadJS('../js/highlight/highlight.pack.js',function(){
+
+        hljs.tabReplace = '  ';
+        hljs.initHighlightingOnLoad();
+    });
+});
+</script>
+<script src="../js/demo.js"></script>
+<link rel="stylesheet" href="../css/demo.css">
+</body>
+</html>
