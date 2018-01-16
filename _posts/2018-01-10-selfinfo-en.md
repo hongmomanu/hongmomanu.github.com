@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "introduce mtself in english"
+title: "Introduce Myself In English"
 description: ""
 category: qin
 tags: [myself,jack]
