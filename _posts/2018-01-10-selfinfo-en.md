@@ -31,7 +31,7 @@ tags: [myself,jack]
 
  > basiclly use es6 to write code for two years
 
- > use enzyme to write react test
+ > use enzyme (mount / render) to write react components tests
 
  > use clojure and clojurescript stack to develop web app  for three years
 
