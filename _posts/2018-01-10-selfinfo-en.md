@@ -6,7 +6,7 @@ category: qin
 tags: [myself,jack]
 ---
 
-* **<label style="font-size:2rem">who i am</label>**
+* **<label style="font-size:2rem">About Me</label>**
 
 
  > Chinese name:Shayuxiang
