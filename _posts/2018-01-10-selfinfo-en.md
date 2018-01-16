@@ -6,7 +6,7 @@ category: qin
 tags: [myself,jack]
 ---
 
-* who i am
+* <strong>who i am</strong>
 
 
  > Chinese name:Shayuxiang
@@ -21,7 +21,7 @@ tags: [myself,jack]
 
  > Education: Study Hydrological analysis and calculation In SiChuan University during 2003-2010.
 
-* skill and experience
+* <strong>skill and experience</strong>
 
  > use React.js to build web application for two years
 
