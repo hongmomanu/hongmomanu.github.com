@@ -21,7 +21,7 @@ tags: [myself,jack]
 
  > Education: Study Hydrological analysis and calculation In SiChuan University during 2003-2010.
 
-* **skill and experience**
+* **<label style="font-size:2rem">skill and experience</label>**
 
  > use React.js to build web application for two years
 
@@ -29,9 +29,11 @@ tags: [myself,jack]
 
  > use Style-Component to write css3/css
 
- > basiclly use es6 to write code
+ > basiclly use es6 to write code for two years
 
  > use enzyme to write react test
+
+ > use clojure and clojurescript stack to develop web app  for three years
 
 
 
